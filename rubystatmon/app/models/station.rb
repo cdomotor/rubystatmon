@@ -1,2 +1,0 @@
-class Station < ApplicationRecord
-end
