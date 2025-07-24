@@ -1,0 +1,1 @@
+# Devise config placeholder
