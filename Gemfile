@@ -7,3 +7,7 @@ gem 'tailwindcss-rails'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'faker'
+gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin]
+gem 'puma', '~> 6.4'
+gem 'propshaft'
+gem 'csv'

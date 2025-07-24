@@ -1,19 +1,9 @@
+# File: config/routes.rb
+
 Rails.application.routes.draw do
-  devise_for :users
+  root "stations#index"
 
-  namespace :api do
-    resources :stations, only: [:index, :show] do
-      post 'ping', on: :member
-    end
+  resources :stations do
+    collection { post :import }
   end
-
-  namespace :admin do
-    resources :stations do
-      collection do
-        post 'import'
-      end
-    end
-  end
-
-  root to: 'admin/stations#index'
 end

@@ -1,0 +1,24 @@
+<% content_for :title, "Stations" %>
+
+<div class="max-w-4xl mx-auto px-4 py-6">
+  <%= render "layouts/flash" %>
+
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800">📡 Stations</h1>
+    <%= link_to "New station", new_station_path, class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium" %>
+  </div>
+
+  <div class="bg-white shadow-md rounded p-4 mb-6">
+    <h2 class="text-xl font-semibold text-gray-700 mb-4">Import Stations from CSV</h2>
+    <%= form_with url: import_stations_path, local: true, multipart: true, class: "flex items-center gap-4" do |form| %>
+      <%= form.file_field :file, required: true, class: "block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" %>
+      <%= form.submit "Import CSV", class: "px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-md font-semibold" %>
+    <% end %>
+  </div>
+
+  <div class="space-y-4">
+    <% @stations.each do |station| %>
+      <%= render partial: "station", locals: { station: station } %>
+    <% end %>
+  </div>
+</div>
