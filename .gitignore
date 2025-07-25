@@ -1,0 +1,35 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore environment files except examples
+/.env*
+!/.env*.erb
+
+# Ignore log and tmp files
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files and local databases
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+# Ignore public assets and Node modules
+/public/assets
+/node_modules
+
+# Ignore other temp files
+.byebug_history
+
+# Ignore SQLite databases
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/app/assets/builds/*
+!/app/assets/builds/.keep
