@@ -4,15 +4,16 @@
   <title>StatMon</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_link_tag 'application.tailwind', media: 'all' %>
+  <%= stylesheet_link_tag 'tailwind', 'data-turbo-track': 'reload' %>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
   <div class="max-w-6xl mx-auto px-4 py-6">
     <%= yield %>
   </div>
+  <footer class="bg-gray-800 text-white py-4 mt-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>&copy; <%= Time.current.year %> StatMon. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
-<footer class="bg-gray-800 text-white py-4 mt-8">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <p>&copy; <%= Time.current.year %> StatMon. All rights reserved.</p>
-  </div>
 </html>

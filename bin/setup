@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 bundle install
-yarn install --check-files
 rails db:setup
