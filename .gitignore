@@ -33,3 +33,5 @@
 /db/*.sqlite3-journal
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+/config/master.key

@@ -1449,3 +1449,279 @@ Processing by StationsController#index as HTML
 Completed 200 OK in 394ms (Views: 36.8ms | ActiveRecord: 0.2ms | Allocations: 12717)
 
 
+Started GET "/" for 127.0.0.1 at 2025-07-25 11:02:57 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 2.9ms | Allocations: 358)
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.0ms | Allocations: 298)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.7ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/index.html.erb within layouts/application (Duration: 73.6ms | Allocations: 21764)
+  Rendered layout layouts/application.html.erb (Duration: 84.8ms | Allocations: 25679)
+Completed 500 Internal Server Error in 2939ms (ActiveRecord: 13.9ms | Allocations: 1026007)
+
+
+  
+ActionView::Template::Error (The asset 'tailwind.css' was not found in the load path.):
+    4:   <title>StatMon</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= stylesheet_link_tag 'tailwind', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: <body class="bg-gray-50 font-sans text-gray-800">
+   10:   <div class="max-w-6xl mx-auto px-4 py-6">
+  
+app/views/layouts/application.html.erb:7:in '_app_views_layouts_application_html_erb___487980882_8856'
+Started GET "/" for 127.0.0.1 at 2025-07-25 11:20:04 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 3.1ms | Allocations: 352)
+  [1m[36mStation Load (0.7ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.5ms | Allocations: 298)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/index.html.erb within layouts/application (Duration: 111.1ms | Allocations: 21763)
+  Rendered layout layouts/application.html.erb (Duration: 127.3ms | Allocations: 25680)
+Completed 500 Internal Server Error in 3001ms (ActiveRecord: 21.7ms | Allocations: 1025785)
+
+
+  
+ActionView::Template::Error (The asset 'tailwind.css' was not found in the load path.):
+    4:   <title>StatMon</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= stylesheet_link_tag 'tailwind', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: <body class="bg-gray-50 font-sans text-gray-800">
+   10:   <div class="max-w-6xl mx-auto px-4 py-6">
+  
+app/views/layouts/application.html.erb:7:in '_app_views_layouts_application_html_erb__213111729_8848'
+Started GET "/" for 127.0.0.1 at 2025-07-25 11:35:34 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 3.0ms | Allocations: 352)
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 298)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.6ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/index.html.erb within layouts/application (Duration: 116.7ms | Allocations: 21759)
+  Rendered layout layouts/application.html.erb (Duration: 127.8ms | Allocations: 26021)
+Completed 500 Internal Server Error in 2810ms (ActiveRecord: 23.1ms | Allocations: 1026318)
+
+
+  
+ActionView::Template::Error (The asset 'application.css' was not found in the load path.):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+     8:   <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
+     9: </head>
+    10: <body class="bg-gray-50 font-sans text-gray-800">
+    11:   <div class="max-w-6xl mx-auto px-4 py-6">
+  
+app/views/layouts/application.html.erb:8:in '_app_views_layouts_application_html_erb__285917519_8848'

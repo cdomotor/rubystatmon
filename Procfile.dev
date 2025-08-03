@@ -1,0 +1,2 @@
+web: bundle exec rails server -p 3000
+css: npx tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --watch
