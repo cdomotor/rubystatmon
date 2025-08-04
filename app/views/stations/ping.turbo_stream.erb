@@ -1,7 +1,7 @@
-<turbo-stream target="ping_result_<%= @station.id %>" action="update">
+<turbo-stream target="ping_results_<%= @station.id %>" action="update">
   <template>
-    <div class="<%= @station.ping_result.last.success ? 'text-green-600' : 'text-red-600' %>">
-      Ping: <%= @station.ping_result.last.success ? "#{@station.ping_result.last.latency_ms} ms" : "Failed" %>
+    <div class="<%= @station.ping_results.last.success ? 'text-green-600' : 'text-red-600' %>">
+      Ping: <%= @station.ping_results.last.success ? "#{@station.ping_results.last.latency_ms} ms" : "Failed" %>
     </div>
   </template>
 </turbo-stream>

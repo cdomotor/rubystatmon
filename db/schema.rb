@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_07_24_031042) do
+ActiveRecord::Schema[7.1].define(version: 2025_08_04_031536) do
+  create_table "ping_results", force: :cascade do |t|
+    t.integer "station_id", null: false
+    t.integer "latency_ms"
+    t.datetime "timestamp"
+    t.boolean "success"
+    t.integer "failure_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["station_id"], name: "index_ping_results_on_station_id"
+  end
+
   create_table "stations", force: :cascade do |t|
     t.string "name"
     t.string "ip_address"
@@ -20,4 +31,5 @@ ActiveRecord::Schema[7.1].define(version: 2025_07_24_031042) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "ping_results", "stations"
 end

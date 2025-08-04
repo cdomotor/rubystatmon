@@ -20,7 +20,7 @@
     <% @stations.each do |station| %>
       <%= render partial: "station", locals: { station: station } %>
       <%= button_to 'Ping', ping_station_path(station), method: :post, data: { turbo: true }, class: "btn btn-sm" %>
-      <div id="ping_result_<%= station.id %>">
+      <div id="ping_results_<%= station.id %>">
         <div class="text-gray-400 text-sm italic">No ping yet</div>
       </div>
     <% end %>

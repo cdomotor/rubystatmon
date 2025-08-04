@@ -1,3 +1,3 @@
 class Station < ApplicationRecord
-    has_many :ping_result, dependent: :destroy
+    has_many :ping_results, dependent: :destroy
 end

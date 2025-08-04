@@ -3683,3 +3683,425 @@ Completed 500 Internal Server Error in 1166ms (ActiveRecord: 0.3ms | Allocations
 ActiveRecord::StatementInvalid (Could not find table 'ping_results'):
   
 app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePingResults (20250804031536)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ping_results" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "station_id" integer NOT NULL, "latency_ms" integer, "timestamp" datetime(6), "success" boolean, "failure_count" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_131149b6bd"
+FOREIGN KEY ("station_id")
+  REFERENCES "stations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_ping_results_on_station_id" ON "ping_results" ("station_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250804031536') RETURNING "version"[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-08-04 13:16:25 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 150)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.1ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 77.5ms | Allocations: 6187)
+Completed 200 OK in 4611ms (Views: 124.7ms | ActiveRecord: 0.0ms | Allocations: 996898)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:16:30 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 13:16:36 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 1.4ms | Allocations: 299)
+  [1m[36mStation Load (0.9ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 298)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/index.html.erb within layouts/application (Duration: 172.9ms | Allocations: 28079)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 176.1ms | Allocations: 28417)
+Completed 200 OK in 1691ms (Views: 157.2ms | ActiveRecord: 44.3ms | Allocations: 39728)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:16:38 +1000
+Started GET "/stations/1" for 127.0.0.1 at 2025-08-04 13:16:47 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 119)
+  Rendered stations/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1011)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1348)
+Completed 200 OK in 1084ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 2602)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:16:48 +1000
+Started DELETE "/stations/1" for 127.0.0.1 at 2025-08-04 13:16:52 +1000
+Processing by StationsController#destroy as HTML
+  Parameters: {"authenticity_token" => "JAT7EI_uWtB5VKb0biPXAGSFJd79Ie7hqhs4bm8LuyK2SdUoxrkqgk9goqrMd6XsG0tpxBm8n1EKEZDPVqFkWQ", "id" => "1"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Load (0.7ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 1]]
+  [1m[36mStation Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stations" WHERE "stations"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations
+Completed 303 See Other in 974ms (ActiveRecord: 3.4ms | Allocations: 4719)
+
+
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 13:16:53 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 1.2ms | Allocations: 190)
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 1.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/index.html.erb within layouts/application (Duration: 55.9ms | Allocations: 19138)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 19474)
+Completed 200 OK in 859ms (Views: 58.6ms | ActiveRecord: 0.3ms | Allocations: 19768)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:16:55 +1000
+Started POST "/stations/71/ping" for 127.0.0.1 at 2025-08-04 13:17:09 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "2_jp9pR-ZBqLvijRWbAH5NZ_nd3lvOVGEcvA2LGFdiiIyIBGWa_SZobyFU4O3J47A4GYAp039MDOd8scEjuqpg", "id" => "71"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1234ms (ActiveRecord: 0.3ms | Allocations: 701)
+
+
+  
+NoMethodError (undefined method 'ping_result' for an instance of Station):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/stations/71/ping" for 127.0.0.1 at 2025-08-04 13:19:12 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/stations/71/ping"):
+  
+Started GET "/" for 127.0.0.1 at 2025-08-04 13:19:18 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 149)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.4ms | Allocations: 300)
+  Rendered layout layouts/application.html.erb (Duration: 121.3ms | Allocations: 6190)
+Completed 200 OK in 5895ms (Views: 156.1ms | ActiveRecord: 0.0ms | Allocations: 996847)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:19:25 +1000
+Started GET "/dashboard" for 127.0.0.1 at 2025-08-04 13:19:30 +1000
+Processing by DashboardController#index as HTML
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 13:19:31 +1000
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 503)
+Completed 200 OK in 1248ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1867)
+
+
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 3.3ms | Allocations: 293)
+  [1m[36mStation Load (1.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 298)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/index.html.erb within layouts/application (Duration: 179.5ms | Allocations: 27810)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 181.8ms | Allocations: 28148)
+Completed 200 OK in 1337ms (Views: 141.6ms | ActiveRecord: 58.7ms | Allocations: 39444)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:19:33 +1000
+Started POST "/stations/71/ping" for 127.0.0.1 at 2025-08-04 13:20:00 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "h6gkmQuAr8fdGl26_SXEEaticwKBp3-tjXHLbyWV4bHUmE0pxlEZu9BWYCWqSV3Ofpx23fksbitSzcCrhis9Pw", "id" => "71"}
+  [1m[36mStation Load (2.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 928ms (ActiveRecord: 2.0ms | Allocations: 1492)
+
+
+  
+NoMethodError (undefined method 'ping_result' for an instance of Station):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+Started GET "/stations/71/" for 127.0.0.1 at 2025-08-04 13:28:58 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 442)
+  Rendered stations/show.html.erb within layouts/application (Duration: 24.0ms | Allocations: 2419)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.4ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 98.2ms | Allocations: 7377)
+Completed 200 OK in 6110ms (Views: 132.9ms | ActiveRecord: 58.5ms | Allocations: 1017104)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:29:05 +1000
+Started POST "/stations/71/ping" for 127.0.0.1 at 2025-08-04 13:29:19 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "vlP-27v5TkKxgIiNG7xQCTImxLYepizevbACoRGmTc7tY5drdij4PrzMtRJM0MnW59jBaWYtPVhiDAllshiRQA", "id" => "71"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (2.7ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 71], ["latency_ms", 74], ["timestamp", "2025-08-04 03:29:20.322048"], ["success", 1], ["failure_count", nil], ["created_at", "2025-08-04 03:29:20.346045"], ["updated_at", "2025-08-04 03:29:20.346045"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/71
+Completed 302 Found in 1083ms (ActiveRecord: 6.6ms | Allocations: 9558)
+
+
+Started GET "/stations/71" for 127.0.0.1 at 2025-08-04 13:29:20 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 0.7ms | Allocations: 117)
+  Rendered stations/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 619)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 955)
+Completed 200 OK in 1215ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 1362)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:29:22 +1000
+Started GET "/stations/71" for 127.0.0.1 at 2025-08-04 13:48:39 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.6ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 211.5ms | Allocations: 8533)
+  Rendered stations/show.html.erb within layouts/application (Duration: 247.5ms | Allocations: 10503)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.7ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 336.2ms | Allocations: 15401)
+Completed 200 OK in 7319ms (Views: 377.1ms | ActiveRecord: 64.1ms | Allocations: 1025316)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:48:47 +1000
+Started GET "/stations/71" for 127.0.0.1 at 2025-08-04 13:51:47 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (1.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 147.1ms | Allocations: 8532)
+  Rendered stations/show.html.erb within layouts/application (Duration: 186.1ms | Allocations: 10504)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.0ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 248.5ms | Allocations: 15402)
+Completed 200 OK in 6405ms (Views: 297.9ms | ActiveRecord: 59.4ms | Allocations: 1025192)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:51:55 +1000

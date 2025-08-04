@@ -9,12 +9,9 @@
 
   <%= render @station %>
 
+  <%= button_to "Ping This Station", ping_station_path(@station), method: :post, data: { turbo: true }, class: "btn" %>
   <%= link_to "Edit this station", edit_station_path(@station), class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
   <%= link_to "Back to stations", stations_path, class: "w-full sm:w-auto text-center mt-2 sm:mt-0 sm:ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
   <%= button_to "Destroy this station", @station, method: :delete, form_class: "sm:inline-block mt-2 sm:mt-0 sm:ml-2", class: "w-full rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium cursor-pointer", data: { turbo_confirm: "Are you sure?" } %>
-
-  <%= button_to 'Ping This Station', ping_station_path(@station), method: :post, data: { turbo: true }, class: "btn" %>
-  <div id="ping_result_<%= @station.id %>">
-    <div class="text-gray-500">Last ping result will appear here</div>
-  </div>
+  
 </div>

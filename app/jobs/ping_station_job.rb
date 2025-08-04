@@ -7,7 +7,7 @@ class PingStationJob < ApplicationJob
     success = result.include?("TTL=")
     latency = result[/time=(\d+)ms/, 1]&.to_i
 
-    station.ping_result.create!(
+    station.ping_results.create!(
       success: success,
       latency_ms: latency,
       timestamp: Time.now

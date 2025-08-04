@@ -16,4 +16,18 @@
     <p><span class="font-semibold text-gray-700">Location:</span> <%= station.location.presence || "—" %></p>
     <p><span class="font-semibold text-gray-700">Notes:</span> <%= station.notes.presence || "—" %></p>
   </div>
+
+  <%= turbo_frame_tag "ping_result_#{station.id}" do %>
+    <% last_ping = station.ping_results.order(timestamp: :desc).first %>
+    <% if last_ping %>
+      <div class="text-green-600">
+        Last ping at <%= last_ping.timestamp.strftime("%H:%M:%S") %> —
+        <%= last_ping.success ? "Success" : "Failure" %> —
+        <%= last_ping.latency_ms || "N/A" %> ms
+      </div>
+    <% else %>
+      <div class="text-gray-400 italic">No ping yet</div>
+    <% end %>
+  <% end %>
+
 </div>

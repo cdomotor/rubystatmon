@@ -87,14 +87,20 @@ class StationsController < ApplicationController
       latency = output[/time=(\d+(?:\.\d+)?) ms/, 1]&.to_f&.round
     end
 
-    @station.ping_result.create!(
+    @station.ping_results.create!(
       timestamp: Time.current,
       latency_ms: latency,   # nil if not parseable
       success: success
     )
 
     respond_to do |format|
-      format.turbo_stream
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.replace(
+          "ping_result_#{@station.id}",
+          partial: "stations/ping_result",
+          locals: { station: @station }
+        )
+      end
       format.html { redirect_to @station, notice: success ? "Ping succeeded" : "Ping failed" }
       format.json { render json: { success: success, latency_ms: latency }, status: :ok }
     end

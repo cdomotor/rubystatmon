@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  station: one
+  latency_ms: 1
+  timestamp: 2025-08-04 13:15:36
+  success: false
+  failure_count: 1
+
+two:
+  station: two
+  latency_ms: 1
+  timestamp: 2025-08-04 13:15:36
+  success: false
+  failure_count: 1
