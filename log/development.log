@@ -4105,3 +4105,1264 @@ Completed 200 OK in 6405ms (Views: 297.9ms | ActiveRecord: 59.4ms | Allocations:
 
 
 Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:51:55 +1000
+Started GET "/stations/71" for 127.0.0.1 at 2025-08-04 13:54:32 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (1.8ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 138.4ms | Allocations: 8533)
+  Rendered stations/show.html.erb within layouts/application (Duration: 176.9ms | Allocations: 10504)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.9ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 237.0ms | Allocations: 15402)
+Completed 200 OK in 8515ms (Views: 262.9ms | ActiveRecord: 780.8ms | Allocations: 1025282)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 13:54:43 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 14:01:59 +1000
+Started GET "/dashboard" for 127.0.0.1 at 2025-08-04 14:01:59 +1000
+Processing by StationsController#index as HTML
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 210)
+  Rendered layouts/_flash.html.erb (Duration: 25.5ms | Allocations: 1331)
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered layouts/_sidebar.html.erb (Duration: 11.8ms | Allocations: 4738)
+  Rendered layout layouts/application.html.erb (Duration: 184.7ms | Allocations: 16492)
+Completed 200 OK in 7968ms (Views: 243.6ms | ActiveRecord: 0.0ms | Allocations: 1018464)
+
+
+  [1m[36mPingResult Load (1.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 106.2ms | Allocations: 4493)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 364)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.6ms | Allocations: 364)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.1ms | Allocations: 364)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.9ms | Allocations: 366)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.4ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 365)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 366)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 366)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 366)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 366)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.4ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 19.5ms | Allocations: 4621)
+  Rendered stations/index.html.erb within layouts/application (Duration: 517.2ms | Allocations: 61851)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 519.5ms | Allocations: 62190)
+Completed 200 OK in 8306ms (Views: 516.7ms | ActiveRecord: 58.3ms | Allocations: 1064406)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:02:08 +1000
+Started GET "/stations/71" for 127.0.0.1 at 2025-08-04 14:02:43 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.5ms | Allocations: 433)
+  Rendered stations/show.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1312)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 1649)
+Completed 200 OK in 1017ms (Views: 20.7ms | ActiveRecord: 0.8ms | Allocations: 2398)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:02:45 +1000
+Started POST "/stations/71/ping" for 127.0.0.1 at 2025-08-04 14:02:51 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "kEfD4bvvn2SGm7c_hETHXzu6CVApeMRRh1cumHCh7V3Dd6pRdj4pGIvXiqDTKF6A7kQMj1Hz1ddY6yVc0x8x0w", "id" => "71"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (2.4ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 71], ["latency_ms", 32], ["timestamp", "2025-08-04 04:02:53.190405"], ["success", 1], ["failure_count", nil], ["created_at", "2025-08-04 04:02:53.193403"], ["updated_at", "2025-08-04 04:02:53.193403"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/71
+Completed 302 Found in 1313ms (ActiveRecord: 7.9ms | Allocations: 2227)
+
+
+Started GET "/stations/71" for 127.0.0.1 at 2025-08-04 14:02:53 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 432)
+  Rendered stations/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 940)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1276)
+Completed 200 OK in 894ms (Views: 7.4ms | ActiveRecord: 0.7ms | Allocations: 1680)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:02:54 +1000
+Started POST "/stations/71/ping" for 127.0.0.1 at 2025-08-04 14:03:04 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "lyasUmhWonk01h5ICQbcr2np98dJ3JIyWfGj7KcR6fXEFsXipYcUBTmaI9deakVwvBfyGDFXg7SGTagoBK81ew", "id" => "71"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (1.0ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 71], ["latency_ms", 42], ["timestamp", "2025-08-04 04:03:06.312353"], ["success", 1], ["failure_count", nil], ["created_at", "2025-08-04 04:03:06.313500"], ["updated_at", "2025-08-04 04:03:06.313500"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/71
+Completed 302 Found in 1510ms (ActiveRecord: 1.6ms | Allocations: 1209)
+
+
+Started GET "/stations/71" for 127.0.0.1 at 2025-08-04 14:03:06 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 432)
+  Rendered stations/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 953)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1289)
+Completed 200 OK in 1738ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 1696)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:03:08 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 14:03:21 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 162)
+  [1m[36mStation Load (1.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 364)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 364)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 364)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 366)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 366)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 365)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 366)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 366)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 366)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 365)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 417)
+  Rendered stations/index.html.erb within layouts/application (Duration: 210.6ms | Allocations: 37564)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 213.2ms | Allocations: 37900)
+Completed 200 OK in 1142ms (Views: 201.4ms | ActiveRecord: 12.9ms | Allocations: 38197)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:03:22 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 14:09:53 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 13.8ms | Allocations: 1034)
+  [1m[36mStation Load (0.7ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 9.6ms | Allocations: 1007)
+  Rendered stations/index.html.erb within layouts/application (Duration: 121.3ms | Allocations: 11976)
+  Rendered layout layouts/application.html.erb (Duration: 122.2ms | Allocations: 12089)
+Completed 500 Internal Server Error in 7147ms (ActiveRecord: 46.7ms | Allocations: 1013507)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- File: app/views/stations/_station.html.erb -->
+<!-- Renders a single station card -->
+
+<div class="bg-white shadow-md rounded-lg p-4 mb-4 border border-gray-200">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-xl font-bold text-gray-800"><%= station.name.presence || "Unnamed Station" %></h2>
+    <div class="space-x-2 text-sm">
+      <%= link_to "Ping", ping_station_path(station), method: :post, class: "text-violet-600 hover:underline" %>
+      <%= link_to "Show", station_path(station), class: "text-blue-600 hover:underline" %>
+      <%= link_to "Edit", edit_station_path(station), class: "text-green-600 hover:underline" %>
+      <%= link_to "Destroy", station_path(station), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600 hover:underline" %>
+    </div>
+  </div>
+
+  <div class="text-sm text-gray-600 space-y-1">
+    <p><span class="font-semibold text-gray-700">IP:</span> <%= station.ip_address.presence || "—" %></p>
+    <p><span class="font-semibold text-gray-700">Location:</span> <%= station.location.presence || "—" %></p>
+    <p><span class="font-semibold text-gray-700">Notes:</span> <%= station.notes.presence || "—" %></p>
+  </div>
+
+  <%= turbo_frame_tag "ping_result_#{station.id}" do %>
+    <% last_ping = station.ping_results.order(timestamp: :desc).first %>
+    <% if last_ping %>
+      <div class="text-green-600">
+        Last ping at <%= last_ping.timestamp.strftime("%H:%M:%S") %> —
+        <%= last_ping.success ? "Success" : "Failure" %> —
+        <%= last_ping.latency_ms || "N/A" %> ms
+      </div>
+
+  <% end %>
+
+</div>
+
+):
+1:    <!-- File: app/views/stations/_station.html.erb -->
+2:    <!-- Renders a single station card -->
+3:    
+4:    <div class="bg-white shadow-md rounded-lg p-4 mb-4 border border-gray-200">
+5:      <div class="flex items-center justify-between mb-2">
+6:        <h2 class="text-xl font-bold text-gray-800"><%= station.name.presence || "Unnamed Station" %></h2>
+7:        <div class="space-x-2 text-sm">
+8:          <%= link_to "Ping", ping_station_path(station), method: :post, class: "text-violet-600 hover:underline" %>
+9:          <%= link_to "Show", station_path(station), class: "text-blue-600 hover:underline" %>
+10:          <%= link_to "Edit", edit_station_path(station), class: "text-green-600 hover:underline" %>
+11:          <%= link_to "Destroy", station_path(station), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600 hover:underline" %>
+12:        </div>
+13:      </div>
+14:    
+15:      <div class="text-sm text-gray-600 space-y-1">
+16:        <p><span class="font-semibold text-gray-700">IP:</span> <%= station.ip_address.presence || "—" %></p>
+17:        <p><span class="font-semibold text-gray-700">Location:</span> <%= station.location.presence || "—" %></p>
+18:        <p><span class="font-semibold text-gray-700">Notes:</span> <%= station.notes.presence || "—" %></p>
+19:      </div>
+20:    
+21:      <%= turbo_frame_tag "ping_result_#{station.id}" do %>
+22:        <% last_ping = station.ping_results.order(timestamp: :desc).first %>
+23:        <% if last_ping %>
+24:          <div class="text-green-600">
+25:            Last ping at <%= last_ping.timestamp.strftime("%H:%M:%S") %> —
+26:            <%= last_ping.success ? "Success" : "Failure" %> —
+27:            <%= last_ping.latency_ms || "N/A" %> ms
+28:          </div>
+29:    
+30:      <% end %>
+31:    
+32:    </div>
+  
+app/views/stations/_station.html.erb:35: syntax errors found
+app/views/stations/index.html.erb:21:in 'block in _app_views_stations_index_html_erb___920886423_9408'
+app/views/stations/index.html.erb:20:in '_app_views_stations_index_html_erb___920886423_9408'
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 14:17:12 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 42.1ms | Allocations: 1034)
+  [1m[36mStation Load (6.6ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  [1m[36mPingResult Load (3.6ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 144.0ms | Allocations: 4548)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.6ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.6ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 8.4ms | Allocations: 393)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 14.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 12.7ms | Allocations: 401)
+  [1m[36mPingResult Load (0.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 9.0ms | Allocations: 393)
+  [1m[36mPingResult Load (0.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 5.2ms | Allocations: 395)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 13.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 13.4ms | Allocations: 395)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.3ms | Allocations: 394)
+  [1m[36mPingResult Load (1.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 17.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 11.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.5ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 12.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 12.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.1ms | Allocations: 395)
+  [1m[36mPingResult Load (0.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 12.6ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 11.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 5.5ms | Allocations: 394)
+  [1m[36mPingResult Load (1.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 9.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.5ms | Allocations: 394)
+  [1m[36mPingResult Load (0.6ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 9.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.9ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 7.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.6ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 17.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 19.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 13.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 7.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 14.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 9.6ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.6ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 15.0ms | Allocations: 394)
+  [1m[36mPingResult Load (1.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 5.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.1ms | Allocations: 395)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 5.9ms | Allocations: 395)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.9ms | Allocations: 395)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 9.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 7.8ms | Allocations: 394)
+  [1m[36mPingResult Load (1.7ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 25.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 18.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 394)
+  [1m[36mPingResult Load (0.6ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.7ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 86.6ms | Allocations: 4710)
+  Rendered stations/index.html.erb within layouts/application (Duration: 1241.8ms | Allocations: 50669)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.5ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 1395.2ms | Allocations: 55561)
+Completed 200 OK in 10859ms (Views: 1412.4ms | ActiveRecord: 121.0ms | Allocations: 1056996)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:17:31 +1000
+Started GET "/stations/26/ping" for 127.0.0.1 at 2025-08-04 14:21:45 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/stations/26/ping"):
+  
+Started GET "/stations/26/" for 127.0.0.1 at 2025-08-04 14:22:09 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "26"}
+  [1m[36mStation Load (21.0ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (1.8ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 8.1ms | Allocations: 410)
+  Rendered stations/show.html.erb within layouts/application (Duration: 108.7ms | Allocations: 1320)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 113.6ms | Allocations: 1657)
+Completed 200 OK in 1330ms (Views: 118.2ms | ActiveRecord: 22.7ms | Allocations: 2416)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:22:11 +1000
+Started POST "/stations/26/ping" for 127.0.0.1 at 2025-08-04 14:22:15 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "YpGdjYhZSOXUzGLWaFFPkqGtJYTr_4kQlhAB92kcOphACN0uen3Gno7lmtECNPaWec5_cRG4mxQMhDM-f-3mMQ", "id" => "26"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (84.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (189.7ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 26], ["latency_ms", 381], ["timestamp", "2025-08-04 04:22:18.501237"], ["success", 1], ["failure_count", nil], ["created_at", "2025-08-04 04:22:18.921207"], ["updated_at", "2025-08-04 04:22:18.921207"]]
+  [1m[36mTRANSACTION (208.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/26
+Completed 302 Found in 3587ms (ActiveRecord: 482.2ms | Allocations: 2174)
+
+
+Started GET "/stations/26" for 127.0.0.1 at 2025-08-04 14:22:19 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "26"}
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.6ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 11.4ms | Allocations: 461)
+  Rendered stations/show.html.erb within layouts/application (Duration: 16.8ms | Allocations: 972)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 1308)
+Completed 200 OK in 1513ms (Views: 20.9ms | ActiveRecord: 0.9ms | Allocations: 1715)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:22:22 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 14:22:43 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 168)
+  [1m[36mStation Load (0.7ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.7ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 393)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 7.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 393)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 393)
+  [1m[36mPingResult Load (1.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.7ms | Allocations: 395)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 395)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 446)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.5ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.0ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 22.7ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 395)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 395)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 395)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 394)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 52.0ms | Allocations: 397)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.7ms | Allocations: 394)
+  [1m[36mPingResult Load (10.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 13.6ms | Allocations: 446)
+  Rendered stations/index.html.erb within layouts/application (Duration: 447.6ms | Allocations: 32795)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 450.1ms | Allocations: 33131)
+Completed 200 OK in 1689ms (Views: 428.6ms | ActiveRecord: 22.7ms | Allocations: 33425)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:22:46 +1000
+Started GET "/stations/2/ping" for 127.0.0.1 at 2025-08-04 14:40:06 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/stations/2/ping"):
+  
+Started GET "/stations/2" for 127.0.0.1 at 2025-08-04 14:40:24 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (202.8ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (3.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 163.7ms | Allocations: 445)
+  Rendered stations/show.html.erb within layouts/application (Duration: 354.5ms | Allocations: 938)
+  Rendered layouts/_sidebar.html.erb (Duration: 3.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 383.9ms | Allocations: 1274)
+Completed 200 OK in 1730ms (Views: 424.2ms | ActiveRecord: 374.2ms | Allocations: 1972)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:40:27 +1000
+Started POST "/stations/2/ping" for 127.0.0.1 at 2025-08-04 14:40:33 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "HgPdfFDAaDlEuKQFpqzxOC-I-OFoim8JoU5JVGqERGsC5EY0NyGG9TmeX3yhVFqGqYDmYaYwkeDJUgbGlexhcA", "id" => "2"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (4.3ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 2], ["latency_ms", nil], ["timestamp", "2025-08-04 04:40:37.263558"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 04:40:37.277813"], ["updated_at", "2025-08-04 04:40:37.277813"]]
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/2
+Completed 302 Found in 2746ms (ActiveRecord: 16.6ms | Allocations: 1186)
+
+
+Started GET "/stations/2" for 127.0.0.1 at 2025-08-04 14:40:37 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.6ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 40.7ms | Allocations: 461)
+  Rendered stations/show.html.erb within layouts/application (Duration: 83.6ms | Allocations: 946)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.7ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 106.2ms | Allocations: 1282)
+Completed 200 OK in 1443ms (Views: 86.7ms | ActiveRecord: 21.9ms | Allocations: 1688)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:40:39 +1000
+Started GET "/stations/2/ping" for 127.0.0.1 at 2025-08-04 14:40:46 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/stations/2/ping"):
+  
+Started GET "/stations/2/ping" for 127.0.0.1 at 2025-08-04 14:40:51 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/stations/2/ping"):
+  
+Started GET "/stations/2/" for 127.0.0.1 at 2025-08-04 14:41:02 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (1.8ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 5.7ms | Allocations: 461)
+  Rendered stations/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 960)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 1296)
+Completed 200 OK in 1020ms (Views: 13.2ms | ActiveRecord: 2.1ms | Allocations: 1716)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:41:03 +1000
+Started GET "/stations/2/" for 127.0.0.1 at 2025-08-04 14:51:13 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (2.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 149.1ms | Allocations: 8618)
+  Rendered stations/show.html.erb within layouts/application (Duration: 195.8ms | Allocations: 10545)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.6ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 268.9ms | Allocations: 15567)
+Completed 200 OK in 5009ms (Views: 313.4ms | ActiveRecord: 32.1ms | Allocations: 1025474)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:51:19 +1000
+Started GET "/stations/2/ping" for 127.0.0.1 at 2025-08-04 14:51:31 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/stations/2/ping"):
+  
+Started GET "/stations/2" for 127.0.0.1 at 2025-08-04 14:51:41 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 14.9ms | Allocations: 472)
+  Rendered stations/show.html.erb within layouts/application (Duration: 16.4ms | Allocations: 962)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 1348)
+Completed 200 OK in 1226ms (Views: 19.8ms | ActiveRecord: 0.5ms | Allocations: 1756)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:51:45 +1000
+Started POST "/stations/2/ping" for 127.0.0.1 at 2025-08-04 14:51:50 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "4SuEdYHSPCADTko8Vi60bY-3HOAIdcaoifpyzvV35jb9zB895jPS7H5osUVR1h_TCb8CYMbPOEHh5j1cCh_DLQ", "id" => "2"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (2.3ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 2], ["latency_ms", nil], ["timestamp", "2025-08-04 04:51:52.259114"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 04:51:52.261461"], ["updated_at", "2025-08-04 04:51:52.261461"]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/2
+Completed 302 Found in 1811ms (ActiveRecord: 12.3ms | Allocations: 2211)
+
+
+Started GET "/stations/2" for 127.0.0.1 at 2025-08-04 14:51:52 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 472)
+  Rendered stations/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 983)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1369)
+Completed 200 OK in 1115ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 1775)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 14:51:53 +1000
+Started GET "/stations/2" for 127.0.0.1 at 2025-08-04 15:01:20 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (1.8ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 75.7ms | Allocations: 8783)
+  Rendered stations/show.html.erb within layouts/application (Duration: 95.1ms | Allocations: 10644)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.9ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 164.9ms | Allocations: 15670)
+Completed 200 OK in 5092ms (Views: 193.0ms | ActiveRecord: 55.5ms | Allocations: 1025396)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:01:26 +1000
+Started POST "/stations/2/ping" for 127.0.0.1 at 2025-08-04 15:01:33 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "cMepIY2AnwAtOrx-gMKW9Bo1cZN7SpujwF2_SCM_3WBsIDJp6mFxzFAcRweHOj1KnD1vE7XwZUqoQfDa3Ff4ew", "id" => "2"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (3.3ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 2], ["latency_ms", nil], ["timestamp", "2025-08-04 05:01:36.258476"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:01:36.261587"], ["updated_at", "2025-08-04 05:01:36.261587"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/2
+Completed 302 Found in 2790ms (ActiveRecord: 7.6ms | Allocations: 2246)
+
+
+Started GET "/stations/2" for 127.0.0.1 at 2025-08-04 15:01:36 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.9ms | Allocations: 549)
+  Rendered stations/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1057)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1443)
+Completed 200 OK in 1020ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 1847)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:01:37 +1000
+Started POST "/stations/2/ping" for 127.0.0.1 at 2025-08-04 15:01:42 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "smlWjEaSL-NUQvs46JybPhVFu-AZPuvdbRJbV_EBcFaujs3EIXPBLylkAEHvZDCAk02lYNeEFTQFDhTFDmlVTQ", "id" => "2"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (1.0ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 2], ["latency_ms", nil], ["timestamp", "2025-08-04 05:01:45.261383"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:01:45.262235"], ["updated_at", "2025-08-04 05:01:45.262235"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/2
+Completed 302 Found in 2225ms (ActiveRecord: 1.5ms | Allocations: 1173)
+
+
+Started GET "/stations/2" for 127.0.0.1 at 2025-08-04 15:01:45 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 549)
+  Rendered stations/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1036)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1422)
+Completed 200 OK in 941ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 1828)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:01:46 +1000
+Started GET "/stations/2" for 127.0.0.1 at 2025-08-04 15:07:31 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.9ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 193.7ms | Allocations: 8873)
+  Rendered stations/show.html.erb within layouts/application (Duration: 224.3ms | Allocations: 10749)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.3ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 295.6ms | Allocations: 15770)
+Completed 200 OK in 5661ms (Views: 336.4ms | ActiveRecord: 39.1ms | Allocations: 1025677)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:07:38 +1000
+Started POST "/stations/2/ping.turbo_stream" for 127.0.0.1 at 2025-08-04 15:08:09 +1000
+Processing by StationsController#ping as TURBO_STREAM
+  Parameters: {"authenticity_token" => "Oiuu6ipwMTbQY0kmFwE9V3xd0ivQ2QC8j2LjLmXxN8MeOA-qPMCjx9BdlhIRQFh-8PdwXPzDa8-8TpzJE6GBOg", "id" => "2"}
+  [1m[36mStation Load (1.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (2.2ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 2], ["latency_ms", nil], ["timestamp", "2025-08-04 05:08:11.265167"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:08:11.268418"], ["updated_at", "2025-08-04 05:08:11.268418"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_ping_result.html.erb (Duration: 2.0ms | Allocations: 359)
+Completed 200 OK in 1856ms (Views: 0.1ms | ActiveRecord: 4.4ms | Allocations: 2769)
+
+
+Started GET "/stations/2/" for 127.0.0.1 at 2025-08-04 15:10:46 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.8ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 152.7ms | Allocations: 8869)
+  Rendered stations/show.html.erb within layouts/application (Duration: 175.3ms | Allocations: 10742)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.1ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 228.4ms | Allocations: 15763)
+Completed 200 OK in 5481ms (Views: 260.7ms | ActiveRecord: 352.6ms | Allocations: 1025634)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:10:54 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 15:11:00 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 2.0ms | Allocations: 303)
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.6ms | Allocations: 557)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 6.6ms | Allocations: 505)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.9ms | Allocations: 505)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 504)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.0ms | Allocations: 505)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 505)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 504)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.1ms | Allocations: 504)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.3ms | Allocations: 508)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.7ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.3ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.7ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 507)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 508)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.5ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.1ms | Allocations: 559)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.0ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.2ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.7ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.6ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.7ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.2ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.5ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.6ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 507)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 507)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 1.8ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.5ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.8ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.2ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.7ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.2ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.1ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 507)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.6ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.1ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.0ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.3ms | Allocations: 508)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 508)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.7ms | Allocations: 508)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.3ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.5ms | Allocations: 507)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.4ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.6ms | Allocations: 507)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.2ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 3.6ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 2.9ms | Allocations: 507)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 4.1ms | Allocations: 559)
+  Rendered stations/index.html.erb within layouts/application (Duration: 274.5ms | Allocations: 41508)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 276.5ms | Allocations: 41894)
+Completed 200 OK in 2041ms (Views: 264.8ms | ActiveRecord: 13.6ms | Allocations: 42280)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:11:03 +1000
+Started POST "/stations/61/ping.turbo_stream" for 127.0.0.1 at 2025-08-04 15:11:25 +1000
+Processing by StationsController#ping as TURBO_STREAM
+  Parameters: {"authenticity_token" => "XiuHmqVWQfuJVF0oL3jkwVwpF2b8E5B-M5dJa122G91fnFPsuvjqvHdsdpRCR66R8bC5Mq0L_ktN6k-0N2TW6A", "id" => "61"}
+  [1m[36mStation Load (23.8ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (5.4ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 61], ["latency_ms", nil], ["timestamp", "2025-08-04 05:11:27.783662"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:11:27.800692"], ["updated_at", "2025-08-04 05:11:27.800692"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_ping_result.html.erb (Duration: 2.9ms | Allocations: 359)
+Completed 200 OK in 2260ms (Views: 0.3ms | ActiveRecord: 31.9ms | Allocations: 2789)
+
+
+Started GET "/stations/61/" for 127.0.0.1 at 2025-08-04 15:17:49 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "61"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (2.9ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 178.3ms | Allocations: 8872)
+  Rendered stations/show.html.erb within layouts/application (Duration: 208.1ms | Allocations: 10587)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.7ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 278.2ms | Allocations: 15609)
+Completed 200 OK in 6848ms (Views: 335.3ms | ActiveRecord: 38.9ms | Allocations: 1025486)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:17:57 +1000
+Started POST "/stations/61/ping.turbo_stream" for 127.0.0.1 at 2025-08-04 15:18:26 +1000
+Processing by StationsController#ping as TURBO_STREAM
+  Parameters: {"authenticity_token" => "gGrjCBP8ObRQ3gZXr8WlVBMEaGUexiDSEZZzmnwuUx-B3Td-DFKS867mLevC-u8Evp3GMU_eTudv63VFFvyeKg", "id" => "61"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (1.8ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 61], ["latency_ms", nil], ["timestamp", "2025-08-04 05:18:28.275306"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:18:28.277970"], ["updated_at", "2025-08-04 05:18:28.277970"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPingResult Load (0.4ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_ping_result.html.erb (Duration: 3.3ms | Allocations: 359)
+Completed 200 OK in 1764ms (Views: 0.1ms | ActiveRecord: 3.5ms | Allocations: 2797)
+
+

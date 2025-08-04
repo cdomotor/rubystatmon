@@ -5,6 +5,12 @@
   <div class="flex items-center justify-between mb-2">
     <h2 class="text-xl font-bold text-gray-800"><%= station.name.presence || "Unnamed Station" %></h2>
     <div class="space-x-2 text-sm">
+      <%= turbo_frame_tag "ping_button_#{station.id}" do %>
+        <%= button_to "Ping", ping_station_path(station, format: :turbo_stream),
+              method: :post,
+              form: { data: { turbo_frame: "ping_result_#{station.id}" } },
+              class: "inline-flex items-center px-3 py-1 rounded bg-indigo-600 text-white hover:bg-indigo-700" %>
+      <% end %>
       <%= link_to "Show", station_path(station), class: "text-blue-600 hover:underline" %>
       <%= link_to "Edit", edit_station_path(station), class: "text-green-600 hover:underline" %>
       <%= link_to "Destroy", station_path(station), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600 hover:underline" %>
@@ -12,8 +18,16 @@
   </div>
 
   <div class="text-sm text-gray-600 space-y-1">
-    <p><span class="font-semibold text-gray-700">IP:</span> <%= station.ip_address.presence || "—" %></p>
-    <p><span class="font-semibold text-gray-700">Location:</span> <%= station.location.presence || "—" %></p>
+    <div class="flex text-sm text-gray-600 space-x-6">
+      <p>
+        <span class="font-semibold text-gray-700">IP:</span>
+        <%= station.ip_address.presence || "—" %>
+      </p>
+      <p>
+        <span class="font-semibold text-gray-700">Location:</span>
+        <%= station.location.presence || "—" %>
+      </p>
+    </div>
     <p><span class="font-semibold text-gray-700">Notes:</span> <%= station.notes.presence || "—" %></p>
   </div>
 
@@ -26,8 +40,8 @@
         <%= last_ping.latency_ms || "N/A" %> ms
       </div>
     <% else %>
-      <div class="text-gray-400 italic">No ping yet</div>
-    <% end %>
+      <div class="text-gray-500">No ping results yet.</div>
+    <% end %>   
   <% end %>
 
 </div>
