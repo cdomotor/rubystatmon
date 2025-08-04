@@ -7,8 +7,11 @@
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
-  <div class="max-w-6xl mx-auto px-4 py-6">
-    <%= yield %>
+  <div class="flex">
+    <%= render 'layouts/sidebar' %>
+    <main class="flex-1 p-6">
+      <%= yield %>
+    </main>
   </div>
   <footer class="bg-gray-800 text-white py-4 mt-8">
     <div class="max-w-6xl mx-auto px-4 text-center">

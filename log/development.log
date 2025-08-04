@@ -1725,3 +1725,1961 @@ ActionView::Template::Error (The asset 'application.css' was not found in the lo
     11:   <div class="max-w-6xl mx-auto px-4 py-6">
   
 app/views/layouts/application.html.erb:8:in '_app_views_layouts_application_html_erb__285917519_8848'
+Started GET "/" for 127.0.0.1 at 2025-08-04 10:17:59 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 3.7ms | Allocations: 352)
+  [1m[36mStation Load (0.8ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.6ms | Allocations: 300)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.8ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/index.html.erb within layouts/application (Duration: 172.3ms | Allocations: 21779)
+  Rendered layout layouts/application.html.erb (Duration: 214.4ms | Allocations: 25704)
+Completed 200 OK in 3987ms (Views: 203.8ms | ActiveRecord: 30.8ms | Allocations: 1025957)
+
+
+Started GET "/assets/application-31122e7c.css" for 127.0.0.1 at 2025-08-04 10:18:04 +1000
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 10:18:05 +1000
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-08-04 10:18:06 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/stations/new" for 127.0.0.1 at 2025-08-04 10:20:24 +1000
+Processing by StationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/new.html.erb within layouts/application
+  Rendered stations/_form.html.erb (Duration: 16.7ms | Allocations: 2878)
+  Rendered stations/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3124)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 3320)
+Completed 200 OK in 829ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 3733)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 10:20:25 +1000
+Started POST "/stations" for 127.0.0.1 at 2025-08-04 10:21:04 +1000
+Processing by StationsController#create as HTML
+  Parameters: {"authenticity_token" => "oYNawqGHS693nSA_-qt2wTBG_spCwLJYGd5vSipJw0mTopw2bVbZERDAbHIfOp1BJc_JrFPn85itM7yg-CCuGg", "station" => {"name" => "Test 20250804_1020", "ip_address" => "1.1.1.1", "location" => "loopback", "notes" => "note this‽"}, "commit" => "Create Station"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.2ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Test 20250804_1020"], ["ip_address", "1.1.1.1"], ["location", "loopback"], ["notes", "note this‽"], ["created_at", "2025-08-04 00:21:05.743754"], ["updated_at", "2025-08-04 00:21:05.743754"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/72
+Completed 302 Found in 607ms (ActiveRecord: 6.1ms | Allocations: 1848)
+
+
+Started GET "/stations/72" for 127.0.0.1 at 2025-08-04 10:21:05 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "72"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 120)
+  Rendered stations/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 874)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 1070)
+Completed 200 OK in 606ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 2208)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 10:21:06 +1000
+Started GET "/stations/72/edit" for 127.0.0.1 at 2025-08-04 10:21:17 +1000
+Processing by StationsController#edit as HTML
+  Parameters: {"id" => "72"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/edit.html.erb within layouts/application
+  Rendered stations/_form.html.erb (Duration: 1.3ms | Allocations: 1075)
+  Rendered stations/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1296)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1492)
+Completed 200 OK in 591ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 1955)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 10:21:18 +1000
+Started GET "/stations/72" for 127.0.0.1 at 2025-08-04 10:21:21 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "72"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered stations/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 509)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 705)
+Completed 200 OK in 1089ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 10:21:23 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 10:21:30 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.3ms | Allocations: 150)
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 44.4ms | Allocations: 12408)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 12605)
+Completed 200 OK in 664ms (Views: 47.5ms | ActiveRecord: 0.3ms | Allocations: 12882)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 10:21:31 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 10:58:44 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 9.7ms | Allocations: 1010)
+  Rendered stations/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 2215)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 2317)
+Completed 500 Internal Server Error in 1978ms (ActiveRecord: 0.0ms | Allocations: 1002535)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'new_station_path' for an instance of #<Class:0x00000220f42f82a0>):
+     5: 
+     6:   <div class="flex justify-between items-center mb-6">
+     7:     <h1 class="text-3xl font-bold text-gray-800">📡 Stations</h1>
+     8:     <%= link_to "New station", new_station_path, class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium" %>
+     9:   </div>
+    10: 
+    11:   <div class="bg-white shadow-md rounded p-4 mb-6">
+  
+app/views/stations/index.html.erb:8:in '_app_views_stations_index_html_erb__267583718_8520'
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:02:05 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 5.7ms | Allocations: 1010)
+  Rendered stations/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2215)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 2317)
+Completed 500 Internal Server Error in 1888ms (ActiveRecord: 0.0ms | Allocations: 1002537)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'new_station_path' for an instance of #<Class:0x00000245711eff10>):
+     5: 
+     6:   <div class="flex justify-between items-center mb-6">
+     7:     <h1 class="text-3xl font-bold text-gray-800">📡 Stations</h1>
+     8:     <%= link_to "New station", new_station_path, class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium" %>
+     9:   </div>
+    10: 
+    11:   <div class="bg-white shadow-md rounded p-4 mb-6">
+  
+app/views/stations/index.html.erb:8:in '_app_views_stations_index_html_erb___387315634_8520'
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:03:41 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.9ms | Allocations: 272)
+  Rendered stations/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 844)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 921)
+Completed 500 Internal Server Error in 824ms (ActiveRecord: 0.0ms | Allocations: 2671)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'new_station_path' for an instance of #<Class:0x000002456b6f80d0>):
+     5: 
+     6:   <div class="flex justify-between items-center mb-6">
+     7:     <h1 class="text-3xl font-bold text-gray-800">📡 Stations</h1>
+     8:     <%= link_to "New station", new_station_path, class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium" %>
+     9:   </div>
+    10: 
+    11:   <div class="bg-white shadow-md rounded p-4 mb-6">
+  
+app/views/stations/index.html.erb:8:in '_app_views_stations_index_html_erb___387315634_11168'
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:03:56 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 5.2ms | Allocations: 1010)
+  Rendered stations/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2215)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2317)
+Completed 500 Internal Server Error in 1781ms (ActiveRecord: 0.0ms | Allocations: 1002533)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'new_station_path' for an instance of #<Class:0x0000020a9ec94898>):
+     5: 
+     6:   <div class="flex justify-between items-center mb-6">
+     7:     <h1 class="text-3xl font-bold text-gray-800">📡 Stations</h1>
+     8:     <%= link_to "New station", new_station_path, class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium" %>
+     9:   </div>
+    10: 
+    11:   <div class="bg-white shadow-md rounded p-4 mb-6">
+  
+app/views/stations/index.html.erb:8:in '_app_views_stations_index_html_erb___237132803_8520'
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:09:57 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 6.0ms | Allocations: 1010)
+  Rendered stations/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2365)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 2467)
+Completed 500 Internal Server Error in 1716ms (ActiveRecord: 0.0ms | Allocations: 1002677)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'import_stations_path' for an instance of #<Class:0x000001d61ac04ee0>):
+    10: 
+    11:   <div class="bg-white shadow-md rounded p-4 mb-6">
+    12:     <h2 class="text-xl font-semibold text-gray-700 mb-4">Import Stations from CSV</h2>
+    13:     <%= form_with url: import_stations_path, local: true, multipart: true, class: "flex items-center gap-4" do |form| %>
+    14:       <%= form.file_field :file, required: true, class: "block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" %>
+    15:       <%= form.submit "Import CSV", class: "px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-md font-semibold" %>
+    16:     <% end %>
+  
+app/views/stations/index.html.erb:13:in '_app_views_stations_index_html_erb___354630716_8808'
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:14:31 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 5.1ms | Allocations: 1009)
+  [1m[36mStation Load (0.8ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.0ms | Allocations: 300)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 208.3ms | Allocations: 22601)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.9ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 241.2ms | Allocations: 26845)
+Completed 200 OK in 1983ms (Views: 221.3ms | ActiveRecord: 34.5ms | Allocations: 1027092)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 11:14:34 +1000
+Started GET "/dashboard" for 127.0.0.1 at 2025-08-04 11:14:38 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 57)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 570)
+Completed 200 OK in 610ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 1114)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 11:14:39 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:14:45 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.3ms | Allocations: 174)
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.7ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 49.0ms | Allocations: 12434)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 12771)
+Completed 200 OK in 791ms (Views: 53.7ms | ActiveRecord: 0.3ms | Allocations: 13048)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 11:14:46 +1000
+Started GET "/stations/new" for 127.0.0.1 at 2025-08-04 11:33:52 +1000
+Processing by StationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/new.html.erb within layouts/application
+  Rendered stations/_form.html.erb (Duration: 19.3ms | Allocations: 2307)
+  Rendered stations/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 2548)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 2884)
+Completed 200 OK in 580ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 3288)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 11:33:53 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:33:59 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.4ms | Allocations: 165)
+  [1m[36mStation Load (6.0ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.6ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 60.6ms | Allocations: 12706)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 13043)
+Completed 200 OK in 616ms (Views: 55.6ms | ActiveRecord: 9.5ms | Allocations: 13319)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 11:34:00 +1000
+Started GET "/dashboard" for 127.0.0.1 at 2025-08-04 11:34:11 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 503)
+Completed 200 OK in 706ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 775)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 11:34:12 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:34:18 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 180)
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.6ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 57.6ms | Allocations: 12444)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 62.1ms | Allocations: 12781)
+Completed 200 OK in 580ms (Views: 63.1ms | ActiveRecord: 0.2ms | Allocations: 13065)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 11:34:18 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:53:46 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 7.3ms | Allocations: 1017)
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 298)
+  Rendered stations/index.html.erb within layouts/application (Duration: 57.0ms | Allocations: 12520)
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 12622)
+Completed 500 Internal Server Error in 2924ms (ActiveRecord: 15.1ms | Allocations: 1012832)
+
+
+  
+ActionView::Template::Error (undefined method 'ping_station_path' for an instance of #<Class:0x000002b5e79f0020>):
+    19:   <div class="space-y-4">
+    20:     <% @stations.each do |station| %>
+    21:       <%= render partial: "station", locals: { station: station } %>
+    22:       <%= button_to 'Ping', ping_station_path(station), method: :post, data: { turbo: true }, class: "btn btn-sm" %>
+    23:       <div id="ping_result_<%= station.id %>">
+    24:         <div class="text-gray-400 text-sm italic">No ping yet</div>
+    25:       </div>
+  
+app/views/stations/index.html.erb:22:in 'block in _app_views_stations_index_html_erb___693252805_9328'
+app/views/stations/index.html.erb:20:in '_app_views_stations_index_html_erb___693252805_9328'
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 11:56:46 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 4.3ms | Allocations: 1017)
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.8ms | Allocations: 298)
+  Rendered stations/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 12514)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 12616)
+Completed 500 Internal Server Error in 2156ms (ActiveRecord: 8.9ms | Allocations: 1012827)
+
+
+  
+ActionView::Template::Error (undefined method 'ping_station_path' for an instance of #<Class:0x0000017dccb6f648>):
+    19:   <div class="space-y-4">
+    20:     <% @stations.each do |station| %>
+    21:       <%= render partial: "station", locals: { station: station } %>
+    22:       <%= button_to 'Ping', ping_station_path(station), method: :post, data: { turbo: true }, class: "btn btn-sm" %>
+    23:       <div id="ping_result_<%= station.id %>">
+    24:         <div class="text-gray-400 text-sm italic">No ping yet</div>
+    25:       </div>
+  
+app/views/stations/index.html.erb:22:in 'block in _app_views_stations_index_html_erb___418626056_9376'
+app/views/stations/index.html.erb:20:in '_app_views_stations_index_html_erb___418626056_9376'
+  [1m[36mStation Load (1.0ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY "stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 12:01:12 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 4.3ms | Allocations: 1017)
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.7ms | Allocations: 298)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 113.2ms | Allocations: 29656)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.9ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 150.0ms | Allocations: 34610)
+Completed 200 OK in 2021ms (Views: 155.6ms | ActiveRecord: 8.6ms | Allocations: 1034854)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:01:15 +1000
+Started POST "/stations/1/ping" for 127.0.0.1 at 2025-08-04 12:01:21 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "I1lkxqqrfgOL4w97nllG5YEml6qxSvKQ1rS1L-AS5XO-mhR5y8HChWCXa2CPtMSE28YzBbNRiByJdaG-Ztu0cQ", "id" => "1"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 699ms (ActiveRecord: 0.3ms | Allocations: 1413)
+
+
+  
+NameError (uninitialized constant Net::Ping):
+  
+app/controllers/stations_controller.rb:80:in 'StationsController#ping'
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:01:48 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | Allocations: 121)
+Completed 200 OK in 742ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1026)
+
+
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:14:35 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 227)
+Completed 200 OK in 2178ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 990733)
+
+
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:14:58 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 628ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 254)
+
+
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:18:23 +1000
+  
+NoMethodError (undefined method 'root' for main):
+  
+config/routes.rb:2:in '<top (required)>'
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:22:06 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 150)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.6ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 6197)
+Completed 200 OK in 5281ms (Views: 109.5ms | ActiveRecord: 0.0ms | Allocations: 996903)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:22:12 +1000
+Started GET "/dashboard" for 127.0.0.1 at 2025-08-04 12:22:21 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 497)
+Completed 200 OK in 1094ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 794)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:22:22 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 12:22:25 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 1.6ms | Allocations: 305)
+  [1m[36mStation Load (0.8ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.4ms | Allocations: 297)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 144.1ms | Allocations: 28607)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 146.0ms | Allocations: 28945)
+Completed 200 OK in 1302ms (Views: 113.5ms | ActiveRecord: 41.6ms | Allocations: 39120)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:22:27 +1000
+Started POST "/stations/1/ping" for 127.0.0.1 at 2025-08-04 12:22:32 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "0t8uN9WMay8PFPWHQ36QLx1tSa-89h7W9OL8FiZVndJPHF6ItObXqeRgkZxSkxJOR43tAL7tZFqrI-iHoJzM0A", "id" => "1"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1335ms (ActiveRecord: 0.2ms | Allocations: 1475)
+
+
+  
+NoMethodError (undefined method 'pings' for an instance of Station):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+Started GET "/stations/" for 127.0.0.1 at 2025-08-04 12:22:44 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 156)
+  [1m[36mStation Load (0.7ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 1.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.6ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 66.0ms | Allocations: 19380)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 19716)
+Completed 200 OK in 1138ms (Views: 69.4ms | ActiveRecord: 0.6ms | Allocations: 20020)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:22:46 +1000
+Started GET "/stations/1" for 127.0.0.1 at 2025-08-04 12:23:04 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 0.9ms | Allocations: 118)
+  Rendered stations/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 972)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 1309)
+Completed 200 OK in 969ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 1802)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:23:06 +1000
+Started POST "/stations/1/ping" for 127.0.0.1 at 2025-08-04 12:23:18 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "N-H1olwqqQqJF0gBxlI94VmirFwEC2na49ed877Sj8SqIoUdPUAVjGJjLBrXv7-AA0II8wYQE1a8FoliOBvexg", "id" => "1"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1295ms (ActiveRecord: 0.1ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method 'pings' for an instance of Station):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+Started POST "/stations/1/ping" for 127.0.0.1 at 2025-08-04 12:32:25 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "N-H1olwqqQqJF0gBxlI94VmirFwEC2na49ed877Sj8SqIoUdPUAVjGJjLBrXv7-AA0II8wYQE1a8FoliOBvexg", "id" => "1"}
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2915ms (ActiveRecord: 39.4ms | Allocations: 23752)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'ping_results'):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:32:38 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 148)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.1ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 161.0ms | Allocations: 5412)
+Completed 200 OK in 3535ms (Views: 212.8ms | ActiveRecord: 0.0ms | Allocations: 995066)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:32:42 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 12:32:50 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.8ms | Allocations: 299)
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.0ms | Allocations: 283)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.6ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 75.7ms | Allocations: 20581)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 20919)
+Completed 200 OK in 1256ms (Views: 87.2ms | ActiveRecord: 0.5ms | Allocations: 21487)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:32:51 +1000
+Started GET "/stations/1" for 127.0.0.1 at 2025-08-04 12:33:02 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered stations/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 981)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 1318)
+Completed 200 OK in 1093ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 1844)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:33:04 +1000
+Started POST "/stations/1/ping" for 127.0.0.1 at 2025-08-04 12:33:10 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "aEFgqgJ8IVKLg4FocecKv3R3QvCCzIKTb9_nhgFG2Ir1ghAVYxad1GD35XNgCojeLpfmX4DX-B8wHvMXh4-JiA", "id" => "1"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1022ms (ActiveRecord: 0.3ms | Allocations: 710)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'ping_results'):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:36:55 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 150)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.3ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 107.2ms | Allocations: 6195)
+Completed 200 OK in 4734ms (Views: 154.0ms | ActiveRecord: 0.0ms | Allocations: 996865)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:37:01 +1000
+Started GET "/dashboard" for 127.0.0.1 at 2025-08-04 12:38:04 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 509)
+Completed 200 OK in 763ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 802)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:38:05 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 12:38:07 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 1.5ms | Allocations: 305)
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 0.8ms | Allocations: 297)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.6ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 145.2ms | Allocations: 28089)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 147.5ms | Allocations: 28427)
+Completed 200 OK in 1510ms (Views: 158.7ms | ActiveRecord: 13.4ms | Allocations: 39720)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:38:09 +1000
+Started POST "/stations/1/ping" for 127.0.0.1 at 2025-08-04 12:38:49 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "WbOClQSVby82fBrGQsu7PPIgdAIsUEjETCvSSU-JeojEcPIqZf_Tqd0Ift1TJjldqMDQrS5LMkgT6sbYyUArig", "id" => "1"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1283ms (ActiveRecord: 0.5ms | Allocations: 3737)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'ping_results'):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/stations/" for 127.0.0.1 at 2025-08-04 12:42:15 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 8.3ms | Allocations: 1037)
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.3ms | Allocations: 298)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 115.3ms | Allocations: 29154)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.2ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 181.3ms | Allocations: 34112)
+Completed 200 OK in 6102ms (Views: 192.1ms | ActiveRecord: 16.2ms | Allocations: 1035482)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:42:22 +1000
+Started GET "/stations/1" for 127.0.0.1 at 2025-08-04 12:42:27 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStation Load (0.6ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered stations/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1005)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 1342)
+Completed 200 OK in 1182ms (Views: 12.9ms | ActiveRecord: 0.6ms | Allocations: 2587)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:42:29 +1000
+Started POST "/stations/1/ping" for 127.0.0.1 at 2025-08-04 12:42:32 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "VcDzw2ca1-iBmsw7MXOCRiRwSzR3C6qwrIrU7ceI1BPIA4N8BnBrbmruqCAgngAnfpDvm3UQ0DzzS8B8QUGFEQ", "id" => "1"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1239ms (ActiveRecord: 0.4ms | Allocations: 2965)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'ping_results'):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:44:07 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 150)
+  Rendered layouts/_sidebar.html.erb (Duration: 2.1ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 106.5ms | Allocations: 6178)
+Completed 200 OK in 5513ms (Views: 153.6ms | ActiveRecord: 0.0ms | Allocations: 997017)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:44:13 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 12:44:18 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 1.6ms | Allocations: 299)
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.5ms | Allocations: 297)
+  Rendered stations/_station.html.erb (Duration: 0.6ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.7ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered stations/index.html.erb within layouts/application (Duration: 137.1ms | Allocations: 28085)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 139.3ms | Allocations: 28423)
+Completed 200 OK in 1523ms (Views: 127.4ms | ActiveRecord: 28.1ms | Allocations: 39727)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:44:20 +1000
+Started POST "/stations/1/ping" for 127.0.0.1 at 2025-08-04 12:44:30 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "-PxAymDXOQ4OSOutfh-VRST-eCUH80cYPa2D_YzgpJxlPzB1Ab2FiOU8j7Zv8hckfh7cigXoPZRibJdsCin1ng", "id" => "1"}
+  [1m[36mStation Load (1.0ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1820ms (ActiveRecord: 1.3ms | Allocations: 3728)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'ping_results'):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-08-04 02:47:55.039079', '2025-08-04 02:47:55.039082') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStations (20250724031042)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "stations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "ip_address" varchar, "location" varchar, "notes" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250724031042') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-08-04 12:48:37 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 150)
+  Rendered layouts/_sidebar.html.erb (Duration: 2.6ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 107.8ms | Allocations: 6195)
+Completed 200 OK in 5197ms (Views: 162.4ms | ActiveRecord: 0.0ms | Allocations: 996860)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:48:43 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 12:48:47 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 1.0ms | Allocations: 290)
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/index.html.erb within layouts/application (Duration: 41.0ms | Allocations: 3705)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 4043)
+Completed 200 OK in 1263ms (Views: 30.0ms | ActiveRecord: 22.6ms | Allocations: 15331)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:48:49 +1000
+Started POST "/stations/import" for 127.0.0.1 at 2025-08-04 12:49:38 +1000
+Processing by StationsController#import as HTML
+  Parameters: {"authenticity_token" => "QQiv_i8E9vV_ivyxvaRK3yO9F_9MK-edmPZFY3-k2MrlVQFhAuqhG-2Gnt41-eLx7XkZuB2iwlC685qbrmPnfg", "file" => #<ActionDispatch::Http::UploadedFile:0x000002b275a2b5f0 @tempfile=#<Tempfile:C:/Users/CAMERO~1.DOM/AppData/Local/Temp/RackMultipart20250804-16216-xljb39.csv>, @content_type="text/csv", @original_filename="5220 Stations(Stations) - simple.csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"5220 Stations(Stations) - simple.csv\"\r\nContent-Type: text/csv\r\n">, "commit" => "Import CSV"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.7ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "StationName"], ["ip_address", "Init_Expected_IP"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.854566"], ["updated_at", "2025-08-04 02:49:39.854566"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.3ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "KolarCk_PHPHHILL"], ["ip_address", "10.245.195.14 "], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.864425"], ["updated_at", "2025-08-04 02:49:39.864425"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.2ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GalahCk_PHPHHILL"], ["ip_address", "10.245.195.15 "], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.869852"], ["updated_at", "2025-08-04 02:49:39.869852"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.0ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "DeadHsCk_PHPHHILL"], ["ip_address", "10.245.195.16 "], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.874588"], ["updated_at", "2025-08-04 02:49:39.874588"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "TBRG_PHPHHILL"], ["ip_address", "10.245.195.17 "], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.878356"], ["updated_at", "2025-08-04 02:49:39.878356"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.2ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AECLST1 (decomissioned)"], ["ip_address", "10.245.194.176"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.882062"], ["updated_at", "2025-08-04 02:49:39.882062"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.2ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AECLST2 (decomissioned)"], ["ip_address", "10.245.195.169"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.887407"], ["updated_at", "2025-08-04 02:49:39.887407"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AECLST3_Loc7"], ["ip_address", "10.245.196.140"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.891968"], ["updated_at", "2025-08-04 02:49:39.891968"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AECLST4_Loc2"], ["ip_address", "10.245.195.118"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.895709"], ["updated_at", "2025-08-04 02:49:39.895709"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRAVV3 (decomissioned)"], ["ip_address", "10.245.196.151"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.898952"], ["updated_at", "2025-08-04 02:49:39.898952"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE1"], ["ip_address", "10.245.193.237"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.901449"], ["updated_at", "2025-08-04 02:49:39.901449"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE2"], ["ip_address", "10.245.193.121"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.903478"], ["updated_at", "2025-08-04 02:49:39.903478"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE3"], ["ip_address", "10.245.195.222"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.905429"], ["updated_at", "2025-08-04 02:49:39.905429"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.4ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE4"], ["ip_address", "10.245.195.172"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.907398"], ["updated_at", "2025-08-04 02:49:39.907398"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.6ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE5"], ["ip_address", "10.245.195.170"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.909123"], ["updated_at", "2025-08-04 02:49:39.909123"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.1ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE6"], ["ip_address", "10.245.196.208"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.911595"], ["updated_at", "2025-08-04 02:49:39.911595"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.1ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE7"], ["ip_address", "10.245.196.209"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.915811"], ["updated_at", "2025-08-04 02:49:39.915811"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.4ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE8"], ["ip_address", "10.245.196.175"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.920667"], ["updated_at", "2025-08-04 02:49:39.920667"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.2ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE9"], ["ip_address", "10.245.195.173"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.926066"], ["updated_at", "2025-08-04 02:49:39.926066"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.2ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRBNE10"], ["ip_address", "10.245.196.170"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.929913"], ["updated_at", "2025-08-04 02:49:39.929913"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.1ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GC-AS01"], ["ip_address", "              "], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.935087"], ["updated_at", "2025-08-04 02:49:39.935087"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.0ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GC-AS02"], ["ip_address", "10.245.195.047"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.939991"], ["updated_at", "2025-08-04 02:49:39.939991"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GC-AS03"], ["ip_address", "10.245.196.178"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.944080"], ["updated_at", "2025-08-04 02:49:39.944080"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GC-AS04"], ["ip_address", "10.245.196.192"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.947160"], ["updated_at", "2025-08-04 02:49:39.947160"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GC-AS05"], ["ip_address", "10.245.196.177"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.949355"], ["updated_at", "2025-08-04 02:49:39.949355"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.3ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GC-Tank123"], ["ip_address", "10.245.196.209"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.951481"], ["updated_at", "2025-08-04 02:49:39.951481"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.6ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GC-Tank4"], ["ip_address", "10.245.196.208"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.953091"], ["updated_at", "2025-08-04 02:49:39.953091"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.6ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "GC-FTG_Cam1"], ["ip_address", "10.245.196.212"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.955696"], ["updated_at", "2025-08-04 02:49:39.955696"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "TMT AIRCAMERA1"], ["ip_address", "10.245.196.212"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.958571"], ["updated_at", "2025-08-04 02:49:39.958571"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.3ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRCBR1"], ["ip_address", "10.245.196.204"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.962180"], ["updated_at", "2025-08-04 02:49:39.962180"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.2ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRCBR2"], ["ip_address", "10.245.196.205"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.967560"], ["updated_at", "2025-08-04 02:49:39.967560"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.6ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRCBR3"], ["ip_address", "10.245.196.206"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.972686"], ["updated_at", "2025-08-04 02:49:39.972686"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.7ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRCBR4"], ["ip_address", "10.245.196.179"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.975358"], ["updated_at", "2025-08-04 02:49:39.975358"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.7ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRCBR5"], ["ip_address", "10.245.196.180"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.977869"], ["updated_at", "2025-08-04 02:49:39.977869"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRCBR6"], ["ip_address", "10.245.195.48 "], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.981825"], ["updated_at", "2025-08-04 02:49:39.981825"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRCBR7"], ["ip_address", "10.245.196.154"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.985590"], ["updated_at", "2025-08-04 02:49:39.985590"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.3ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRCBR8"], ["ip_address", "10.245.196.155"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.989588"], ["updated_at", "2025-08-04 02:49:39.989588"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.4ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRPER1"], ["ip_address", "10.245.196.171"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:39.994710"], ["updated_at", "2025-08-04 02:49:39.994710"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.3ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRPER2"], ["ip_address", "10.245.195.174"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.000533"], ["updated_at", "2025-08-04 02:49:40.000533"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.3ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRPER3"], ["ip_address", "10.245.196.172"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.005277"], ["updated_at", "2025-08-04 02:49:40.005277"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRPER4"], ["ip_address", "10.245.196.210"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.012188"], ["updated_at", "2025-08-04 02:49:40.012188"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRPER5"], ["ip_address", "10.245.196.152"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.017934"], ["updated_at", "2025-08-04 02:49:40.017934"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.7ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRMEL3"], ["ip_address", "10.245.196.153"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.024053"], ["updated_at", "2025-08-04 02:49:40.024053"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRSYD1"], ["ip_address", "10.245.197.8  "], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.029284"], ["updated_at", "2025-08-04 02:49:40.029284"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRSYD2"], ["ip_address", "10.245.196.240"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.031544"], ["updated_at", "2025-08-04 02:49:40.031544"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRSYD3"], ["ip_address", "10.245.196.174"], ["location", "SYD (Mascot)"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.035286"], ["updated_at", "2025-08-04 02:49:40.035286"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.0ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRSYD4"], ["ip_address", "10.245.195.175"], ["location", "SYD (Mascot)"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.039559"], ["updated_at", "2025-08-04 02:49:40.039559"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.6ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRMKY2b "], ["ip_address", "10.245.196.207"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.043759"], ["updated_at", "2025-08-04 02:49:40.043759"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.3ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "AIRMKY4b"], ["ip_address", "10.245.196.182"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.046374"], ["updated_at", "2025-08-04 02:49:40.046374"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Doptest (BNE)"], ["ip_address", "10.245.196.174"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.048291"], ["updated_at", "2025-08-04 02:49:40.048291"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "BrisEagleTest"], ["ip_address", "10.245.193.121"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.051559"], ["updated_at", "2025-08-04 02:49:40.051559"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Emu Swamp US"], ["ip_address", "10.245.194.217"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.054687"], ["updated_at", "2025-08-04 02:49:40.054687"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.2ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Emu Swamp DS"], ["ip_address", "10.245.194.218"], ["location", nil], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.058863"], ["updated_at", "2025-08-04 02:49:40.058863"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.7ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "MP1_WQ "], ["ip_address", "10.245.195.208"], ["location", "Willowbank"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.062431"], ["updated_at", "2025-08-04 02:49:40.062431"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "MP1_Q "], ["ip_address", "10.245.195.209"], ["location", "Willowbank"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.065049"], ["updated_at", "2025-08-04 02:49:40.065049"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "MP2_WQ "], ["ip_address", "10.245.195.210"], ["location", "Willowbank"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.067432"], ["updated_at", "2025-08-04 02:49:40.067432"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "MP2_Q "], ["ip_address", "10.245.195.211"], ["location", "Willowbank"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.071778"], ["updated_at", "2025-08-04 02:49:40.071778"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "MP3_WQ "], ["ip_address", "10.245.195.212"], ["location", "Willowbank"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.076177"], ["updated_at", "2025-08-04 02:49:40.076177"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.6ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "TTBLLD1"], ["ip_address", "10.245.197.99 "], ["location", "Willowbank"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.079261"], ["updated_at", "2025-08-04 02:49:40.079261"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "POBANEMOM1"], ["ip_address", "10.245.196.40"], ["location", "Port of Brisbane"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.081839"], ["updated_at", "2025-08-04 02:49:40.081839"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.4ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "POBANEMOM2"], ["ip_address", "10.245.197.159"], ["location", "Port of Brisbane"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.083679"], ["updated_at", "2025-08-04 02:49:40.083679"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.4ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ALSEBTRADEWASTE1"], ["ip_address", "10.245.197.157"], ["location", "2 Byth"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.085783"], ["updated_at", "2025-08-04 02:49:40.085783"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WSPBARROW1"], ["ip_address", "10.245.196.160"], ["location", "Barrow Island"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.087444"], ["updated_at", "2025-08-04 02:49:40.087444"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.7ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WSPBARROW2"], ["ip_address", "10.245.196.161"], ["location", "Barrow Island"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.089483"], ["updated_at", "2025-08-04 02:49:40.089483"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WSPBARROW3"], ["ip_address", "10.245.196.162"], ["location", "Barrow Island"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.092022"], ["updated_at", "2025-08-04 02:49:40.092022"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WSPBARROW4"], ["ip_address", "10.245.196.163"], ["location", "Barrow Island"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.095391"], ["updated_at", "2025-08-04 02:49:40.095391"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WSPBARROW5"], ["ip_address", "10.245.196.164"], ["location", "Barrow Island"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.097859"], ["updated_at", "2025-08-04 02:49:40.097859"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.8ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WSPBARROW6"], ["ip_address", "10.245.196.158"], ["location", "Barrow Island"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.101152"], ["updated_at", "2025-08-04 02:49:40.101152"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.9ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WSPBARROW7"], ["ip_address", "10.245.196.159"], ["location", "Barrow Island"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.104511"], ["updated_at", "2025-08-04 02:49:40.104511"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (0.7ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WSPBARROW8"], ["ip_address", nil], ["location", "Barrow Island"], ["notes", "nil"], ["created_at", "2025-08-04 02:49:40.107971"], ["updated_at", "2025-08-04 02:49:40.107971"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations
+Completed 302 Found in 1352ms (ActiveRecord: 83.7ms | Allocations: 38650)
+
+
+Started GET "/stations" for 127.0.0.1 at 2025-08-04 12:49:40 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 2.8ms | Allocations: 184)
+  [1m[36mStation Load (0.6ms)[0m  [1m[34mSELECT "stations".* FROM "stations"[0m
+  Rendered stations/_station.html.erb (Duration: 1.9ms | Allocations: 286)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.6ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.8ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/_station.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered stations/index.html.erb within layouts/application (Duration: 83.0ms | Allocations: 19499)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 84.5ms | Allocations: 19835)
+Completed 200 OK in 1275ms (Views: 84.8ms | ActiveRecord: 0.6ms | Allocations: 20134)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:49:41 +1000
+Started GET "/stations/new" for 127.0.0.1 at 2025-08-04 12:49:59 +1000
+Processing by StationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/new.html.erb within layouts/application
+  Rendered stations/_form.html.erb (Duration: 26.5ms | Allocations: 2287)
+  Rendered stations/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 2528)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 2864)
+Completed 200 OK in 1118ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 3233)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:50:01 +1000
+Started POST "/stations" for 127.0.0.1 at 2025-08-04 12:50:19 +1000
+Processing by StationsController#create as HTML
+  Parameters: {"authenticity_token" => "7LBumwH2Ey8tSUuL2PRgDce_eBIMweBGaOT6urcrSUjekahvzSeBkUoUB8Y9ZYuN0jZPdB3moYbcCSlQZUIkGw", "station" => {"name" => "loopback", "ip_address" => "1.1.1.1", "location" => "loopback", "notes" => "loopback"}, "commit" => "Create Station"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStation Create (1.5ms)[0m  [1m[32mINSERT INTO "stations" ("name", "ip_address", "location", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "loopback"], ["ip_address", "1.1.1.1"], ["location", "loopback"], ["notes", "loopback"], ["created_at", "2025-08-04 02:50:21.572967"], ["updated_at", "2025-08-04 02:50:21.572967"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/stations/71
+Completed 302 Found in 1266ms (ActiveRecord: 1.8ms | Allocations: 1062)
+
+
+Started GET "/stations/71" for 127.0.0.1 at 2025-08-04 12:50:21 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "71"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/_station.html.erb (Duration: 0.8ms | Allocations: 118)
+  Rendered stations/show.html.erb within layouts/application (Duration: 14.2ms | Allocations: 992)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 1329)
+Completed 200 OK in 1218ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 2482)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 12:50:23 +1000
+Started POST "/stations/71/ping" for 127.0.0.1 at 2025-08-04 12:50:29 +1000
+Processing by StationsController#ping as HTML
+  Parameters: {"authenticity_token" => "U3xtp5zN-vWhhfsdZ1S5KMR5RVNtT7LFyi_Hr63C9KEATAQXURxMiazJxoIwOCD3EYdAjBXEo0MVk8xrDnwoLw", "id" => "71"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1166ms (ActiveRecord: 0.3ms | Allocations: 2905)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'ping_results'):
+  
+app/controllers/stations_controller.rb:90:in 'StationsController#ping'

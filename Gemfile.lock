@@ -224,6 +224,9 @@ GEM
     tailwindcss-ruby (4.1.11-x64-mingw-ucrt)
     thor (1.4.0)
     timeout (0.4.3)
+    turbo-rails (2.0.16)
+      actionpack (>= 7.1.0)
+      railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2025.2)
@@ -251,6 +254,7 @@ DEPENDENCIES
   rails (~> 7.1.0)
   sqlite3 (~> 1.4)
   tailwindcss-rails
+  turbo-rails
   tzinfo-data
 
 BUNDLED WITH

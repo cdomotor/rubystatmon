@@ -73,6 +73,36 @@ class StationsController < ApplicationController
     end
   end
 
+  def ping
+    @station = Station.find(params[:id])
+    ip = @station.ip_address
+
+    if Gem.win_platform?
+      output = `ping -n 1 -w 1000 #{ip}`
+      success = $?.exitstatus == 0
+      latency = output[/Average = (\d+)ms/, 1]&.to_i
+    else
+      output = `ping -c 1 -W 1 #{ip}`
+      success = $?.exitstatus == 0
+      latency = output[/time=(\d+(?:\.\d+)?) ms/, 1]&.to_f&.round
+    end
+
+    @station.ping_result.create!(
+      timestamp: Time.current,
+      latency_ms: latency,   # nil if not parseable
+      success: success
+    )
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to @station, notice: success ? "Ping succeeded" : "Ping failed" }
+      format.json { render json: { success: success, latency_ms: latency }, status: :ok }
+    end
+  end
+
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_station

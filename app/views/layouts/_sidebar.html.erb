@@ -1,0 +1,7 @@
+<nav class="bg-gray-800 text-white w-64 min-h-screen">
+  <ul class="space-y-2 p-4">
+    <li><%= link_to 'Dashboard', dashboard_path, class: "#{current_page?(dashboard_path) ? 'bg-gray-700' : ''} block py-2 px-3 hover:bg-gray-700" %></li>
+    <li><%= link_to 'Stations', stations_path, class: "#{current_page?(stations_path) ? 'bg-gray-700' : ''} block py-2 px-3 hover:bg-gray-700" %></li>
+    <!-- add future navigation items here -->
+  </ul>
+</nav>
