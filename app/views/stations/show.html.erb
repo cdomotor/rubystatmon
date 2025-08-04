@@ -7,7 +7,9 @@
 
   <h1 class="font-bold text-4xl">Viewing this station</h1>
 
-  <%= render @station %>
+  <%= turbo_frame_tag "station_view" do %>
+    <%= render @station %>
+  <% end %>
 
   <%= link_to "Edit this station", edit_station_path(@station), class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
   <%= link_to "Back to stations", stations_path, class: "w-full sm:w-auto text-center mt-2 sm:mt-0 sm:ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>

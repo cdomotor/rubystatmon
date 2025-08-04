@@ -1,7 +1,16 @@
-<turbo-stream target="ping_results_<%= @station.id %>" action="update">
-  <template>
-    <div class="<%= @station.ping_results.last.success ? 'text-green-600' : 'text-red-600' %>">
-      Ping: <%= @station.ping_results.last.success ? "#{@station.ping_results.last.latency_ms} ms" : "Failed" %>
-    </div>
-  </template>
-</turbo-stream>
+<%= turbo_stream.replace "ping_result_#{@station.id}" do %>
+  <% last_ping = @station.ping_results.order(timestamp: :desc).first %>
+  <% if last_ping %>
+    <%= turbo_frame_tag "ping_result_#{@station.id}" do %>
+      <div class="<%= last_ping.success ? 'text-green-600' : 'text-red-600' %>">
+        Last ping at <%= last_ping.timestamp.strftime("%H:%M:%S") %> —
+        <%= last_ping.success ? "Success" : "Failure" %> —
+        <%= last_ping.latency_ms || "N/A" %> ms
+      </div>
+    <% end %>
+  <% else %>
+    <%= turbo_frame_tag "ping_result_#{@station.id}" do %>
+      <div class="text-gray-500">No ping results yet.</div>
+    <% end %>
+  <% end %>
+<% end %>

@@ -5366,3 +5366,141 @@ Processing by StationsController#ping as TURBO_STREAM
 Completed 200 OK in 1764ms (Views: 0.1ms | ActiveRecord: 3.5ms | Allocations: 2797)
 
 
+Started GET "/stations/61/" for 127.0.0.1 at 2025-08-04 15:22:27 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "61"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.7ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 148.7ms | Allocations: 8877)
+  Rendered stations/show.html.erb within layouts/application (Duration: 173.5ms | Allocations: 10589)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.9ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 238.5ms | Allocations: 15611)
+Completed 200 OK in 4997ms (Views: 271.6ms | ActiveRecord: 62.4ms | Allocations: 1025519)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:22:32 +1000
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-08-04 15:28:38 +1000
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:28:38 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/" for 127.0.0.1 at 2025-08-04 15:39:38 +1000
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 150)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.7ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 177.6ms | Allocations: 6316)
+Completed 200 OK in 6971ms (Views: 215.9ms | ActiveRecord: 0.0ms | Allocations: 996988)
+
+
+Started GET "/stations/61/" for 127.0.0.1 at 2025-08-04 15:39:56 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "61"}
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (2.8ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 262.3ms | Allocations: 8539)
+  Rendered stations/show.html.erb within layouts/application (Duration: 277.0ms | Allocations: 9420)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 279.2ms | Allocations: 9809)
+Completed 200 OK in 2027ms (Views: 295.0ms | ActiveRecord: 278.7ms | Allocations: 29417)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:40:00 +1000
+Started POST "/stations/61/ping.turbo_stream" for 127.0.0.1 at 2025-08-04 15:40:32 +1000
+Processing by StationsController#ping as TURBO_STREAM
+  Parameters: {"authenticity_token" => "slzumbRad-uznTVAkIxfPznT8Qr3IEpGY0J--s3cpMWz6zrvq_TcrE2lHvz9sxVvlEpfXqY4JHMdP3glpw5p8A", "id" => "61"}
+  [1m[36mStation Load (6.6ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (5.1ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 61], ["latency_ms", nil], ["timestamp", "2025-08-04 05:40:35.269415"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:40:35.274338"], ["updated_at", "2025-08-04 05:40:35.274338"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_ping_result.html.erb (Duration: 4.0ms | Allocations: 361)
+Completed 200 OK in 2582ms (Views: 0.2ms | ActiveRecord: 19.6ms | Allocations: 2769)
+
+
+Started GET "/stations/61/" for 127.0.0.1 at 2025-08-04 15:43:20 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "61"}
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (4.8ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 171.4ms | Allocations: 8818)
+  Rendered stations/show.html.erb within layouts/application (Duration: 213.1ms | Allocations: 10519)
+  Rendered layouts/_sidebar.html.erb (Duration: 2.3ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 350.9ms | Allocations: 15541)
+Completed 200 OK in 8974ms (Views: 385.5ms | ActiveRecord: 275.3ms | Allocations: 1025423)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:43:30 +1000
+Started POST "/stations/61/ping.turbo_stream" for 127.0.0.1 at 2025-08-04 15:43:39 +1000
+Processing by StationsController#ping as TURBO_STREAM
+  Parameters: {"authenticity_token" => "W2wtuxEEaq2XT4Z0JdCfE57Ipv3aRRTXee-vefoSQ8Fa2_nNDqrB6ml3rchI79VDM1EIqYtdeuIHkqmmkMCO9A", "id" => "61"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (5.6ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 61], ["latency_ms", nil], ["timestamp", "2025-08-04 05:43:42.270187"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:43:42.289356"], ["updated_at", "2025-08-04 05:43:42.289356"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_ping_result.html.erb (Duration: 2.2ms | Allocations: 359)
+Completed 200 OK in 2095ms (Views: 0.2ms | ActiveRecord: 8.1ms | Allocations: 2779)
+
+
+Started GET "/stations/61/" for 127.0.0.1 at 2025-08-04 15:49:34 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "61"}
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (3.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 211.0ms | Allocations: 8818)
+  Rendered stations/show.html.erb within layouts/application (Duration: 243.3ms | Allocations: 10522)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.9ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 315.7ms | Allocations: 15544)
+Completed 200 OK in 6537ms (Views: 362.4ms | ActiveRecord: 192.6ms | Allocations: 1025416)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:49:43 +1000
+Started POST "/stations/61/ping.turbo_stream" for 127.0.0.1 at 2025-08-04 15:50:03 +1000
+Processing by StationsController#ping as TURBO_STREAM
+  Parameters: {"authenticity_token" => "7WGvqLVZ7FArh4wUSwqARoQHGK-ruBsVD0NsoQu_P9Ts1nveqvdHF9W_p6gmNcoWKZ62-_qgdSBxPmp-YW3y4Q", "id" => "61"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (2.1ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 61], ["latency_ms", nil], ["timestamp", "2025-08-04 05:50:06.257286"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:50:06.259431"], ["updated_at", "2025-08-04 05:50:06.259431"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_ping_result.html.erb (Duration: 2.5ms | Allocations: 359)
+Completed 200 OK in 2160ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 2797)
+
+
+Started GET "/stations/61/" for 127.0.0.1 at 2025-08-04 15:50:16 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "61"}
+  [1m[36mStation Load (0.7ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  [1m[36mPingResult Load (0.5ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_station.html.erb (Duration: 8.2ms | Allocations: 552)
+  Rendered stations/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 928)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.5ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 1314)
+Completed 200 OK in 1806ms (Views: 17.9ms | ActiveRecord: 1.2ms | Allocations: 1737)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-04 15:50:19 +1000
+Started POST "/stations/61/ping.turbo_stream" for 127.0.0.1 at 2025-08-04 15:50:39 +1000
+Processing by StationsController#ping as TURBO_STREAM
+  Parameters: {"authenticity_token" => "7h7c0ijbsQgvT7yldR9u0YUtfJsmXdMjHsNPZavGF83vqQikN3UaT9F3lxkYICSBKLTSz3dFvRZgvkm6wRTa-A", "id" => "61"}
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPingResult Create (1.2ms)[0m  [1m[32mINSERT INTO "ping_results" ("station_id", "latency_ms", "timestamp", "success", "failure_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["station_id", 61], ["latency_ms", nil], ["timestamp", "2025-08-04 05:50:43.256700"], ["success", 0], ["failure_count", nil], ["created_at", "2025-08-04 05:50:43.258391"], ["updated_at", "2025-08-04 05:50:43.258391"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."timestamp" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  Rendered stations/_ping_result.html.erb (Duration: 2.0ms | Allocations: 234)
+Completed 200 OK in 2861ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 1482)
+
+
