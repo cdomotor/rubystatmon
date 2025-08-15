@@ -45,6 +45,21 @@
     </div>
   </section>
 
+  <!-- Spotlight -->
+  <section data-controller="dashboard">
+    <h2 class="text-xl font-semibold mb-3">🎯 Station Spotlight</h2>
+
+    <% if @random_spotlight.present? %>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="spotlightGrid">
+        <% @random_spotlight.each do |station| %>
+          <%= render "dashboard/station_spotlight", station: station %>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-gray-500">No stations to show yet.</p>
+    <% end %>
+  </section>
+
   <!-- Flagged stations -->
   <section>
     <h2 class="text-xl font-semibold mb-3">⚠️ Flagged Stations</h2>
@@ -74,22 +89,6 @@
       </div>
     <% else %>
       <p class="text-gray-500">None flagged.</p>
-    <% end %>
-  </section>
-
-
-  <!-- Spotlight -->
-  <section data-controller="dashboard">
-    <h2 class="text-xl font-semibold mb-3">🎯 Station Spotlight</h2>
-
-    <% if @random_spotlight.present? %>
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="spotlightGrid">
-        <% @random_spotlight.each do |station| %>
-          <%= render "dashboard/station_spotlight", station: station %>
-        <% end %>
-      </div>
-    <% else %>
-      <p class="text-gray-500">No stations to show yet.</p>
     <% end %>
   </section>
 
