@@ -1,30 +1,23 @@
 # File: app/models/station.rb
-# Full path: /app/models/station.rb
+# Path: C:/rubystatmon-fetched/rubystatmon/app/models/station.rb
 
 class Station < ApplicationRecord
-  # If you're on SQLite, serialize JSON into a text column transparently.
-  serialize :configured_parameters, JSON
+  # Fix the deprecation warning — use keyword arg for coder:
+  # old: serialize :configured_parameters, JSON
+  serialize :configured_parameters, coder: JSON
 
-  has_many :readings, dependent: :nullify
+  has_many :readings, dependent: :destroy
   has_many :ping_results, dependent: :destroy
 
-  # Fallback list if a station has no custom config yet.
-  # Adjust to your domain defaults.
-  DEFAULT_PARAMETER_LIST = %w[Battery flow_rate turbidity SignalStrength].freeze
+  # Return an array of [timestamp, value] for a given parameter
+  def series_for(param, since: 24.hours.ago)
+    # Be defensive during setup/migrations
+    return [] unless ActiveRecord::Base.connection.data_source_exists?('readings')
 
-  def selected_parameters
-    Array(configured_parameters).presence || DEFAULT_PARAMETER_LIST
-  end
-
-  # Optional helper to fetch timeseries (minimizes controller clutter)
-  # Expects Reading model with columns: station_id, parameter, timestamp, value
-  def series_for(param, since: 7.days.ago)
-    readings.where(parameter: param)
-            .where('timestamp >= ?', since)
-            .order(:timestamp)
-            .pluck(:timestamp, :value)
+    readings
+      .where(parameter: param)
+      .where('taken_at >= ?', since)
+      .order(:taken_at)
+      .pluck(:taken_at, :value)
   end
 end
-# == Schema Information
-#
-# Table name: stations      

@@ -15,14 +15,19 @@
   <!-- System Summary -->
   <section>
     <h1 class="text-2xl font-bold mb-4">System Summary</h1>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <% @summary.each do |label, value| %>
-        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-          <p class="text-xs uppercase tracking-wide text-gray-500"><%= label %></p>
-          <p class="text-2xl font-semibold mt-1"><%= value %></p>
-        </div>
-      <% end %>
-    </div>
+
+    <% if @summary.present? %>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <% @summary.each do |label, value| %>
+          <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+            <p class="text-xs uppercase tracking-wide text-gray-500"><%= label %></p>
+            <p class="text-2xl font-semibold mt-1"><%= value %></p>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-gray-500">Summary not available yet.</p>
+    <% end %>
   </section>
 
   <!-- Charts -->
