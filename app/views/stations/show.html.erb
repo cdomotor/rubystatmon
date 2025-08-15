@@ -1,18 +1,43 @@
-<% content_for :title, "View station" %>
+<!-- File: app/views/stations/show.html.erb -->
+<!-- Full path: /app/views/stations/show.html.erb -->
 
-<div class="md:w-2/3 w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
-  <% end %>
+<% content_for :title, "Station: #{@station.name}" %>
 
-  <h1 class="font-bold text-4xl">Viewing this station</h1>
+<div class="space-y-6">
+  <div class="flex items-center justify-between">
+    <h1 class="text-3xl font-bold"><%= @station.name.presence || "Station ##{@station.id}" %></h1>
+    <div class="text-sm text-gray-500">
+      Last seen by <%= current_user&.name || "user" %> at <%= Time.zone.now.strftime("%Y-%m-%d %H:%M") %>
+    </div>
+  </div>
 
-  <%= turbo_frame_tag "station_view" do %>
-    <%= render @station %>
-  <% end %>
+  <!-- Battery Chart -->
+  <div class="bg-white p-4 rounded-lg shadow border border-gray-100">
+    <h2 class="text-xl font-semibold mb-3">Battery Voltage</h2>
+    <canvas id="batteryChart" height="140"></canvas>
+  </div>
 
-  <%= link_to "Edit this station", edit_station_path(@station), class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
-  <%= link_to "Back to stations", stations_path, class: "w-full sm:w-auto text-center mt-2 sm:mt-0 sm:ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
-  <%= button_to "Destroy this station", @station, method: :delete, form_class: "sm:inline-block mt-2 sm:mt-0 sm:ml-2", class: "w-full rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium cursor-pointer", data: { turbo_confirm: "Are you sure?" } %>
-  
+  <!-- Parameter Chart -->
+  <div class="bg-white p-4 rounded-lg shadow border border-gray-100">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-xl font-semibold">Logger Parameters</h2>
+      <div class="text-sm text-gray-500">
+        Series: <%= @selected_params.join(", ") %>
+      </div>
+    </div>
+    <canvas id="paramsChart" height="200"></canvas>
+  </div>
 </div>
+
+<!-- Inline data payloads for JS (avoids extra endpoints for now) -->
+<script type="application/json" id="battery-data-json">
+  <%= @battery_data.to_json %>
+</script>
+
+<script type="application/json" id="params-data-json">
+  <%= @param_data.to_json %>
+</script>
+
+<script type="application/json" id="battery-thresholds-json">
+  <%= @battery_thresholds.to_json %>
+</script>

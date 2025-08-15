@@ -1,4 +1,93 @@
-<div class="space-y-4">
-  <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
-  <p>Summary stats will go here.</p>
+<!-- File: app/views/dashboard/index.html.erb -->
+
+<% content_for :title, "Dashboard" %>
+
+<div class="p-6 space-y-8">
+
+  <!-- Last seen -->
+  <div class="text-sm text-gray-600">
+    <%# show who last viewed (current user) and their local time if available %>
+    <% viewer = (defined?(current_user) && current_user) ? (current_user.respond_to?(:name) ? current_user.name : current_user.email) : "User" %>
+    <% tz = (defined?(current_user) && current_user.respond_to?(:time_zone) && current_user.time_zone.present?) ? current_user.time_zone : Time.zone.name %>
+    <span>Last seen by <strong><%= viewer %></strong> at <%= Time.current.in_time_zone(tz).strftime("%Y-%m-%d %H:%M") %> (<%= tz %>)</span>
+  </div>
+
+  <!-- System Summary -->
+  <section>
+    <h1 class="text-2xl font-bold mb-4">System Summary</h1>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <% @summary.each do |label, value| %>
+        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+          <p class="text-xs uppercase tracking-wide text-gray-500"><%= label %></p>
+          <p class="text-2xl font-semibold mt-1"><%= value %></p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <!-- Charts -->
+  <section>
+    <h2 class="text-xl font-semibold mb-3">Trends</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-controller="dashboard">
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+        <h3 class="font-medium mb-2">Average Ping (last 14 days)</h3>
+        <canvas data-dashboard-target="latencyChart"></canvas>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+        <h3 class="font-medium mb-2">% Unhealthy Stations (last 14 days)</h3>
+        <canvas data-dashboard-target="healthChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flagged stations (unchanged below) -->
+  <section>
+    <h2 class="text-xl font-semibold mb-3">⚠️ Flagged Stations</h2>
+    <% if @flagged_stations.any? %>
+      <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Station</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Last Ping</th>
+              <th class="px-4 py-2"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <% @flagged_stations.each do |station| %>
+              <tr>
+                <td class="px-4 py-2 font-medium text-gray-800"><%= station.name %></td>
+                <td class="px-4 py-2">
+                  <% status = station.status_summary %>
+                  <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium
+                    <%= status.present? ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800' %>">
+                    <%= status.presence || 'OK' %>
+                  </span>
+                </td>
+                <td class="px-4 py-2 text-gray-600"><%= station.ping_results.last&.created_at&.strftime("%Y-%m-%d %H:%M") || "N/A" %></td>
+                <td class="px-4 py-2 text-right">
+                  <%= link_to "Open", station_path(station),
+                        class: "inline-flex items-center rounded-md bg-white px-3 py-1.5 text-sm font-medium border hover:bg-gray-50" %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% else %>
+      <p class="text-gray-500">No flagged stations.</p>
+    <% end %>
+  </section>
+
+  <!-- Spotlight -->
+  <section data-controller="dashboard">
+    <h2 class="text-xl font-semibold mb-3">🎯 Station Spotlight</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="spotlightGrid">
+      <% @random_spotlight.each do |station| %>
+        <%= render "dashboard/station_spotlight", station: station %>
+      <% end %>
+    </div>
+  </section>
+
 </div>

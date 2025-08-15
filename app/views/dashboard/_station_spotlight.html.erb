@@ -1,0 +1,42 @@
+<!-- File: app/views/dashboard/_station_spotlight.html.erb -->
+
+<div id="spotlight_<%= station.id %>" class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col gap-2">
+  <div class="flex items-start justify-between">
+    <h3 class="font-semibold text-lg"><%= station.name %></h3>
+    <% if station.unhealthy? %>
+      <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-red-100 text-red-800">Unhealthy</span>
+    <% else %>
+      <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-green-100 text-green-800">OK</span>
+    <% end %>
+  </div>
+
+  <p class="text-sm text-gray-600">Last ping:
+    <%= station.ping_results.last&.created_at&.strftime("%Y-%m-%d %H:%M") || "N/A" %>
+    <% if (ms = station.ping_results.last&.latency_ms) %>
+      — <span class="font-mono"><%= ms %> ms</span>
+    <% end %>
+  </p>
+
+  <p class="text-sm text-gray-600"><%= station.status_summary.presence || "Within thresholds" %></p>
+
+  <!-- Mini sparkline (last 24h pings) -->
+  <div class="mt-2">
+    <canvas
+      class="w-full"
+      height="40"
+      data-sparkline-id="<%= station.id %>">
+    </canvas>
+  </div>
+
+  <div class="mt-2 flex gap-2">
+    <%= link_to "Open", station_path(station),
+          class: "inline-flex items-center rounded-md bg-white px-3 py-1.5 text-sm font-medium border hover:bg-gray-50" %>
+
+    <button
+      class="inline-flex items-center rounded-md bg-gray-900 text-white px-3 py-1.5 text-sm font-medium hover:bg-black"
+      data-action="click->dashboard#markReviewed"
+      data-dashboard-station-id-param="<%= station.id %>">
+      Mark reviewed
+    </button>
+  </div>
+</div>

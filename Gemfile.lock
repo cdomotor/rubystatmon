@@ -101,6 +101,7 @@ GEM
       tzinfo
     faker (3.5.2)
       i18n (>= 1.8.11, < 2)
+    fiddle (1.1.8)
     fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
@@ -246,6 +247,7 @@ DEPENDENCIES
   csv
   devise
   faker
+  fiddle
   good_job
   importmap-rails
   jbuilder

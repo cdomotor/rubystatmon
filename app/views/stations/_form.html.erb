@@ -1,37 +1,31 @@
-<%= form_with(model: station, class: "contents") do |form| %>
-  <% if station.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-md mt-3">
-      <h2><%= pluralize(station.errors.count, "error") %> prohibited this station from being saved:</h2>
+<!-- File: app/views/stations/_form.html.erb -->
+<!-- Full path: /app/views/stations/_form.html.erb -->
 
-      <ul class="list-disc ml-6">
-        <% station.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+<%= form_with(model: station) do |form| %>
+  <% if station.errors.any? %>
+    <div class="mb-4 text-red-600">
+      <h2><%= pluralize(station.errors.count, "error") %> prohibited this station from being saved:</h2>
+      <ul>
+        <% station.errors.full_messages.each do |msg| %>
+          <li>• <%= msg %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="my-5">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": station.errors[:name].none?, "border-red-400 focus:outline-red-600": station.errors[:name].any?}] %>
+  <!-- Your other fields ... -->
+
+  <div class="mb-4">
+    <%= form.label :configured_parameters, "Configured Parameters (JSON Array)", class: "block font-medium mb-1" %>
+    <%= form.text_area :configured_parameters,
+        value: station.configured_parameters.to_json,
+        rows: 3,
+        class: "w-full rounded border-gray-300" %>
+    <p class="text-xs text-gray-500 mt-1">Example: ["Battery","flow_rate","turbidity","SignalStrength"]</p>
   </div>
 
-  <div class="my-5">
-    <%= form.label :ip_address %>
-    <%= form.text_field :ip_address, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": station.errors[:ip_address].none?, "border-red-400 focus:outline-red-600": station.errors[:ip_address].any?}] %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :location %>
-    <%= form.text_field :location, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": station.errors[:location].none?, "border-red-400 focus:outline-red-600": station.errors[:location].any?}] %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :notes %>
-    <%= form.text_area :notes, rows: 4, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": station.errors[:notes].none?, "border-red-400 focus:outline-red-600": station.errors[:notes].any?}] %>
-  </div>
-
-  <div class="inline">
-    <%= form.submit class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
+  <div class="flex gap-2">
+    <%= form.submit class: "px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700" %>
+    <%= link_to "Cancel", stations_path, class: "px-4 py-2 rounded bg-gray-100 hover:bg-gray-200" %>
   </div>
 <% end %>

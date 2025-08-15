@@ -24,6 +24,27 @@ class StationsController < ApplicationController
 
   # GET /stations/1 or /stations/1.json
   def show
+    @station = Station.find(params[:id])
+
+    # How far back to load for the inline chart. Tweak as needed.
+    window_start = 7.days.ago
+
+    # Battery series (commonly "Battery" or your domain variant)
+    @battery_data = @station.series_for('Battery', since: window_start)
+
+    # User-selected parameters pulled from DB (or defaults if none)
+    @selected_params = @station.selected_parameters
+    # Build a { "param_name" => [[timestamp,value], ...] } hash
+    @param_data = @selected_params.each_with_object({}) do |p, h|
+      h[p] = @station.series_for(p, since: window_start)
+    end
+
+    # Optionally expose battery threshold bands (low/high) for shading.
+    # Replace with real per-station thresholds if you have them stored.
+    @battery_thresholds = {
+      low: 11.5,
+      high: 14.5
+    }
   end
 
   # GET /stations/new

@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_04_031536) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "configured_parameters", default: "[]", null: false
   end
 
   add_foreign_key "ping_results", "stations"
