@@ -5943,3 +5943,27 @@ FOREIGN KEY ("station_id")
   [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250816060000') RETURNING "version"[0m
   [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-08-16 05:12:28 +1000
+Processing by DashboardController#index as HTML
+  [1m[36mStation Count (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "stations"[0m
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE (created_at >= '2025-08-14 19:12:35.358775')[0m
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT "ping_results"."created_at" FROM "ping_results" ORDER BY "ping_results"."created_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mReading Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "readings" WHERE (taken_at >= '2025-08-14 19:12:35.380322')[0m
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 1406)
+Completed 500 Internal Server Error in 10095ms (ActiveRecord: 42.8ms | Allocations: 1009844)
+
+
+  
+ActionView::Template::Error (undefined method 'any?' for nil):
+    48:   <!-- Flagged stations (unchanged below) -->
+    49:   <section>
+    50:     <h2 class="text-xl font-semibold mb-3">⚠️ Flagged Stations</h2>
+    51:     <% if @flagged_stations.any? %>
+    52:       <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+    53:         <table class="min-w-full divide-y divide-gray-200">
+    54:           <thead class="bg-gray-50">
+  
+app/views/dashboard/index.html.erb:51:in '_app_views_dashboard_index_html_erb__854023386_9744'

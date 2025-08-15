@@ -152,6 +152,9 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
+    nokogiri (1.18.9)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.18.9-x64-mingw-ucrt)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -222,6 +225,7 @@ GEM
     tailwindcss-rails (4.3.0)
       railties (>= 7.0.0)
       tailwindcss-ruby (~> 4.0)
+    tailwindcss-ruby (4.1.11)
     tailwindcss-ruby (4.1.11-x64-mingw-ucrt)
     thor (1.4.0)
     timeout (0.4.3)
@@ -242,6 +246,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-unknown
 
 DEPENDENCIES
   csv
