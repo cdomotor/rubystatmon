@@ -5967,3 +5967,236 @@ ActionView::Template::Error (undefined method 'any?' for nil):
     54:           <thead class="bg-gray-50">
   
 app/views/dashboard/index.html.erb:51:in '_app_views_dashboard_index_html_erb__854023386_9744'
+Started GET "/" for 127.0.0.1 at 2025-08-16 05:46:42 +1000
+Processing by DashboardController#index as HTML
+  [1m[36mStation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "stations"[0m
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE (created_at >= '2025-08-14 19:46:45.545438')[0m
+  [1m[36mReading Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "readings" WHERE (taken_at >= '2025-08-14 19:46:45.553404')[0m
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT "ping_results"."created_at" FROM "ping_results" ORDER BY "ping_results"."created_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStation Load (0.7ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY "stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["station_id", 2], ["station_id", 3], ["station_id", 4], ["station_id", 5], ["station_id", 6], ["station_id", 7], ["station_id", 8], ["station_id", 9], ["station_id", 10], ["station_id", 11], ["station_id", 12], ["station_id", 13], ["station_id", 14], ["station_id", 15], ["station_id", 16], ["station_id", 17], ["station_id", 18], ["station_id", 19], ["station_id", 20], ["station_id", 21], ["station_id", 22], ["station_id", 23], ["station_id", 24], ["station_id", 25], ["station_id", 26], ["station_id", 27], ["station_id", 28], ["station_id", 29], ["station_id", 30], ["station_id", 31], ["station_id", 32], ["station_id", 33], ["station_id", 34], ["station_id", 35], ["station_id", 36], ["station_id", 37], ["station_id", 38], ["station_id", 39], ["station_id", 40], ["station_id", 41], ["station_id", 42], ["station_id", 43], ["station_id", 44], ["station_id", 45], ["station_id", 46], ["station_id", 47], ["station_id", 48], ["station_id", 49], ["station_id", 50], ["station_id", 51], ["station_id", 52], ["station_id", 53], ["station_id", 54], ["station_id", 55], ["station_id", 56], ["station_id", 57], ["station_id", 58], ["station_id", 59], ["station_id", 60], ["station_id", 61], ["station_id", 62], ["station_id", 63], ["station_id", 64], ["station_id", 65], ["station_id", 66], ["station_id", 67], ["station_id", 68], ["station_id", 69], ["station_id", 70], ["station_id", 71]]
+  [1m[36mPingResult Maximum (0.2ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 2]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.666812') AND "ping_results"."success" = ?[0m  [["station_id", 2], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 3]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.669503') AND "ping_results"."success" = ?[0m  [["station_id", 3], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 4]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.672252') AND "ping_results"."success" = ?[0m  [["station_id", 4], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 5]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.674493') AND "ping_results"."success" = ?[0m  [["station_id", 5], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 6]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.676948') AND "ping_results"."success" = ?[0m  [["station_id", 6], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 7]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.679719') AND "ping_results"."success" = ?[0m  [["station_id", 7], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 8]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.681958') AND "ping_results"."success" = ?[0m  [["station_id", 8], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 9]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.684221') AND "ping_results"."success" = ?[0m  [["station_id", 9], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 10]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.686804') AND "ping_results"."success" = ?[0m  [["station_id", 10], ["success", 0]]
+  [1m[36mPingResult Maximum (0.2ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 11]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.691210') AND "ping_results"."success" = ?[0m  [["station_id", 11], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 12]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.693124') AND "ping_results"."success" = ?[0m  [["station_id", 12], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 13]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.694635') AND "ping_results"."success" = ?[0m  [["station_id", 13], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 14]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.696702') AND "ping_results"."success" = ?[0m  [["station_id", 14], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 15]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.698775') AND "ping_results"."success" = ?[0m  [["station_id", 15], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 16]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.701127') AND "ping_results"."success" = ?[0m  [["station_id", 16], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 17]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.702837') AND "ping_results"."success" = ?[0m  [["station_id", 17], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 18]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.704917') AND "ping_results"."success" = ?[0m  [["station_id", 18], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 19]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.707436') AND "ping_results"."success" = ?[0m  [["station_id", 19], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 20]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.710179') AND "ping_results"."success" = ?[0m  [["station_id", 20], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 21]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.712538') AND "ping_results"."success" = ?[0m  [["station_id", 21], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 22]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.714184') AND "ping_results"."success" = ?[0m  [["station_id", 22], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 23]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.716131') AND "ping_results"."success" = ?[0m  [["station_id", 23], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 24]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.717416') AND "ping_results"."success" = ?[0m  [["station_id", 24], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 25]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.718690') AND "ping_results"."success" = ?[0m  [["station_id", 25], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 26]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.719936') AND "ping_results"."success" = ?[0m  [["station_id", 26], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 27]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.721409') AND "ping_results"."success" = ?[0m  [["station_id", 27], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 28]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.723583') AND "ping_results"."success" = ?[0m  [["station_id", 28], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 29]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.726344') AND "ping_results"."success" = ?[0m  [["station_id", 29], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 30]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.728645') AND "ping_results"."success" = ?[0m  [["station_id", 30], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 31]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.731091') AND "ping_results"."success" = ?[0m  [["station_id", 31], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 32]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.732918') AND "ping_results"."success" = ?[0m  [["station_id", 32], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 33]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.734634') AND "ping_results"."success" = ?[0m  [["station_id", 33], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 34]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.736216') AND "ping_results"."success" = ?[0m  [["station_id", 34], ["success", 0]]
+  [1m[36mPingResult Maximum (0.2ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 35]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.738521') AND "ping_results"."success" = ?[0m  [["station_id", 35], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 36]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.741139') AND "ping_results"."success" = ?[0m  [["station_id", 36], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 37]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.742992') AND "ping_results"."success" = ?[0m  [["station_id", 37], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 38]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.744445') AND "ping_results"."success" = ?[0m  [["station_id", 38], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 39]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.745809') AND "ping_results"."success" = ?[0m  [["station_id", 39], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 40]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.747067') AND "ping_results"."success" = ?[0m  [["station_id", 40], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 41]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.748410') AND "ping_results"."success" = ?[0m  [["station_id", 41], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 42]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.749757') AND "ping_results"."success" = ?[0m  [["station_id", 42], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 43]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.751079') AND "ping_results"."success" = ?[0m  [["station_id", 43], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 44]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.752395') AND "ping_results"."success" = ?[0m  [["station_id", 44], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 45]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.753704') AND "ping_results"."success" = ?[0m  [["station_id", 45], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 46]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.756402') AND "ping_results"."success" = ?[0m  [["station_id", 46], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 47]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.758602') AND "ping_results"."success" = ?[0m  [["station_id", 47], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 48]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.760044') AND "ping_results"."success" = ?[0m  [["station_id", 48], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 49]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.761426') AND "ping_results"."success" = ?[0m  [["station_id", 49], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 50]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.762852') AND "ping_results"."success" = ?[0m  [["station_id", 50], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 51]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.764210') AND "ping_results"."success" = ?[0m  [["station_id", 51], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 52]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.765566') AND "ping_results"."success" = ?[0m  [["station_id", 52], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 53]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.766907') AND "ping_results"."success" = ?[0m  [["station_id", 53], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 54]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.768203') AND "ping_results"."success" = ?[0m  [["station_id", 54], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 55]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.769488') AND "ping_results"."success" = ?[0m  [["station_id", 55], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 56]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.770922') AND "ping_results"."success" = ?[0m  [["station_id", 56], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 57]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.773162') AND "ping_results"."success" = ?[0m  [["station_id", 57], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 58]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.775320') AND "ping_results"."success" = ?[0m  [["station_id", 58], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 59]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.777555') AND "ping_results"."success" = ?[0m  [["station_id", 59], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 60]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.779678') AND "ping_results"."success" = ?[0m  [["station_id", 60], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 61]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.781833') AND "ping_results"."success" = ?[0m  [["station_id", 61], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 62]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.784054') AND "ping_results"."success" = ?[0m  [["station_id", 62], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 63]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.785932') AND "ping_results"."success" = ?[0m  [["station_id", 63], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 64]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.788304') AND "ping_results"."success" = ?[0m  [["station_id", 64], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 65]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.790963') AND "ping_results"."success" = ?[0m  [["station_id", 65], ["success", 0]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 66]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.792937') AND "ping_results"."success" = ?[0m  [["station_id", 66], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 67]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.794823') AND "ping_results"."success" = ?[0m  [["station_id", 67], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 68]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.796672') AND "ping_results"."success" = ?[0m  [["station_id", 68], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 69]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.798323') AND "ping_results"."success" = ?[0m  [["station_id", 69], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 70]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.800024') AND "ping_results"."success" = ?[0m  [["station_id", 70], ["success", 0]]
+  [1m[36mPingResult Maximum (0.0ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 71]]
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (created_at >= '2025-08-15 13:46:45.801877') AND "ping_results"."success" = ?[0m  [["station_id", 71], ["success", 0]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3376)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3483)
+Completed 500 Internal Server Error in 4483ms (ActiveRecord: 43.0ms | Allocations: 1060694)
+
+
+  
+ActionView::Template::Error (undefined method 'each' for nil):
+    82:   <section data-controller="dashboard">
+    83:     <h2 class="text-xl font-semibold mb-3">🎯 Station Spotlight</h2>
+    84:     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="spotlightGrid">
+    85:       <% @random_spotlight.each do |station| %>
+    86:         <%= render "dashboard/station_spotlight", station: station %>
+    87:       <% end %>
+    88:     </div>
+  
+app/views/dashboard/index.html.erb:85:in '_app_views_dashboard_index_html_erb___839297090_10344'
+Started GET "/" for 127.0.0.1 at 2025-08-16 05:53:10 +1000
+Processing by DashboardController#index as HTML
+  [1m[36mStation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stations"[0m
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE (created_at >= '2025-08-14 19:53:13.174600')[0m
+  [1m[36mReading Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "readings" WHERE (taken_at >= '2025-08-14 19:53:13.179954')[0m
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT "ping_results"."created_at" FROM "ping_results" ORDER BY "ping_results"."created_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mPingResult Maximum (0.1ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") AS "maximum_created_at", "ping_results"."station_id" AS "ping_results_station_id" FROM "ping_results" GROUP BY "ping_results"."station_id"[0m
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "ping_results"."station_id" AS "ping_results_station_id" FROM "ping_results" WHERE (created_at >= '2025-08-15 13:53:13.199103') AND "ping_results"."success" = ? GROUP BY "ping_results"."station_id"[0m  [["success", 0]]
+  [1m[36mStation Load (0.7ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY "stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/_station_spotlight.html.erb (Duration: 6.7ms | Allocations: 1033)
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3893)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3991)
+Completed 500 Internal Server Error in 3847ms (ActiveRecord: 28.4ms | Allocations: 1020895)
+
+
+  
+ActionView::Template::Error (undefined method 'unhealthy?' for an instance of Station):
+    3: <div id="spotlight_<%= station.id %>" class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col gap-2">
+    4:   <div class="flex items-start justify-between">
+    5:     <h3 class="font-semibold text-lg"><%= station.name %></h3>
+    6:     <% if station.unhealthy? %>
+    7:       <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-red-100 text-red-800">Unhealthy</span>
+    8:     <% else %>
+    9:       <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-green-100 text-green-800">OK</span>
+  
+app/views/dashboard/_station_spotlight.html.erb:6:in '_app_views_dashboard__station_spotlight_html_erb__932921045_9768'
+app/views/dashboard/index.html.erb:88:in 'block in _app_views_dashboard_index_html_erb__354978142_9760'
+app/views/dashboard/index.html.erb:87:in 'Array#each'
+app/views/dashboard/index.html.erb:87:in '_app_views_dashboard_index_html_erb__354978142_9760'
+Started GET "/" for 127.0.0.1 at 2025-08-16 06:00:44 +1000
+Processing by DashboardController#index as HTML
+  [1m[36mStation Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "stations"[0m
+  [1m[36mPingResult Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE (created_at >= '2025-08-14 20:00:46.945258')[0m
+  [1m[36mReading Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "readings" WHERE (taken_at >= '2025-08-14 20:00:46.951816')[0m
+  [1m[36mPingResult Pluck (0.1ms)[0m  [1m[34mSELECT "ping_results"."created_at" FROM "ping_results" ORDER BY "ping_results"."created_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mPingResult Maximum (0.2ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") AS "maximum_created_at", "ping_results"."station_id" AS "ping_results_station_id" FROM "ping_results" GROUP BY "ping_results"."station_id"[0m
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "ping_results"."station_id" AS "ping_results_station_id" FROM "ping_results" WHERE (created_at >= '2025-08-15 14:00:46.978253') AND "ping_results"."success" = ? GROUP BY "ping_results"."station_id"[0m  [["success", 0]]
+  [1m[36mStation Load (0.7ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY "stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mPingResult Maximum (0.2ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") FROM "ping_results" WHERE "ping_results"."station_id" = ?[0m  [["station_id", 3]]
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  Rendered dashboard/_station_spotlight.html.erb (Duration: 38.3ms | Allocations: 3832)
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 43.8ms | Allocations: 6692)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 6790)
+Completed 500 Internal Server Error in 3832ms (ActiveRecord: 27.2ms | Allocations: 1023674)
+
+
+  
+ActionView::Template::Error (undefined method 'status_summary' for an instance of Station):
+    17:     <% end %>
+    18:   </p>
+    19: 
+    20:   <p class="text-sm text-gray-600"><%= station.status_summary.presence || "Within thresholds" %></p>
+    21: 
+    22:   <!-- Mini sparkline (last 24h pings) -->
+    23:   <div class="mt-2">
+  
+app/views/dashboard/_station_spotlight.html.erb:20:in '_app_views_dashboard__station_spotlight_html_erb__476453509_9768'
+app/views/dashboard/index.html.erb:88:in 'block in _app_views_dashboard_index_html_erb___491572460_9760'
+app/views/dashboard/index.html.erb:87:in 'Array#each'
+app/views/dashboard/index.html.erb:87:in '_app_views_dashboard_index_html_erb___491572460_9760'

@@ -28,6 +28,14 @@
     </canvas>
   </div>
 
+  <% reason =
+      if station.stale?
+        "stale (>#{Station::STALE_CUTOFF_HOURS}h)"
+      elsif station.recent_failures_count >= Station::FAIL_LIMIT
+        "failures (≥#{Station::FAIL_LIMIT} in #{Station::FAIL_WINDOW_HOURS}h)"
+      end %>
+  <span class="..."><%= station.unhealthy? ? "Unhealthy: #{reason}" : "OK" %></span>
+
   <div class="mt-2 flex gap-2">
     <%= link_to "Open", station_path(station),
           class: "inline-flex items-center rounded-md bg-white px-3 py-1.5 text-sm font-medium border hover:bg-gray-50" %>
