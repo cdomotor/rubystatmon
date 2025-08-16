@@ -45,16 +45,19 @@ class StationsController < ApplicationController
     window_start = 7.days.ago
     @battery_data = @station.series_for('Battery', since: window_start)
     @selected_params = @station.selected_parameters
-    @param_data = @selected_params.each_with_object({}) { |p, h| h[p] = @station.series_for(p, since: window_start) }
+    #@param_data = @selected_params.each_with_object({}) { |p, h| h[p] = @station.series_for(p, since: window_start) }
     @battery_thresholds = { low: 11.5, high: 14.5 }
   end
 
+  # GET /stations/new
   def new
     @station = Station.new
   end
 
+  # GET /stations/1/edit
   def edit; end
 
+  # POST /stations
   def create
     @station = Station.new(station_params)
     if @station.save
@@ -64,6 +67,7 @@ class StationsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /stations/1
   def update
     if @station.update(station_params)
       redirect_to @station, notice: "Station was successfully updated."
@@ -72,11 +76,13 @@ class StationsController < ApplicationController
     end
   end
 
+  # DELETE /stations/1
   def destroy
     @station.destroy!
     redirect_to stations_path, status: :see_other, notice: "Station was successfully destroyed."
   end
 
+  # POST /stations/1/ping
   def ping
     ip = @station.ip_address
 
@@ -112,34 +118,25 @@ class StationsController < ApplicationController
   end
 
   def station_params
-    params.require(:station).permit(:name, :ip_address, :location, :notes)
-  end
-
-  def edit; end
-
-  def update
-    if @station.update(station_params)
-      redirect_to @station, notice: "Station updated."
-    else
-      render :edit, status: :unprocessable_entity
-    end
-  end
-
-  private
-
-  def set_station
-    @station = Station.find(params[:id])
-  end
-
-  def station_params
-    params.require(:station).permit(
+    sp = params.require(:station).permit(
       :name,
-      :url,
+      :ip_address,             # ✅ correct column (instead of :url)
       :tags,
-      :configured_parameters,
       :ping_enabled,
-      :logger_ingest_enabled
+      :logger_ingest_enabled,
+      :configured_parameters
     )
+
+    # Parse JSON string for configured_parameters if necessary
+    if sp[:configured_parameters].is_a?(String)
+      begin
+        parsed = JSON.parse(sp[:configured_parameters].presence || "[]")
+        sp[:configured_parameters] = parsed.is_a?(Array) ? parsed : []
+      rescue JSON::ParserError
+        sp[:configured_parameters] = []
+      end
+    end
+
+    sp
   end
 end
-

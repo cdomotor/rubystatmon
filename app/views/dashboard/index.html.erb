@@ -9,7 +9,9 @@
     <%# show who last viewed (current user) and their local time if available %>
     <% viewer = (defined?(current_user) && current_user) ? (current_user.respond_to?(:name) ? current_user.name : current_user.email) : "User" %>
     <% tz = (defined?(current_user) && current_user.respond_to?(:time_zone) && current_user.time_zone.present?) ? current_user.time_zone : Time.zone.name %>
-    <span>Last seen by <strong><%= viewer %></strong> at <%= Time.current.in_time_zone(tz).strftime("%Y-%m-%d %H:%M") %> (<%= tz %>)</span>
+    <div class="text-sm text-gray-500">
+      Last seen by <%= safe_current_user_name %> at <%= Time.zone.now.strftime("%Y-%m-%d %H:%M") %>
+    </div>
   </div>
 
   <!-- System Summary -->

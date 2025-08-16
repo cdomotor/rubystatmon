@@ -11,7 +11,7 @@ class Station < ApplicationRecord
   FAIL_WINDOW_HOURS  = 6
   FAIL_LIMIT         = 3
 
-  # Text search on name or ip_address (kept from your version)
+  # Text search on name or ip_address
   scope :search, ->(q) {
     next all if q.blank?
     where("LOWER(name) LIKE ? OR LOWER(ip_address) LIKE ?", "%#{q.downcase}%", "%#{q.downcase}%")
@@ -22,8 +22,10 @@ class Station < ApplicationRecord
   before_validation :normalize_configured_parameters!
 
   # --- Small helpers used by filters/UI ---
+
+  # Prefer explicit ping timestamp, fall back to created_at
   def last_ping
-    @last_ping ||= ping_results.order(created_at: :desc).limit(1).first
+    @last_ping ||= ping_results.order(Arel.sql("COALESCE(timestamp, created_at) DESC")).limit(1).first
   end
 
   def last_ping_success?
@@ -31,11 +33,12 @@ class Station < ApplicationRecord
   end
 
   def last_ping_at
-    ping_results.maximum(:created_at)
+    ping_results.maximum(Arel.sql("COALESCE(timestamp, created_at)"))
   end
 
   def recent_failures_count(window_hours: FAIL_WINDOW_HOURS)
-    ping_results.where('created_at >= ?', window_hours.hours.ago).where(success: false).count
+    from = window_hours.hours.ago
+    ping_scope_between(from:, to: Time.current).where(success: false).count
   end
 
   def stale?
@@ -49,7 +52,11 @@ class Station < ApplicationRecord
 
   def status_summary
     reasons = []
-    last_ping_at.nil? ? reasons << "No pings yet" : reasons << "Stale (>#{STALE_CUTOFF_HOURS}h)" if stale?
+    if last_ping_at.nil?
+      reasons << "No pings yet"
+    elsif stale?
+      reasons << "Stale (>#{STALE_CUTOFF_HOURS}h)"
+    end
     fails = recent_failures_count
     reasons << "Recent failures: #{fails} in #{FAIL_WINDOW_HOURS}h" if fails.positive?
     reasons.uniq.join("; ")
@@ -57,10 +64,144 @@ class Station < ApplicationRecord
     ""
   end
 
-  # Extract threshold pairs either from a nested "thresholds" hash
-  # or from top-level { "Param" => [low,high], ... }
+  # --- Lightweight metrics/series API for charts/sparklines ---
+
+  # Returns [[epoch_ms, latency_ms], ...] in ascending time, ignoring nils.
+  def ping_series(from: 24.hours.ago, to: Time.current)
+    rows = ping_scope_between(from:, to:)
+             .where.not(latency_ms: nil)
+             .order(Arel.sql("COALESCE(timestamp, created_at) ASC"))
+             .pluck(:timestamp, :created_at, :latency_ms)
+
+    rows.map do |t, created_at, v|
+      ts = (t || created_at).to_i * 1000
+      [ts, v]
+    end
+  end
+
+  # Returns [[epoch_ms, 1/0], ...] for success state over time.
+  def ping_success_series(from: 24.hours.ago, to: Time.current)
+    rows = ping_scope_between(from:, to:)
+             .order(Arel.sql("COALESCE(timestamp, created_at) ASC"))
+             .pluck(:timestamp, :created_at, :success)
+
+    rows.map do |t, created_at, ok|
+      ts = (t || created_at).to_i * 1000
+      [ts, ok ? 1 : 0]
+    end
+  end
+
+  # Generic accessor for views; flexible window args:
+  #   series_for(:latency, since: 24.hours.ago)
+  #   series_for(:latency, from: 24.hours.ago, to: Time.current)
+  #   series_for(:latency, hours: 24)
+  #   series_for(:latency, last: 24.hours)
+  def series_for(key, from: nil, to: nil, since: nil, hours: nil, last: nil)
+    _from, _to = resolve_window(from:, to:, since:, hours:, last:)
+
+    case key.to_s
+    when "latency", "latency_ms", "latency_24h"
+      ping_series(from: _from, to: _to)
+    when "success", "success_24h"
+      ping_success_series(from: _from, to: _to)
+    else
+      []
+    end
+  end
+
+  # Returns an Array<String> of parameter names the station cares about.
+  # Supports these shapes in `configured_parameters`:
+  # - Hash with:
+  #     { "selected": ["BattV","Flow"], ... }
+  #     { "parameters": ["BattV","Flow"], ... }
+  #     { "thresholds": { ... }, "BattV": [10, 15], "Flow": [0.2, 2.0] }  # keys imply selection
+  # - Array: ["BattV","Flow"]
+  # - String: "BattV, Flow; RSSI"
+  def selected_parameters
+    cp = configured_parameters
+
+    case cp
+    when Hash
+      if cp["selected"].is_a?(Array)
+        cp["selected"].map(&:to_s)
+      elsif cp["parameters"].is_a?(Array)
+        cp["parameters"].map(&:to_s)
+      else
+        # Treat non-threshold top-level keys as selected params
+        (cp.keys - ["thresholds"]).map(&:to_s)
+      end
+    when Array
+      cp.map(&:to_s)
+    when String
+      cp.split(/[,;\s]+/).map(&:strip).reject(&:blank?)
+    else
+      []
+    end
+  end
+
   private
 
+  # Unified time-window scope that works with or without explicit timestamps
+  def ping_scope_between(from:, to:)
+    ping_results.where(Arel.sql("COALESCE(timestamp, created_at) BETWEEN ? AND ?"), from, to)
+  end
+
+  # Accepts various window styles and normalises to [from, to]
+  def resolve_window(from:, to:, since:, hours:, last:)
+    # Highest precedence: explicit from/to
+    return [from, to] if from && to
+
+    # since: <time> means from = since, to = now
+    return [since, Time.current] if since
+
+    # hours: N or last: N.hours / seconds duration
+    if hours
+      return [hours.to_i.hours.ago, Time.current]
+    end
+
+    if last
+      duration =
+        case last
+        when ActiveSupport::Duration then last
+        when Numeric then last.seconds
+        else 24.hours
+        end
+      return [Time.current - duration, Time.current]
+    end
+
+    # default 24h window
+    [24.hours.ago, Time.current]
+  end
+
+  # ---------- Normalisers ----------
+
+  # Make tags forgiving: "a, b  c;d" -> "a,b,c,d"
+  def normalize_tags_if_present!
+    return unless has_attribute?(:tags) && self[:tags].present?
+    tokens = self[:tags].to_s.split(/[,;\s]+/).map(&:strip).reject(&:blank?)
+    self[:tags] = tokens.uniq.join(",")
+  end
+
+  # Accept JSON array, JSON object, or a simple comma/space-separated list.
+  # Stores Hash/Array directly (serialize handles it) or JSON text if the column is plain text.
+  def normalize_configured_parameters!
+    raw = self[:configured_parameters]
+    return if raw.nil? || raw.is_a?(Hash) || raw.is_a?(Array)
+
+    str = raw.to_s.strip
+    parsed =
+      begin
+        val = JSON.parse(str)
+        (val.is_a?(Array) || val.is_a?(Hash)) ? val : [val]
+      rescue JSON::ParserError
+        str.split(/[,;\s]+/).map(&:strip).reject(&:blank?)
+      end
+
+    self[:configured_parameters] = parsed
+  end
+
+  # Extract threshold pairs either from a nested "thresholds" hash
+  # or from top-level { "Param" => [low, high], ... }
   def thresholds_hash
     cfg = configured_parameters
     return {} unless cfg.is_a?(Hash)
@@ -69,34 +210,5 @@ class Station < ApplicationRecord
     else
       cfg.select { |_k, v| v.is_a?(Array) && v.size == 2 && v.all? { |x| x.is_a?(Numeric) } }
     end
-  end
-
-  # ---------- Normalisers ----------
-  # Make tags forgiving: "a, b  c;d" -> "a,b,c,d"
-  def normalize_tags_if_present!
-    return unless has_attribute?(:tags) && self[:tags].present?
-    tokens = self[:tags].to_s.split(/[,;\s]+/).map!(&:strip).reject!(&:blank?) || []
-    self[:tags] = tokens.uniq.join(",")
-  end
-
-  # Accept JSON array, JSON object, or a simple comma/space-separated list
-  # Stores Hash/Array directly (serialize handles it) or JSON text if the column is plain text.
-  def normalize_configured_parameters!
-    raw = self[:configured_parameters]
-    return if raw.nil? || (raw.is_a?(Hash) || raw.is_a?(Array))
-
-    str = raw.to_s.strip
-    parsed =
-      begin
-        val = JSON.parse(str)
-        # If parsed is scalar, wrap to array
-        val.is_a?(Array) || val.is_a?(Hash) ? val : [val]
-      rescue JSON::ParserError
-        # Fallback: split into array of strings
-        str.split(/[,;\s]+/).map(&:strip).reject(&:blank?)
-      end
-
-    # If the column is backed by serialize(JSON), assigning Array/Hash is ideal.
-    self[:configured_parameters] = parsed
   end
 end

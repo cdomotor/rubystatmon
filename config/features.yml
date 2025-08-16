@@ -6,10 +6,9 @@ current:
   - CSV import for stations
   - Tailwind UI theming
   - Last ping timestamp display
+  - Station editing (name, URL, tags, monitoring options)
 
 planned:
-  - Fix new station form, and move the import from csv to here
-  - Station editing (name, URL, tags, monitoring options)
   - Background daemon for continuous pings & logger ingest
   - Historical data modal (zoom/pan + export) (untested)
   - Direct logger status table ingest

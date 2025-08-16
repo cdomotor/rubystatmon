@@ -7,7 +7,7 @@
   <div class="flex items-center justify-between">
     <h1 class="text-3xl font-bold"><%= @station.name.presence || "Station ##{@station.id}" %></h1>
     <div class="text-sm text-gray-500">
-      Last seen by <%= current_user&.name || "user" %> at <%= Time.zone.now.strftime("%Y-%m-%d %H:%M") %>
+      Last seen by <%= safe_current_user_name %> at <%= Time.zone.now.strftime("%Y-%m-%d %H:%M") %>
     </div>
   </div>
 
