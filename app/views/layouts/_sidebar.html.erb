@@ -1,7 +1,37 @@
-<nav class="bg-gray-800 text-white w-64 min-h-screen">
+<!-- File: app/views/layouts/_sidebar.html.erb -->
+<!-- Path: /app/views/layouts/_sidebar.html.erb -->
+<nav class="bg-gray-800 text-white w-64 min-h-screen" aria-label="Primary">
   <ul class="space-y-2 p-4">
-    <li><%= link_to 'Dashboard', dashboard_path, class: "#{current_page?(dashboard_path) ? 'bg-gray-700' : ''} block py-2 px-3 hover:bg-gray-700" %></li>
-    <li><%= link_to 'Stations', stations_path, class: "#{current_page?(stations_path) ? 'bg-gray-700' : ''} block py-2 px-3 hover:bg-gray-700" %></li>
+    <li>
+      <%= link_to dashboard_path,
+                  class: "block py-2 px-3 rounded-md hover:bg-gray-700 #{'bg-gray-900' if current_page?(dashboard_path)}" do %>
+        <span class="inline-flex items-center gap-2">
+          <span>📊</span>
+          <span>Dashboard</span>
+        </span>
+      <% end %>
+    </li>
+
+    <li>
+      <%= link_to stations_path,
+                  class: "block py-2 px-3 rounded-md hover:bg-gray-700 #{'bg-gray-900' if current_page?(stations_path)}" do %>
+        <span class="inline-flex items-center gap-2">
+          <span>📡</span>
+          <span>Stations</span>
+        </span>
+      <% end %>
+    </li>
+
+    <li>
+      <%= link_to features_path,
+                  class: "block py-2 px-3 rounded-md hover:bg-gray-700 #{'bg-gray-900' if current_page?(features_path)}" do %>
+        <span class="inline-flex items-center gap-2">
+          <span>✨</span>
+          <span>Features</span>
+        </span>
+      <% end %>
+    </li>
+
     <!-- add future navigation items here -->
   </ul>
 </nav>

@@ -1,24 +1,83 @@
+<!-- File: app/views/stations/index.html.erb -->
+<!-- Path: /app/views/stations/index.html.erb -->
+
 <% content_for :title, "Stations" %>
 
-<div class="max-w-4xl mx-auto px-4 py-6">
+<div class="max-w-5xl mx-auto px-4 py-6 space-y-6">
   <%= render "layouts/flash" %>
 
-  <div class="flex justify-between items-center mb-6">
+  <div class="flex justify-between items-center">
     <h1 class="text-3xl font-bold text-gray-800">📡 Stations</h1>
     <%= link_to "New station", new_station_path, class: "rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium" %>
   </div>
 
-  <div class="bg-white shadow-md rounded p-4 mb-6">
+  <!-- CSV Import -->
+  <div class="bg-white shadow-md rounded p-4">
     <h2 class="text-xl font-semibold text-gray-700 mb-4">Import Stations from CSV</h2>
-    <%= form_with url: import_stations_path, local: true, multipart: true, class: "flex items-center gap-4" do |form| %>
+    <%= form_with url: import_stations_path, method: :post, local: true, multipart: true, class: "flex items-center gap-4" do |form| %>
       <%= form.file_field :file, required: true, class: "block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" %>
       <%= form.submit "Import CSV", class: "px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-md font-semibold" %>
     <% end %>
   </div>
 
-  <div class="space-y-4">
-    <% @stations.each do |station| %>
-      <%= render partial: "station", locals: { station: station } %>
+  <!-- Quick Pills -->
+  <div class="flex items-center gap-2">
+    <% current_q = params[:q].to_s %>
+    <%= link_to "All",       stations_path(q: current_q, status: ""),          class: pill_classes(params[:status].blank?) %>
+    <%= link_to "Reachable", stations_path(q: current_q, status: "reachable"), class: pill_classes(params[:status] == "reachable") %>
+    <%= link_to "Unreachable", stations_path(q: current_q, status: "unreachable"), class: pill_classes(params[:status] == "unreachable") %>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="bg-white border border-gray-200 rounded-lg p-4">
+    <%= form_with url: stations_path, method: :get, local: true,
+                  html: { id: "filters-form", class: "flex flex-col sm:flex-row gap-3 items-start sm:items-end" } do %>
+      <div class="w-full sm:w-1/2">
+        <label for="q" class="block text-sm font-medium text-gray-700 mb-1">Search (name or IP)</label>
+        <%= text_field_tag :q, params[:q], id: "q",
+              placeholder: "e.g. Main Pond or 10.0.0.25",
+              class: "w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500" %>
+      </div>
+
+      <div class="w-full sm:w-48">
+        <label for="status" class="block text-sm font-medium text-gray-700 mb-1">Last Ping Status</label>
+        <%= select_tag :status,
+              options_for_select([["(Any)", ""], ["Reachable", "reachable"], ["Unreachable", "unreachable"]], params[:status]),
+              id: "status",
+              class: "w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500" %>
+      </div>
+
+      <div class="flex gap-2">
+        <%= submit_tag "Filter", class: "rounded-md px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-500 font-medium" %>
+        <%= link_to "Clear", stations_path, class: "rounded-md px-4 py-2 bg-gray-100 text-gray-800 hover:bg-gray-200 font-medium" %>
+      </div>
     <% end %>
   </div>
+
+  <!-- Results (Turbo Frame for instant filtering updates) -->
+  <turbo-frame id="stations_list">
+    <%= render partial: "list", locals: { stations: @stations } %>
+  </turbo-frame>
 </div>
+
+<!-- Instant filters JS (debounced q; instant select/pills) -->
+<script>
+  (function(){
+    const form   = document.getElementById('filters-form');
+    const q      = document.getElementById('q');
+    const status = document.getElementById('status');
+
+    // Submit the form into the turbo-frame so only the list updates
+    if (form) form.setAttribute('data-turbo-frame', 'stations_list');
+
+    let t;
+    function debounce(fn, ms){ return function(){ clearTimeout(t); t = setTimeout(fn, ms); }; }
+
+    if (q) {
+      q.addEventListener('input', debounce(() => form && form.requestSubmit(), 250));
+    }
+    if (status) {
+      status.addEventListener('change', () => form && form.requestSubmit());
+    }
+  })();
+</script>

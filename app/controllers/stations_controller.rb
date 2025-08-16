@@ -1,118 +1,96 @@
+# File: app/controllers/stations_controller.rb
+# Path: /app/controllers/stations_controller.rb
 class StationsController < ApplicationController
-  before_action :set_station, only: %i[ show edit update destroy ]
+  before_action :set_station, only: %i[ show edit update destroy ping ]
 
   require 'csv'
 
+  # GET /stations
+  def index
+    @q      = params[:q].to_s.strip
+    @status = params[:status].to_s.strip # "", "reachable", "unreachable"
+
+    @stations = Station.search(@q).order(:name)
+
+    case @status
+    when "reachable"
+      @stations = @stations.select(&:last_ping_success?)
+    when "unreachable"
+      @stations = @stations.reject(&:last_ping_success?)
+    end
+  end
+
+  # POST /stations/import
   def import
     file = params[:file]
     if file.nil?
-      redirect_to stations_path, alert: "Please select a CSV file to import"
-      return
+      redirect_to stations_path, alert: "Please select a CSV file to import" and return
     end
 
+    imported = 0
     CSV.foreach(file.path, headers: true) do |row|
       Station.create!(row.to_hash)
+      imported += 1
     end
 
-    redirect_to stations_path, notice: "Stations imported successfully"
+    redirect_to stations_path, notice: "Imported #{imported} station(s)"
+  rescue ActiveRecord::RecordInvalid => e
+    redirect_to stations_path, alert: "Import error: #{e.record.errors.full_messages.to_sentence}"
+  rescue => e
+    redirect_to stations_path, alert: "Import failed: #{e.message}"
   end
 
-  # GET /stations or /stations.json
-  def index
-    @stations = Station.all
-  end
-
-  # GET /stations/1 or /stations/1.json
+  # GET /stations/1
   def show
-    @station = Station.find(params[:id])
-
-    # How far back to load for the inline chart. Tweak as needed.
     window_start = 7.days.ago
-
-    # Battery series (commonly "Battery" or your domain variant)
     @battery_data = @station.series_for('Battery', since: window_start)
-
-    # User-selected parameters pulled from DB (or defaults if none)
     @selected_params = @station.selected_parameters
-    # Build a { "param_name" => [[timestamp,value], ...] } hash
-    @param_data = @selected_params.each_with_object({}) do |p, h|
-      h[p] = @station.series_for(p, since: window_start)
-    end
-
-    # Optionally expose battery threshold bands (low/high) for shading.
-    # Replace with real per-station thresholds if you have them stored.
-    @battery_thresholds = {
-      low: 11.5,
-      high: 14.5
-    }
+    @param_data = @selected_params.each_with_object({}) { |p, h| h[p] = @station.series_for(p, since: window_start) }
+    @battery_thresholds = { low: 11.5, high: 14.5 }
   end
 
-  # GET /stations/new
   def new
     @station = Station.new
   end
 
-  # GET /stations/1/edit
-  def edit
-  end
+  def edit; end
 
-  # POST /stations or /stations.json
   def create
     @station = Station.new(station_params)
-
-    respond_to do |format|
-      if @station.save
-        format.html { redirect_to @station, notice: "Station was successfully created." }
-        format.json { render :show, status: :created, location: @station }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @station.errors, status: :unprocessable_entity }
-      end
+    if @station.save
+      redirect_to @station, notice: "Station was successfully created."
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /stations/1 or /stations/1.json
   def update
-    respond_to do |format|
-      if @station.update(station_params)
-        format.html { redirect_to @station, notice: "Station was successfully updated." }
-        format.json { render :show, status: :ok, location: @station }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @station.errors, status: :unprocessable_entity }
-      end
+    if @station.update(station_params)
+      redirect_to @station, notice: "Station was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
-  # DELETE /stations/1 or /stations/1.json
   def destroy
     @station.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to stations_path, status: :see_other, notice: "Station was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to stations_path, status: :see_other, notice: "Station was successfully destroyed."
   end
 
   def ping
-    @station = Station.find(params[:id])
     ip = @station.ip_address
 
     if Gem.win_platform?
-      output = `ping -n 1 -w 1000 #{ip}`
+      output  = `ping -n 1 -w 1000 #{ip}`
       success = $?.exitstatus == 0
       latency = output[/Average = (\d+)ms/, 1]&.to_i
     else
-      output = `ping -c 1 -W 1 #{ip}`
+      output  = `ping -c 1 -W 1 #{ip}`
       success = $?.exitstatus == 0
       latency = output[/time=(\d+(?:\.\d+)?) ms/, 1]&.to_f&.round
     end
 
-    @station.ping_results.create!(
-      timestamp: Time.current,
-      latency_ms: latency,   # nil if not parseable
-      success: success
-    )
+    @station.ping_results.create!(timestamp: Time.current, latency_ms: latency, success: success)
 
     respond_to do |format|
       format.turbo_stream do
@@ -127,17 +105,41 @@ class StationsController < ApplicationController
     end
   end
 
+  private
 
+  def set_station
+    @station = Station.find(params[:id])
+  end
 
+  def station_params
+    params.require(:station).permit(:name, :ip_address, :location, :notes)
+  end
+
+  def edit; end
+
+  def update
+    if @station.update(station_params)
+      redirect_to @station, notice: "Station updated."
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_station
-      @station = Station.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def station_params
-      params.require(:station).permit(:name, :ip_address, :location, :notes)
-    end
+  def set_station
+    @station = Station.find(params[:id])
+  end
+
+  def station_params
+    params.require(:station).permit(
+      :name,
+      :url,
+      :tags,
+      :configured_parameters,
+      :ping_enabled,
+      :logger_ingest_enabled
+    )
+  end
 end
+

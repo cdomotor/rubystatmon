@@ -1,31 +1,56 @@
-<!-- File: app/views/stations/_form.html.erb -->
-<!-- Full path: /app/views/stations/_form.html.erb -->
-
-<%= form_with(model: station) do |form| %>
+<%# File: app/views/stations/_form.html.erb %>
+<%# Path: /app/views/stations/_form.html.erb %>
+<%= form_with(model: station, local: true, class: "space-y-6") do |f| %>
   <% if station.errors.any? %>
-    <div class="mb-4 text-red-600">
-      <h2><%= pluralize(station.errors.count, "error") %> prohibited this station from being saved:</h2>
-      <ul>
-        <% station.errors.full_messages.each do |msg| %>
-          <li>• <%= msg %></li>
-        <% end %>
+    <div class="bg-red-50 border border-red-200 rounded-md p-4 text-sm text-red-700">
+      <p class="font-semibold"><%= pluralize(station.errors.count, "error") %> prohibited this station from being saved:</p>
+      <ul class="list-disc ml-5 mt-1">
+        <% station.errors.full_messages.each { |m| %><li><%= m %></li><% } %>
       </ul>
     </div>
   <% end %>
 
-  <!-- Your other fields ... -->
+  <!-- Name -->
+  <div>
+    <%= f.label :name, class: "block text-sm font-medium text-gray-700" %>
+    <%= f.text_field :name, class: "mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+  </div>
 
-  <div class="mb-4">
-    <%= form.label :configured_parameters, "Configured Parameters (JSON Array)", class: "block font-medium mb-1" %>
-    <%= form.text_area :configured_parameters,
-        value: station.configured_parameters.to_json,
-        rows: 3,
-        class: "w-full rounded border-gray-300" %>
-    <p class="text-xs text-gray-500 mt-1">Example: ["Battery","flow_rate","turbidity","SignalStrength"]</p>
+  <!-- URL / IP -->
+  <div>
+    <%= f.label :url, "IP Address", class: "block text-sm font-medium text-gray-700" %>
+    <%= f.text_field :url, placeholder: "http://10.0.0.12 or 10.0.0.12", class: "mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+  </div>
+
+  <!-- Tags -->
+  <div>
+    <%= f.label :tags, "Tags (comma-separated or spaced)", class: "block text-sm font-medium text-gray-700" %>
+    <%= f.text_field :tags, placeholder: "pond, weather, critical", class: "mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+  </div>
+
+  <!-- Configured Parameters -->
+  <div>
+    <%= f.label :configured_parameters, "Configured Parameters (JSON Array or list)", class: "block text-sm font-medium text-gray-700" %>
+    <%= f.text_area :configured_parameters, rows: 3, class: "mt-1 block w-full font-mono rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+    <p class="mt-1 text-xs text-gray-500">
+      Example: ["Battery","flow_rate","turbidity","SignalStrength"] or Battery, flow_rate, turbidity
+    </p>
+  </div>
+
+  <!-- Monitoring options -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <label class="inline-flex items-center gap-2 text-sm">
+      <%= f.check_box :ping_enabled, class: "rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" %>
+      Enable Ping
+    </label>
+    <label class="inline-flex items-center gap-2 text-sm">
+      <%= f.check_box :logger_ingest_enabled, class: "rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" %>
+      Enable Logger Ingest
+    </label>
   </div>
 
   <div class="flex gap-2">
-    <%= form.submit class: "px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700" %>
-    <%= link_to "Cancel", stations_path, class: "px-4 py-2 rounded bg-gray-100 hover:bg-gray-200" %>
+    <%= f.submit "Update Station", class: "inline-flex items-center rounded-md bg-indigo-600 px-3.5 py-2.5 text-white font-medium hover:bg-indigo-500" %>
+    <%= link_to "Cancel", stations_path, class: "inline-flex items-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 font-medium" %>
   </div>
 <% end %>

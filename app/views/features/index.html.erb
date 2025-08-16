@@ -1,0 +1,36 @@
+<!-- File: app/views/features/index.html.erb -->
+<!-- Path: /app/views/features/index.html.erb -->
+<% content_for :title, "Features" %>
+
+<div class="max-w-5xl mx-auto px-4 py-6">
+  <div class="mb-6">
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900">Features</h1>
+    <p class="text-gray-600 mt-1">What StatMon does today—and what’s coming soon.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xl">✅</span>
+        <h2 class="text-xl font-semibold">Current</h2>
+      </div>
+      <ul class="list-disc list-inside space-y-2 text-gray-800">
+        <% @current_features.each do |feat| %>
+          <li><%= feat %></li>
+        <% end %>
+      </ul>
+    </section>
+
+    <section class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xl">🧭</span>
+        <h2 class="text-xl font-semibold">Planned</h2>
+      </div>
+      <ul class="list-disc list-inside space-y-2 text-gray-800">
+        <% @planned_features.each do |feat| %>
+          <li><%= feat %></li>
+        <% end %>
+      </ul>
+    </section>
+  </div>
+</div>

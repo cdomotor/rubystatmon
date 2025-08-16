@@ -1,8 +1,7 @@
 # File: app/models/station.rb
-# Path: C:/rubystatmon-fetched/rubystatmon/app/models/station.rb
-
+# Path: /app/models/station.rb
 class Station < ApplicationRecord
-  # Already added earlier, repeating for context:
+  # Persist configured_parameters as JSON; accepts Hash/Array/String
   serialize :configured_parameters, coder: JSON
 
   has_many :ping_results, dependent: :destroy
@@ -12,16 +11,31 @@ class Station < ApplicationRecord
   FAIL_WINDOW_HOURS  = 6
   FAIL_LIMIT         = 3
 
+  # Text search on name or ip_address (kept from your version)
+  scope :search, ->(q) {
+    next all if q.blank?
+    where("LOWER(name) LIKE ? OR LOWER(ip_address) LIKE ?", "%#{q.downcase}%", "%#{q.downcase}%")
+  }
+
+  # Accept forgiving input before validations/saves
+  before_validation :normalize_tags_if_present!
+  before_validation :normalize_configured_parameters!
+
+  # --- Small helpers used by filters/UI ---
+  def last_ping
+    @last_ping ||= ping_results.order(created_at: :desc).limit(1).first
+  end
+
+  def last_ping_success?
+    last_ping&.success
+  end
+
   def last_ping_at
-    return nil unless data_source?(:ping_results)
-    @last_ping_at ||= ping_results.maximum(:created_at)
+    ping_results.maximum(:created_at)
   end
 
   def recent_failures_count(window_hours: FAIL_WINDOW_HOURS)
-    return 0 unless data_source?(:ping_results)
-    ping_results.where('created_at >= ?', window_hours.hours.ago)
-                .where(success: false)
-                .count
+    ping_results.where('created_at >= ?', window_hours.hours.ago).where(success: false).count
   end
 
   def stale?
@@ -33,42 +47,20 @@ class Station < ApplicationRecord
     stale? || recent_failures_count >= FAIL_LIMIT
   end
 
-  # --- NEW: concise human status for the dashboard badge line ---
-  # Returns "" when all good, otherwise a semicolon-joined reason string.
   def status_summary
     reasons = []
-
-    if data_source?(:ping_results)
-      if last_ping_at.nil?
-        reasons << "No pings yet"
-      elsif stale?
-        reasons << "Stale (>#{STALE_CUTOFF_HOURS}h)"
-      end
-
-      fails = recent_failures_count
-      reasons << "Recent failures: #{fails} in #{FAIL_WINDOW_HOURS}h" if fails.positive?
-    end
-
-    # Optional thresholds check from configured_parameters
-    if data_source?(:readings)
-      thresholds_hash.each do |param, (min, max)|
-        val = readings.where(parameter: param).order(taken_at: :desc).limit(1).pick(:value)
-        next if val.nil?
-        reasons << "#{param} low (#{val} < #{min})" if min && val < min
-        reasons << "#{param} high (#{val} > #{max})" if max && val > max
-      end
-    end
-
+    last_ping_at.nil? ? reasons << "No pings yet" : reasons << "Stale (>#{STALE_CUTOFF_HOURS}h)" if stale?
+    fails = recent_failures_count
+    reasons << "Recent failures: #{fails} in #{FAIL_WINDOW_HOURS}h" if fails.positive?
     reasons.uniq.join("; ")
   rescue
-    ""  # fail closed: don’t break the view if something weird happens
+    ""
   end
 
+  # Extract threshold pairs either from a nested "thresholds" hash
+  # or from top-level { "Param" => [low,high], ... }
   private
 
-  # Accepts either:
-  #   configured_parameters: { "thresholds" => { "Battery" => [11.5, 14.5], ... } }
-  # or a flat { "Battery" => [11.5,14.5], ... }
   def thresholds_hash
     cfg = configured_parameters
     return {} unless cfg.is_a?(Hash)
@@ -79,7 +71,32 @@ class Station < ApplicationRecord
     end
   end
 
-  def data_source?(name)
-    ActiveRecord::Base.connection.data_source_exists?(name.to_s)
+  # ---------- Normalisers ----------
+  # Make tags forgiving: "a, b  c;d" -> "a,b,c,d"
+  def normalize_tags_if_present!
+    return unless has_attribute?(:tags) && self[:tags].present?
+    tokens = self[:tags].to_s.split(/[,;\s]+/).map!(&:strip).reject!(&:blank?) || []
+    self[:tags] = tokens.uniq.join(",")
+  end
+
+  # Accept JSON array, JSON object, or a simple comma/space-separated list
+  # Stores Hash/Array directly (serialize handles it) or JSON text if the column is plain text.
+  def normalize_configured_parameters!
+    raw = self[:configured_parameters]
+    return if raw.nil? || (raw.is_a?(Hash) || raw.is_a?(Array))
+
+    str = raw.to_s.strip
+    parsed =
+      begin
+        val = JSON.parse(str)
+        # If parsed is scalar, wrap to array
+        val.is_a?(Array) || val.is_a?(Hash) ? val : [val]
+      rescue JSON::ParserError
+        # Fallback: split into array of strings
+        str.split(/[,;\s]+/).map(&:strip).reject(&:blank?)
+      end
+
+    # If the column is backed by serialize(JSON), assigning Array/Hash is ideal.
+    self[:configured_parameters] = parsed
   end
 end

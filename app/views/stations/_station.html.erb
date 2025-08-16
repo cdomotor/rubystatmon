@@ -1,48 +1,72 @@
-<!-- File: app/views/stations/_station.html.erb -->
-<!-- Renders a single station card -->
+<%# File: app/views/stations/_station.html.erb %>
+<%# Compact station card with clear hierarchy %>
 
-<div class="bg-white shadow-md rounded-lg p-4 mb-4 border border-gray-200">
-  <div class="flex items-center justify-between mb-2">
-    <h2 class="text-xl font-bold text-gray-800"><%= station.name.presence || "Unnamed Station" %></h2>
+<% last_ping = station.ping_results.last %>
+
+<div class="bg-gray-300 border rounded-md shadow-xs p-2">
+  <!-- Row 1: Station name -->
+  <div>
+    <h2 class="text-base font-semibold text-gray-900 truncate">
+      <%= station.name.presence || "Unnamed Station" %>
+      <% if station.respond_to?(:status) && station.status.present? %>
+        <span class="ml-1 text-xs text-gray-500">(<%= station.status %>)</span>
+      <% end %>
+    </h2>
   </div>
 
-  <div class="flex flex-wrap items-center gap-3 mb-2 text-sm">
-    <%= button_to "Ping", ping_station_path(station, format: :turbo_stream),
+  <!-- Row 2+: Actions + Meta grid -->
+  <div class="mt-1 grid grid-cols-2 gap-x-3 gap-y-1 text-xs leading-5 text-gray-700">
+    <!-- Actions (span full width if narrow) -->
+    <div class="col-span-2 flex flex-wrap gap-1">
+      <%= button_to "Ping",
+          ping_station_path(station),
           method: :post,
-          form: { data: { turbo_frame: "ping_result_#{station.id}" } },
-          class: "inline-flex items-center px-3 py-1 rounded bg-indigo-600 text-white hover:bg-indigo-700" %>
-
-    <%= link_to "Show", station_path(station), class: "text-blue-600 hover:underline" %>
-    <%= link_to "Edit", edit_station_path(station), class: "text-green-600 hover:underline" %>
-    <%= link_to "Destroy", station_path(station), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600 hover:underline" %>
-  </div>
-
-
-  <div class="text-sm text-gray-600 space-y-1">
-    <div class="flex text-sm text-gray-600 space-x-6">
-      <p>
-        <span class="font-semibold text-gray-700">IP:</span>
-        <%= station.ip_address.presence || "—" %>
-      </p>
-      <p>
-        <span class="font-semibold text-gray-700">Location:</span>
-        <%= station.location.presence || "—" %>
-      </p>
+          data: { turbo: true },
+          class: "px-2 py-1 text-xs font-medium rounded bg-blue-600 text-white hover:bg-blue-500" %>
+      <%= link_to "Show", station, class: "px-2 py-1 text-xs rounded hover:bg-gray-100 text-gray-700" %>
+      <%= link_to "Edit", edit_station_path(station), class: "px-2 py-1 text-xs rounded hover:bg-gray-100 text-gray-700" %>
+      <%= link_to "Del", station, method: :delete, data: { confirm: "Delete this station?" },
+          class: "px-2 py-1 text-xs rounded hover:bg-red-50 text-red-600" %>
     </div>
-    <p><span class="font-semibold text-gray-700">Notes:</span> <%= station.notes.presence || "—" %></p>
+
+    <!-- IP -->
+    <div class="col-span-1 flex">
+      <span class="font-semibold mr-1">IP:</span>
+      <span class="truncate"><%= station.ip_address.presence || "—" %></span>
+    </div>
+
+    <!-- Ping -->
+    <div class="col-span-1 flex">
+      <span class="font-semibold mr-1">Ping:</span>
+      <% if last_ping.present? %>
+        <% if last_ping.success %>
+          <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-100 text-green-700">
+            <%= "#{last_ping.latency_ms.to_i} ms" %>
+          </span>
+        <% else %>
+          <span class="px-2 py-0.5 rounded text-xs font-semibold bg-red-600 text-white animate-pulse">
+            Failed
+          </span>
+        <% end %>
+      <% else %>
+        <span class="text-gray-400">none</span>
+      <% end %>
+    </div>
+
+    <!-- Seen -->
+    <div class="col-span-1 flex">
+      <span class="font-semibold mr-1">Seen:</span>
+      <% if last_ping.present? %>
+        <span class="text-gray-600"><%= time_ago_in_words(last_ping.created_at) %> ago</span>
+      <% else %>
+        <span class="text-gray-400">—</span>
+      <% end %>
+    </div>
+
+    <!-- Fails -->
+    <div class="col-span-1 flex">
+      <span class="font-semibold mr-1">Fails:</span>
+      <span><%= (last_ping&.failure_count || 0) %></span>
+    </div>
   </div>
-
-  <%= turbo_frame_tag "ping_result_#{station.id}" do %>
-    <% last_ping = station.ping_results.order(timestamp: :desc).first %>
-    <% if last_ping %>
-      <div class="text-green-600">
-        Last ping at <%= last_ping.timestamp.strftime("%H:%M:%S") %> —
-        <%= last_ping.success ? "Success" : "Failure" %> —
-        <%= last_ping.latency_ms || "N/A" %> ms
-      </div>
-    <% else %>
-      <div class="text-gray-500">No ping results yet.</div>
-    <% end %>   
-  <% end %>
-
 </div>

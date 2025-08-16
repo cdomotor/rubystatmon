@@ -1,0 +1,21 @@
+# File: config/features.yml
+# Path: /config/features.yml
+current:
+  - Station list with search & status filters
+  - Manual ping with live latency result
+  - CSV import for stations
+  - Tailwind UI theming
+  - Last ping timestamp display
+
+planned:
+  - Fix new station form, and move the import from csv to here
+  - Station editing (name, URL, tags, monitoring options)
+  - Background daemon for continuous pings & logger ingest
+  - Historical data modal (zoom/pan + export) (untested)
+  - Direct logger status table ingest
+  - System health dashboard with sparkline mini-charts
+  - Alerting to Teams & Email with thresholds
+  - Admin users & secure storage (tokens, file paths)
+  - Export stations to CSV (UI action)
+  - Settings page for system-wide config
+  - Dockerfile for easy deployment
