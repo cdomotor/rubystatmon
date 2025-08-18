@@ -1,6 +1,7 @@
 # File: app/models/station.rb
 # Path: /app/models/station.rb
 class Station < ApplicationRecord
+  scope :active, -> { where(active: true) }
   # Persist configured_parameters as JSON; accepts Hash/Array/String
   serialize :configured_parameters, coder: JSON
 
@@ -25,20 +26,25 @@ class Station < ApplicationRecord
 
   # Prefer explicit ping timestamp, fall back to created_at
   def last_ping
-    @last_ping ||= ping_results.order(Arel.sql("COALESCE(timestamp, created_at) DESC")).limit(1).first
+    @last_ping ||= ping_results
+      .order(Arel.sql("COALESCE(timestamp, created_at) DESC"))
+      .limit(1).first
   end
 
   def last_ping_success?
     last_ping&.success
   end
 
+  # Scalar: MAX(COALESCE(timestamp, created_at))
   def last_ping_at
-    ping_results.maximum(Arel.sql("COALESCE(timestamp, created_at)"))
+    ping_results.pick(Arel.sql("MAX(COALESCE(timestamp, created_at))"))
   end
 
   def recent_failures_count(window_hours: FAIL_WINDOW_HOURS)
-    from = window_hours.hours.ago
-    ping_scope_between(from:, to: Time.current).where(success: false).count
+    from_time = window_hours.hours.ago
+    ping_scope_between(from: from_time, to: Time.current)
+      .where(success: false)
+      .count
   end
 
   def stale?
@@ -91,11 +97,7 @@ class Station < ApplicationRecord
     end
   end
 
-  # Generic accessor for views; flexible window args:
-  #   series_for(:latency, since: 24.hours.ago)
-  #   series_for(:latency, from: 24.hours.ago, to: Time.current)
-  #   series_for(:latency, hours: 24)
-  #   series_for(:latency, last: 24.hours)
+  # Generic accessor for views; flexible window args
   def series_for(key, from: nil, to: nil, since: nil, hours: nil, last: nil)
     _from, _to = resolve_window(from:, to:, since:, hours:, last:)
 
@@ -110,13 +112,6 @@ class Station < ApplicationRecord
   end
 
   # Returns an Array<String> of parameter names the station cares about.
-  # Supports these shapes in `configured_parameters`:
-  # - Hash with:
-  #     { "selected": ["BattV","Flow"], ... }
-  #     { "parameters": ["BattV","Flow"], ... }
-  #     { "thresholds": { ... }, "BattV": [10, 15], "Flow": [0.2, 2.0] }  # keys imply selection
-  # - Array: ["BattV","Flow"]
-  # - String: "BattV, Flow; RSSI"
   def selected_parameters
     cp = configured_parameters
 
@@ -127,7 +122,6 @@ class Station < ApplicationRecord
       elsif cp["parameters"].is_a?(Array)
         cp["parameters"].map(&:to_s)
       else
-        # Treat non-threshold top-level keys as selected params
         (cp.keys - ["thresholds"]).map(&:to_s)
       end
     when Array
@@ -141,20 +135,20 @@ class Station < ApplicationRecord
 
   private
 
-  # Unified time-window scope that works with or without explicit timestamps
+  # Unified time-window scope that binds through `where(...)` correctly.
+  # IMPORTANT: do NOT wrap the SQL string in Arel.sql here, so the `?` binds are handled by AR.
   def ping_scope_between(from:, to:)
-    ping_results.where(Arel.sql("COALESCE(timestamp, created_at) BETWEEN ? AND ?"), from, to)
+    ping_results.where(
+      "COALESCE(timestamp, created_at) BETWEEN ? AND ?",
+      from, to
+    )
   end
 
   # Accepts various window styles and normalises to [from, to]
   def resolve_window(from:, to:, since:, hours:, last:)
-    # Highest precedence: explicit from/to
     return [from, to] if from && to
-
-    # since: <time> means from = since, to = now
     return [since, Time.current] if since
 
-    # hours: N or last: N.hours / seconds duration
     if hours
       return [hours.to_i.hours.ago, Time.current]
     end
@@ -169,21 +163,17 @@ class Station < ApplicationRecord
       return [Time.current - duration, Time.current]
     end
 
-    # default 24h window
     [24.hours.ago, Time.current]
   end
 
   # ---------- Normalisers ----------
 
-  # Make tags forgiving: "a, b  c;d" -> "a,b,c,d"
   def normalize_tags_if_present!
     return unless has_attribute?(:tags) && self[:tags].present?
     tokens = self[:tags].to_s.split(/[,;\s]+/).map(&:strip).reject(&:blank?)
     self[:tags] = tokens.uniq.join(",")
   end
 
-  # Accept JSON array, JSON object, or a simple comma/space-separated list.
-  # Stores Hash/Array directly (serialize handles it) or JSON text if the column is plain text.
   def normalize_configured_parameters!
     raw = self[:configured_parameters]
     return if raw.nil? || raw.is_a?(Hash) || raw.is_a?(Array)
@@ -200,8 +190,6 @@ class Station < ApplicationRecord
     self[:configured_parameters] = parsed
   end
 
-  # Extract threshold pairs either from a nested "thresholds" hash
-  # or from top-level { "Param" => [low, high], ... }
   def thresholds_hash
     cfg = configured_parameters
     return {} unless cfg.is_a?(Hash)

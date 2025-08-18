@@ -41,6 +41,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_16_060000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "configured_parameters", default: "[]", null: false
+    t.boolean "active", default: true, null: false
+    t.index ["active"], name: "index_stations_on_active"
   end
 
   add_foreign_key "ping_results", "stations"

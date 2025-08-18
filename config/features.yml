@@ -12,9 +12,10 @@ planned:
   - Background daemon for continuous pings & logger ingest
   - Historical data modal (zoom/pan + export) (untested)
   - Direct logger status table ingest
+  - Tidy up stations cards formatting
   - System health dashboard with sparkline mini-charts
   - Alerting to Teams & Email with thresholds
   - Admin users & secure storage (tokens, file paths)
   - Export stations to CSV (UI action)
-  - Settings page for system-wide config
+  - Settings page for system-wide config (from sidebar)
   - Dockerfile for easy deployment

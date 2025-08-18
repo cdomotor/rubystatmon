@@ -120,9 +120,10 @@ class StationsController < ApplicationController
   def station_params
     sp = params.require(:station).permit(
       :name,
-      :ip_address,             # ✅ correct column (instead of :url)
+      :ip_address,             
       :tags,
       :ping_enabled,
+      :active,
       :logger_ingest_enabled,
       :configured_parameters
     )
