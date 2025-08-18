@@ -1,7 +1,7 @@
 # File: config/features.yml
 # Path: /config/features.yml
 current:
-  - Station list with search & status filters
+  - Stations lists with search & status filters
   - Manual ping with live latency result
   - CSV import for stations
   - Tailwind UI theming
@@ -12,6 +12,9 @@ planned:
   - Background daemon for continuous pings & logger ingest
   - Historical data modal (zoom/pan + export) (untested)
   - Direct logger status table ingest
+  - Finish darkmode theming
+  - Project / client based station filters
+  - Station tags management (add/edit/delete)
   - Tidy up stations cards formatting
   - System health dashboard with sparkline mini-charts
   - Alerting to Teams & Email with thresholds

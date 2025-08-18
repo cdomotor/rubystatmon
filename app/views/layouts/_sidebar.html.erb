@@ -1,12 +1,17 @@
 <!-- File: app/views/layouts/_sidebar.html.erb -->
 <!-- Path: /app/views/layouts/_sidebar.html.erb -->
-<nav class="bg-gray-800 text-white w-64 min-h-screen" aria-label="Primary">
+<nav class="bg-gray-800 dark:bg-gray-900 text-white w-64 min-h-screen" aria-label="Primary">
   <ul class="space-y-2 p-4">
+    <li class="mb-2">
+      <%= render 'shared/theme_toggle' %>
+    </li>
+
     <li>
       <%= link_to dashboard_path,
-                  class: "block py-2 px-3 rounded-md hover:bg-gray-700 #{'bg-gray-900' if current_page?(dashboard_path)}" do %>
+            class: "block py-2 px-3 rounded-md hover:bg-gray-700 dark:hover:bg-gray-800 #{'bg-gray-900 dark:bg-black/40' if current_page?(dashboard_path)}",
+            aria: { current: (current_page?(dashboard_path) ? 'page' : nil) } do %>
         <span class="inline-flex items-center gap-2">
-          <span>📊</span>
+          <span aria-hidden="true">📊</span>
           <span>Dashboard</span>
         </span>
       <% end %>

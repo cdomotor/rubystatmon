@@ -1,0 +1,36 @@
+<!-- File: _theme_toggle.html.erb -->
+<!-- Path: /app/views/shared/_theme_toggle.html.erb -->
+<div class="flex items-center gap-2">
+  <button type="button" class="px-2 py-1 rounded border text-sm"
+          onclick="window.setTheme('light')">Light</button>
+  <button type="button" class="px-2 py-1 rounded border text-sm"
+          onclick="window.setTheme('dark')">Dark</button>
+  <button type="button" class="px-2 py-1 rounded border text-sm"
+          onclick="window.setTheme('system')">System</button>
+</div>
+
+<script>
+  window.setTheme = function (mode) {
+    var key = 'statmon:theme'; // 'light' | 'dark' | 'system'
+    try {
+      localStorage.setItem(key, mode);
+      var systemDark = window.matchMedia &&
+                       window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var isDark = (mode === 'dark') || (mode === 'system' && systemDark);
+      var root = document.documentElement;
+      if (isDark) root.classList.add('dark'); else root.classList.remove('dark');
+      root.dataset.theme = isDark ? 'dark' : 'light';
+    } catch (e) {}
+  };
+
+  // Optional: live-update when user toggles OS theme and you're in 'system' mode
+  (function () {
+    if (!window.matchMedia) return;
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    mq.addEventListener('change', function () {
+      var key = 'statmon:theme';
+      var saved = localStorage.getItem(key) || 'system';
+      if (saved === 'system') window.setTheme('system');
+    });
+  })();
+</script>

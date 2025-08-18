@@ -1,22 +1,50 @@
+<!-- File: application.html.erb -->
+<!-- Path: /app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>StatMon</title>
+  <!-- Theme bootstrap FIRST to avoid FOUC -->
+  <script>
+    // keep this tiny & synchronous to avoid FOUC
+    (function () {
+      try {
+        var key   = 'statmon:theme'; // 'light' | 'dark' | 'system'
+        var saved = localStorage.getItem(key);
+        var preferSystem = !saved || saved === 'system';
+
+        var systemDark = window.matchMedia &&
+                         window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        var isDark = preferSystem ? systemDark : (saved === 'dark');
+        var root   = document.documentElement;
+
+        if (isDark) root.classList.add('dark'); else root.classList.remove('dark');
+        root.dataset.theme = isDark ? 'dark' : 'light';
+      } catch (_) {}
+    })();
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "StatMon" %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+
+  <%# If Tailwind is emitted as application.tailwind.css, use that name instead %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
-    <%= javascript_importmap_tags %>
-
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
-  <div class="flex">
+
+<body class="bg-gray-50 dark:bg-gray-950 font-sans text-gray-800 dark:text-gray-100">
+  <div class="flex min-h-screen">
     <%= render 'layouts/sidebar' %>
     <main class="flex-1 p-6">
       <%= yield %>
     </main>
   </div>
-  <footer class="bg-gray-800 text-white py-4 mt-8">
+
+  <footer class="bg-gray-800 dark:bg-gray-900 text-white dark:text-gray-200 py-4 mt-8">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <p>&copy; <%= Time.current.year %> StatMon. All rights reserved.</p>
     </div>
