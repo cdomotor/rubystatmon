@@ -1,0 +1,20 @@
+<!-- File: app/views/stations_imports/commit.html.erb -->
+<!-- Path: /app/views/stations_imports/commit.html.erb -->
+<h1 class="text-xl font-semibold mb-4">Import Complete</h1>
+
+<p class="text-sm text-gray-700 mb-3">
+  Creates <%= @report[:totals][:creates] %> ·
+  Updates <%= @report[:totals][:updates] %> ·
+  Skipped <%= @report[:totals][:skipped] %> ·
+  Errors <%= @report[:totals][:errors] %>
+</p>
+
+<% if @report[:totals][:errors].to_i > 0 %>
+  <div class="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+    Some rows failed. See details below.
+  </div>
+<% end %>
+
+<div class="mt-3">
+  <%= link_to "Back to Stations", stations_path, class: "rounded-md bg-gray-100 px-4 py-2 text-sm hover:bg-gray-200" %>
+</div>

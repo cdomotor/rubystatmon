@@ -1,0 +1,41 @@
+<!-- File: app/views/stations_imports/new.html.erb -->
+<!-- Path: /app/views/stations_imports/new.html.erb -->
+
+<h1 class="text-xl font-semibold mb-4">Import Stations (CSV)</h1>
+
+<div class="rounded-lg border border-gray-200 bg-white p-4">
+  <p class="text-sm text-gray-600 mb-3">
+    Upload a CSV to create/update stations.
+    <%= link_to "Download template", import_template_stations_path, class: "underline" %>
+  </p>
+
+  <ul class="text-xs text-gray-500 mb-4 list-disc pl-5">
+    <li>Recognized headers (case-insensitive): <code>id, name, ip_address, active, filestore_path, ingest_enabled, ingest_parameters, tags</code></li>
+    <li><code>ingest_parameters</code> accepts JSON (e.g. <code>{"Battery":{"trend_days":7}}</code>) or <code>Param:7;Other:3</code></li>
+    <li>Options below control whether new rows are created and/or existing rows are updated.</li>
+  </ul>
+
+  <%= form_with url: import_preview_stations_path, multipart: true, local: true do |f| %>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">CSV file</label>
+        <%= f.file_field :csv, accept: ".csv", class: "mt-1 w-full rounded-md border-gray-300 shadow-sm" %>
+      </div>
+      <div class="flex flex-col gap-2">
+        <label class="inline-flex items-center gap-2 mt-6">
+          <%= check_box_tag :create_missing, "1", true, class: "rounded border-gray-300" %>
+          <span class="text-sm">Create missing stations</span>
+        </label>
+        <label class="inline-flex items-center gap-2">
+          <%= check_box_tag :update_existing, "1", true, class: "rounded border-gray-300" %>
+          <span class="text-sm">Update existing stations</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="mt-4 flex gap-2">
+      <%= f.submit "Preview", class: "rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700" %>
+      <%= link_to "Back to Stations", stations_path, class: "rounded-md bg-gray-100 px-4 py-2 text-sm hover:bg-gray-200" %>
+    </div>
+  <% end %>
+</div>

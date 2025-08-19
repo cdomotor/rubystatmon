@@ -9,9 +9,12 @@ current:
   - Station editing (name, URL, tags, monitoring options)
 
 planned:
-  - Background daemon for continuous pings & logger ingest
+  - add nested grouping of stations on station list page (e.g. by active (monitoring), client, project, etc.)
+  - Test/debug Background daemon server data ingest
   - Historical data modal (zoom/pan + export) (untested)
   - Direct logger status table ingest
+  - fix the "collage" of colours in the station cards
+  - add "request feature" button to "features" page
   - Finish darkmode theming
   - Project / client based station filters
   - Station tags management (add/edit/delete)
