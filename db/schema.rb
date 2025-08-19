@@ -42,7 +42,11 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_16_060000) do
     t.datetime "updated_at", null: false
     t.text "configured_parameters", default: "[]", null: false
     t.boolean "active", default: true, null: false
+    t.string "filestore_path"
+    t.boolean "ingest_enabled", default: false, null: false
+    t.text "ingest_parameters"
     t.index ["active"], name: "index_stations_on_active"
+    t.index ["ingest_enabled"], name: "index_stations_on_ingest_enabled"
   end
 
   add_foreign_key "ping_results", "stations"

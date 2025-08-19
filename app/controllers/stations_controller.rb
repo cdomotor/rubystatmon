@@ -118,26 +118,10 @@ class StationsController < ApplicationController
   end
 
   def station_params
-    sp = params.require(:station).permit(
-      :name,
-      :ip_address,             
-      :tags,
-      :ping_enabled,
-      :active,
-      :logger_ingest_enabled,
-      :configured_parameters
+    params.require(:station).permit(
+      :name, :ip_address, :enabled,
+      :filestore_path, :ingest_enabled,
+      ingest_parameters: {} # allow nested JSON as a Hash
     )
-
-    # Parse JSON string for configured_parameters if necessary
-    if sp[:configured_parameters].is_a?(String)
-      begin
-        parsed = JSON.parse(sp[:configured_parameters].presence || "[]")
-        sp[:configured_parameters] = parsed.is_a?(Array) ? parsed : []
-      rescue JSON::ParserError
-        sp[:configured_parameters] = []
-      end
-    end
-
-    sp
   end
 end

@@ -21302,3 +21302,929 @@ Completed 200 OK in 10139ms (Views: 236.4ms | ActiveRecord: 0.0ms | Allocations:
 Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-19 14:27:40 +1000
 Started GET "/daemon_logs/stream" for 127.0.0.1 at 2025-08-19 14:27:43 +1000
 Processing by DaemonLogsController#stream as */*
+Started GET "/dashboard" for 127.0.0.1 at 2025-08-20 04:52:08 +1000
+Processing by DashboardController#index as HTML
+  [1m[36mStation Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stations"[0m
+  [1m[36mPingResult Count (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE (created_at >= '2025-08-18 18:52:10.447803')[0m
+  [1m[36mReading Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "readings" WHERE (taken_at >= '2025-08-18 18:52:10.458356')[0m
+  [1m[36mPingResult Pluck (2.9ms)[0m  [1m[34mSELECT "ping_results"."created_at" FROM "ping_results" ORDER BY "ping_results"."created_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mPingResult Maximum (6.9ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") AS "maximum_created_at", "ping_results"."station_id" AS "ping_results_station_id" FROM "ping_results" GROUP BY "ping_results"."station_id"[0m
+  [1m[36mPingResult Count (5.1ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "ping_results"."station_id" AS "ping_results_station_id" FROM "ping_results" WHERE (created_at >= '2025-08-19 12:52:10.511381') AND "ping_results"."success" = ? GROUP BY "ping_results"."station_id"[0m  [["success", 0]]
+  [1m[36mStation Load (0.4ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY "stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.653571' AND '2025-08-19 18:52:10.653642') AND "ping_results"."success" = ?[0m  [["station_id", 29], ["success", 0]]
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.1ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.718162' AND '2025-08-19 18:52:10.718170') AND "ping_results"."success" = ?[0m  [["station_id", 29], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.723648' AND '2025-08-19 18:52:10.723656') AND "ping_results"."success" = ?[0m  [["station_id", 29], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.725923' AND '2025-08-19 18:52:10.725929') AND "ping_results"."success" = ?[0m  [["station_id", 29], ["success", 0]]
+  Rendered dashboard/_station_spotlight.html.erb (Duration: 162.5ms | Allocations: 10081)
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.732701' AND '2025-08-19 18:52:10.732710') AND "ping_results"."success" = ?[0m  [["station_id", 59], ["success", 0]]
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.739872' AND '2025-08-19 18:52:10.739877') AND "ping_results"."success" = ?[0m  [["station_id", 59], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.741834' AND '2025-08-19 18:52:10.741840') AND "ping_results"."success" = ?[0m  [["station_id", 59], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.743340' AND '2025-08-19 18:52:10.743346') AND "ping_results"."success" = ?[0m  [["station_id", 59], ["success", 0]]
+  Rendered dashboard/_station_spotlight.html.erb (Duration: 16.1ms | Allocations: 2551)
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.746265' AND '2025-08-19 18:52:10.746273') AND "ping_results"."success" = ?[0m  [["station_id", 27], ["success", 0]]
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.751859' AND '2025-08-19 18:52:10.751869') AND "ping_results"."success" = ?[0m  [["station_id", 27], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.757656' AND '2025-08-19 18:52:10.757663') AND "ping_results"."success" = ?[0m  [["station_id", 27], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 12:52:10.759766' AND '2025-08-19 18:52:10.759771') AND "ping_results"."success" = ?[0m  [["station_id", 27], ["success", 0]]
+  Rendered dashboard/_station_spotlight.html.erb (Duration: 16.4ms | Allocations: 2551)
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 218.8ms | Allocations: 18427)
+  Rendered shared/_theme_toggle.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.0ms | Allocations: 280)
+  Rendered layout layouts/application.html.erb (Duration: 223.5ms | Allocations: 19318)
+Completed 200 OK in 1776ms (Views: 237.3ms | ActiveRecord: 62.2ms | Allocations: 48728)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-20 04:52:11 +1000
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFilestoreIngestToStations (20250819)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "stations" ADD "filestore_path" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "stations" ADD "ingest_enabled" boolean DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "stations" ADD "ingest_parameters" text[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_stations_on_ingest_enabled" ON "stations" ("ingest_enabled")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250819') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/dashboard" for 127.0.0.1 at 2025-08-20 05:48:37 +1000
+Processing by DashboardController#index as HTML
+  [1m[36mStation Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stations"[0m
+  [1m[36mPingResult Count (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE (created_at >= '2025-08-18 19:48:39.785280')[0m
+  [1m[36mReading Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "readings" WHERE (taken_at >= '2025-08-18 19:48:39.794613')[0m
+  [1m[36mPingResult Pluck (4.6ms)[0m  [1m[34mSELECT "ping_results"."created_at" FROM "ping_results" ORDER BY "ping_results"."created_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mPingResult Maximum (6.4ms)[0m  [1m[34mSELECT MAX("ping_results"."created_at") AS "maximum_created_at", "ping_results"."station_id" AS "ping_results_station_id" FROM "ping_results" GROUP BY "ping_results"."station_id"[0m
+  [1m[36mPingResult Count (3.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "ping_results"."station_id" AS "ping_results_station_id" FROM "ping_results" WHERE (created_at >= '2025-08-19 13:48:39.833490') AND "ping_results"."success" = ? GROUP BY "ping_results"."station_id"[0m  [["success", 0]]
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY "stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.401944' AND '2025-08-19 19:48:42.401999') AND "ping_results"."success" = ?[0m  [["station_id", 10], ["success", 0]]
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.423548' AND '2025-08-19 19:48:42.423553') AND "ping_results"."success" = ?[0m  [["station_id", 10], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.426262' AND '2025-08-19 19:48:42.426276') AND "ping_results"."success" = ?[0m  [["station_id", 10], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.429792' AND '2025-08-19 19:48:42.429799') AND "ping_results"."success" = ?[0m  [["station_id", 10], ["success", 0]]
+  Rendered dashboard/_station_spotlight.html.erb (Duration: 105.1ms | Allocations: 10244)
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.434244' AND '2025-08-19 19:48:42.434258') AND "ping_results"."success" = ?[0m  [["station_id", 63], ["success", 0]]
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.442302' AND '2025-08-19 19:48:42.442311') AND "ping_results"."success" = ?[0m  [["station_id", 63], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.444831' AND '2025-08-19 19:48:42.444843') AND "ping_results"."success" = ?[0m  [["station_id", 63], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.446941' AND '2025-08-19 19:48:42.446950') AND "ping_results"."success" = ?[0m  [["station_id", 63], ["success", 0]]
+  Rendered dashboard/_station_spotlight.html.erb (Duration: 16.0ms | Allocations: 2551)
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.450010' AND '2025-08-19 19:48:42.450029') AND "ping_results"."success" = ?[0m  [["station_id", 30], ["success", 0]]
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.455212' AND '2025-08-19 19:48:42.455227') AND "ping_results"."success" = ?[0m  [["station_id", 30], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.458227' AND '2025-08-19 19:48:42.458237') AND "ping_results"."success" = ?[0m  [["station_id", 30], ["success", 0]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:48:42.461032' AND '2025-08-19 19:48:42.461044') AND "ping_results"."success" = ?[0m  [["station_id", 30], ["success", 0]]
+  Rendered dashboard/_station_spotlight.html.erb (Duration: 14.0ms | Allocations: 2551)
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 152.1ms | Allocations: 18750)
+  Rendered shared/_theme_toggle.html.erb (Duration: 1.0ms | Allocations: 144)
+  Rendered layouts/_sidebar.html.erb (Duration: 7.5ms | Allocations: 724)
+  Rendered layout layouts/application.html.erb (Duration: 240.1ms | Allocations: 26967)
+Completed 200 OK in 4947ms (Views: 270.2ms | ActiveRecord: 48.0ms | Allocations: 1048649)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-20 05:48:42 +1000
+Started GET "/stations" for 127.0.0.1 at 2025-08-20 05:49:53 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 1.2ms | Allocations: 318)
+  [1m[36mStation Load (0.3ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY "stations"."name" ASC[0m
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.349586' AND '2025-08-19 19:49:55.349640') AND "ping_results"."success" = ?[0m  [["station_id", 6], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 15.9ms | Allocations: 2205)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.357600' AND '2025-08-19 19:49:55.357632') AND "ping_results"."success" = ?[0m  [["station_id", 7], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.2ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.365994' AND '2025-08-19 19:49:55.366029') AND "ping_results"."success" = ?[0m  [["station_id", 8], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.5ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.373680' AND '2025-08-19 19:49:55.373702') AND "ping_results"."success" = ?[0m  [["station_id", 9], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.7ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.379581' AND '2025-08-19 19:49:55.379603') AND "ping_results"."success" = ?[0m  [["station_id", 10], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.6ms | Allocations: 1275)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.386237' AND '2025-08-19 19:49:55.386256') AND "ping_results"."success" = ?[0m  [["station_id", 11], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.392762' AND '2025-08-19 19:49:55.392784') AND "ping_results"."success" = ?[0m  [["station_id", 20], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.398178' AND '2025-08-19 19:49:55.398204') AND "ping_results"."success" = ?[0m  [["station_id", 12], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.7ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.405059' AND '2025-08-19 19:49:55.405087') AND "ping_results"."success" = ?[0m  [["station_id", 13], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.6ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.412035' AND '2025-08-19 19:49:55.412067') AND "ping_results"."success" = ?[0m  [["station_id", 14], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.4ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.421206' AND '2025-08-19 19:49:55.421251') AND "ping_results"."success" = ?[0m  [["station_id", 15], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.431851' AND '2025-08-19 19:49:55.431894') AND "ping_results"."success" = ?[0m  [["station_id", 16], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.443933' AND '2025-08-19 19:49:55.443979') AND "ping_results"."success" = ?[0m  [["station_id", 17], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.455694' AND '2025-08-19 19:49:55.455741') AND "ping_results"."success" = ?[0m  [["station_id", 18], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.4ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.467544' AND '2025-08-19 19:49:55.467571') AND "ping_results"."success" = ?[0m  [["station_id", 19], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 11.1ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.478756' AND '2025-08-19 19:49:55.478791') AND "ping_results"."success" = ?[0m  [["station_id", 30], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.2ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.487434' AND '2025-08-19 19:49:55.487468') AND "ping_results"."success" = ?[0m  [["station_id", 31], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.0ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.496751' AND '2025-08-19 19:49:55.496787') AND "ping_results"."success" = ?[0m  [["station_id", 32], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.2ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.506563' AND '2025-08-19 19:49:55.506584') AND "ping_results"."success" = ?[0m  [["station_id", 33], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.7ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.516445' AND '2025-08-19 19:49:55.516492') AND "ping_results"."success" = ?[0m  [["station_id", 34], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.527616' AND '2025-08-19 19:49:55.527641') AND "ping_results"."success" = ?[0m  [["station_id", 35], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.5ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.536530' AND '2025-08-19 19:49:55.536574') AND "ping_results"."success" = ?[0m  [["station_id", 36], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.4ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.545136' AND '2025-08-19 19:49:55.545155') AND "ping_results"."success" = ?[0m  [["station_id", 37], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.551643' AND '2025-08-19 19:49:55.551660') AND "ping_results"."success" = ?[0m  [["station_id", 43], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.557925' AND '2025-08-19 19:49:55.557939') AND "ping_results"."success" = ?[0m  [["station_id", 48], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.1ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.564166' AND '2025-08-19 19:49:55.564191') AND "ping_results"."success" = ?[0m  [["station_id", 49], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.1ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.574196' AND '2025-08-19 19:49:55.574242') AND "ping_results"."success" = ?[0m  [["station_id", 38], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.585672' AND '2025-08-19 19:49:55.585697') AND "ping_results"."success" = ?[0m  [["station_id", 39], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.5ms | Allocations: 1275)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.594917' AND '2025-08-19 19:49:55.594952') AND "ping_results"."success" = ?[0m  [["station_id", 40], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.2ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.606989' AND '2025-08-19 19:49:55.607023') AND "ping_results"."success" = ?[0m  [["station_id", 41], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.7ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.618009' AND '2025-08-19 19:49:55.618040') AND "ping_results"."success" = ?[0m  [["station_id", 42], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 11.1ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.630553' AND '2025-08-19 19:49:55.630606') AND "ping_results"."success" = ?[0m  [["station_id", 44], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 12.3ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.642700' AND '2025-08-19 19:49:55.642746') AND "ping_results"."success" = ?[0m  [["station_id", 45], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.652891' AND '2025-08-19 19:49:55.652922') AND "ping_results"."success" = ?[0m  [["station_id", 46], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.1ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.661855' AND '2025-08-19 19:49:55.661888') AND "ping_results"."success" = ?[0m  [["station_id", 47], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.6ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.670678' AND '2025-08-19 19:49:55.670711') AND "ping_results"."success" = ?[0m  [["station_id", 62], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.2ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.681061' AND '2025-08-19 19:49:55.681097') AND "ping_results"."success" = ?[0m  [["station_id", 51], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.6ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.690916' AND '2025-08-19 19:49:55.690951') AND "ping_results"."success" = ?[0m  [["station_id", 4], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 10.5ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.701362' AND '2025-08-19 19:49:55.701381') AND "ping_results"."success" = ?[0m  [["station_id", 50], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.710177' AND '2025-08-19 19:49:55.710211') AND "ping_results"."success" = ?[0m  [["station_id", 53], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.720231' AND '2025-08-19 19:49:55.720253') AND "ping_results"."success" = ?[0m  [["station_id", 52], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.6ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.730061' AND '2025-08-19 19:49:55.730086') AND "ping_results"."success" = ?[0m  [["station_id", 21], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.0ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.740266' AND '2025-08-19 19:49:55.740298') AND "ping_results"."success" = ?[0m  [["station_id", 22], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.750003' AND '2025-08-19 19:49:55.750038') AND "ping_results"."success" = ?[0m  [["station_id", 23], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.2ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.759269' AND '2025-08-19 19:49:55.759297') AND "ping_results"."success" = ?[0m  [["station_id", 24], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.767002' AND '2025-08-19 19:49:55.767021') AND "ping_results"."success" = ?[0m  [["station_id", 25], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.3ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.773788' AND '2025-08-19 19:49:55.773803') AND "ping_results"."success" = ?[0m  [["station_id", 28], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.795034' AND '2025-08-19 19:49:55.795070') AND "ping_results"."success" = ?[0m  [["station_id", 26], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 22.1ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.810142' AND '2025-08-19 19:49:55.810177') AND "ping_results"."success" = ?[0m  [["station_id", 27], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 13.7ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.825902' AND '2025-08-19 19:49:55.825934') AND "ping_results"."success" = ?[0m  [["station_id", 3], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 15.4ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 72], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 72], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 72], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.840228' AND '2025-08-19 19:49:55.840248') AND "ping_results"."success" = ?[0m  [["station_id", 72], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 15.3ms | Allocations: 1281)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.857222' AND '2025-08-19 19:49:55.857256') AND "ping_results"."success" = ?[0m  [["station_id", 2], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 16.0ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.874520' AND '2025-08-19 19:49:55.874553') AND "ping_results"."success" = ?[0m  [["station_id", 55], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 18.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.893837' AND '2025-08-19 19:49:55.893875') AND "ping_results"."success" = ?[0m  [["station_id", 54], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 18.8ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.913525' AND '2025-08-19 19:49:55.913560') AND "ping_results"."success" = ?[0m  [["station_id", 57], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 15.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.924465' AND '2025-08-19 19:49:55.924502') AND "ping_results"."success" = ?[0m  [["station_id", 56], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 11.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.938433' AND '2025-08-19 19:49:55.938468') AND "ping_results"."success" = ?[0m  [["station_id", 58], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 12.0ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.952315' AND '2025-08-19 19:49:55.952894') AND "ping_results"."success" = ?[0m  [["station_id", 60], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 14.2ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.8ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.968649' AND '2025-08-19 19:49:55.968683') AND "ping_results"."success" = ?[0m  [["station_id", 61], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 13.8ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:55.982310' AND '2025-08-19 19:49:55.982363') AND "ping_results"."success" = ?[0m  [["station_id", 5], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 14.3ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.000136' AND '2025-08-19 19:49:56.000209') AND "ping_results"."success" = ?[0m  [["station_id", 29], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 14.9ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.009684' AND '2025-08-19 19:49:56.009712') AND "ping_results"."success" = ?[0m  [["station_id", 59], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.3ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.018211' AND '2025-08-19 19:49:56.018230') AND "ping_results"."success" = ?[0m  [["station_id", 63], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.8ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.029112' AND '2025-08-19 19:49:56.029148') AND "ping_results"."success" = ?[0m  [["station_id", 64], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 11.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.042664' AND '2025-08-19 19:49:56.042717') AND "ping_results"."success" = ?[0m  [["station_id", 65], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 18.8ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.062531' AND '2025-08-19 19:49:56.062577') AND "ping_results"."success" = ?[0m  [["station_id", 66], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 15.7ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.083047' AND '2025-08-19 19:49:56.083078') AND "ping_results"."success" = ?[0m  [["station_id", 67], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 17.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.100563' AND '2025-08-19 19:49:56.100588') AND "ping_results"."success" = ?[0m  [["station_id", 68], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 17.3ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.116238' AND '2025-08-19 19:49:56.116262') AND "ping_results"."success" = ?[0m  [["station_id", 69], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 14.0ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.125155' AND '2025-08-19 19:49:56.125208') AND "ping_results"."success" = ?[0m  [["station_id", 70], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.0ms | Allocations: 1030)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:49:56.136332' AND '2025-08-19 19:49:56.136378') AND "ping_results"."success" = ?[0m  [["station_id", 71], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 11.0ms | Allocations: 1280)
+  Rendered stations/_list.html.erb (Duration: 810.2ms | Allocations: 96749)
+  Rendered stations/index.html.erb within layouts/application (Duration: 820.9ms | Allocations: 98186)
+  Rendered shared/_theme_toggle.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_sidebar.html.erb (Duration: 3.1ms | Allocations: 271)
+  Rendered layout layouts/application.html.erb (Duration: 827.7ms | Allocations: 98884)
+Completed 200 OK in 2026ms (Views: 766.5ms | ActiveRecord: 74.1ms | Allocations: 99601)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-20 05:49:56 +1000
+Started GET "/stations/6" for 127.0.0.1 at 2025-08-20 05:50:18 +1000
+Processing by StationsController#show as HTML
+  Parameters: {"id" => "6"}
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/show.html.erb within layouts/application
+  Rendered stations/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 216)
+  Rendered shared/_theme_toggle.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_sidebar.html.erb (Duration: 2.0ms | Allocations: 284)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1068)
+Completed 200 OK in 1275ms (Views: 11.5ms | ActiveRecord: 0.5ms | Allocations: 1942)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-20 05:50:20 +1000
+Started GET "/stations/6/edit" for 127.0.0.1 at 2025-08-20 05:50:30 +1000
+Processing by StationsController#edit as HTML
+  Parameters: {"id" => "6"}
+  [1m[36mStation Load (0.1ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/edit.html.erb within layouts/application
+  Rendered stations/_form.html.erb (Duration: 8.6ms | Allocations: 1120)
+  Rendered stations/edit.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1327)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 1403)
+Completed 500 Internal Server Error in 934ms (ActiveRecord: 0.1ms | Allocations: 1908)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'form' for an instance of #<Class:0x000002092efbb240>):
+     7: 
+     8:   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+     9:     <div>
+    10:       <%= form.label :filestore_path, "Source folder (local or UNC)", class: "block text-sm font-medium text-gray-700" %>
+    11:       <%= form.text_field :filestore_path, class: "mt-1 w-full rounded-md border-gray-300 shadow-sm" %>
+    12:       <p class="mt-1 text-xs text-gray-500">e.g. <code>C:\data\logger\STN001</code> or <code>\\server\share\logger\STN001</code></p>
+    13:     </div>
+  
+app/views/stations/_form.html.erb:10:in '_app_views_stations__form_html_erb__698873086_10152'
+app/views/stations/edit.html.erb:6:in '_app_views_stations_edit_html_erb___956744366_10144'
+Started GET "/stations" for 127.0.0.1 at 2025-08-20 05:58:11 +1000
+Processing by StationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stations/index.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 10.8ms | Allocations: 1033)
+  [1m[36mStation Load (0.9ms)[0m  [1m[34mSELECT "stations".* FROM "stations" ORDER BY "stations"."name" ASC[0m
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (1.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 6], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.740073' AND '2025-08-19 19:58:15.740117') AND "ping_results"."success" = ?[0m  [["station_id", 6], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 115.5ms | Allocations: 11554)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 7], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.748850' AND '2025-08-19 19:58:15.748866') AND "ping_results"."success" = ?[0m  [["station_id", 7], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.6ms | Allocations: 1279)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 8], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.756134' AND '2025-08-19 19:58:15.756168') AND "ping_results"."success" = ?[0m  [["station_id", 8], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.0ms | Allocations: 1276)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 9], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.765059' AND '2025-08-19 19:58:15.765079') AND "ping_results"."success" = ?[0m  [["station_id", 9], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.3ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 10], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.771449' AND '2025-08-19 19:58:15.771464') AND "ping_results"."success" = ?[0m  [["station_id", 10], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.8ms | Allocations: 1275)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 11], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.777771' AND '2025-08-19 19:58:15.777792') AND "ping_results"."success" = ?[0m  [["station_id", 11], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.2ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 20], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.784404' AND '2025-08-19 19:58:15.784424') AND "ping_results"."success" = ?[0m  [["station_id", 20], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.0ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 12], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.792043' AND '2025-08-19 19:58:15.792060') AND "ping_results"."success" = ?[0m  [["station_id", 12], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 13], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.800212' AND '2025-08-19 19:58:15.800229') AND "ping_results"."success" = ?[0m  [["station_id", 13], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 14], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.806614' AND '2025-08-19 19:58:15.806628') AND "ping_results"."success" = ?[0m  [["station_id", 14], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.7ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 15], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.813687' AND '2025-08-19 19:58:15.813722') AND "ping_results"."success" = ?[0m  [["station_id", 15], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 16], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.822545' AND '2025-08-19 19:58:15.822579') AND "ping_results"."success" = ?[0m  [["station_id", 16], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.0ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 17], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.831921' AND '2025-08-19 19:58:15.831957') AND "ping_results"."success" = ?[0m  [["station_id", 17], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 18], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.841490' AND '2025-08-19 19:58:15.841526') AND "ping_results"."success" = ?[0m  [["station_id", 18], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 19], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.849317' AND '2025-08-19 19:58:15.849352') AND "ping_results"."success" = ?[0m  [["station_id", 19], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 30], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.856321' AND '2025-08-19 19:58:15.856335') AND "ping_results"."success" = ?[0m  [["station_id", 30], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.3ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 31], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.862716' AND '2025-08-19 19:58:15.862737') AND "ping_results"."success" = ?[0m  [["station_id", 31], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.7ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.1ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 32], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.868775' AND '2025-08-19 19:58:15.868809') AND "ping_results"."success" = ?[0m  [["station_id", 32], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.1ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 33], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.875702' AND '2025-08-19 19:58:15.875731') AND "ping_results"."success" = ?[0m  [["station_id", 33], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.3ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 34], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.882905' AND '2025-08-19 19:58:15.882922') AND "ping_results"."success" = ?[0m  [["station_id", 34], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 35], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.890126' AND '2025-08-19 19:58:15.890160') AND "ping_results"."success" = ?[0m  [["station_id", 35], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.3ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 36], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.898069' AND '2025-08-19 19:58:15.898109') AND "ping_results"."success" = ?[0m  [["station_id", 36], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.4ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 37], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.905312' AND '2025-08-19 19:58:15.905342') AND "ping_results"."success" = ?[0m  [["station_id", 37], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 43], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.914333' AND '2025-08-19 19:58:15.914364') AND "ping_results"."success" = ?[0m  [["station_id", 43], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.1ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 48], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.922261' AND '2025-08-19 19:58:15.922294') AND "ping_results"."success" = ?[0m  [["station_id", 48], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.8ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 49], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.931411' AND '2025-08-19 19:58:15.931435') AND "ping_results"."success" = ?[0m  [["station_id", 49], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.5ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 38], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.940968' AND '2025-08-19 19:58:15.941004') AND "ping_results"."success" = ?[0m  [["station_id", 38], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 39], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.948800' AND '2025-08-19 19:58:15.948833') AND "ping_results"."success" = ?[0m  [["station_id", 39], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.1ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 40], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.957923' AND '2025-08-19 19:58:15.957958') AND "ping_results"."success" = ?[0m  [["station_id", 40], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.4ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 41], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.966777' AND '2025-08-19 19:58:15.966811') AND "ping_results"."success" = ?[0m  [["station_id", 41], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 42], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.974315' AND '2025-08-19 19:58:15.974344') AND "ping_results"."success" = ?[0m  [["station_id", 42], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.0ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 44], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.980838' AND '2025-08-19 19:58:15.980856') AND "ping_results"."success" = ?[0m  [["station_id", 44], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.9ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 45], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.988435' AND '2025-08-19 19:58:15.988470') AND "ping_results"."success" = ?[0m  [["station_id", 45], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.3ms | Allocations: 1274)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.7ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 46], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:15.997185' AND '2025-08-19 19:58:15.997213') AND "ping_results"."success" = ?[0m  [["station_id", 46], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.7ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.1ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 47], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.003149' AND '2025-08-19 19:58:16.003181') AND "ping_results"."success" = ?[0m  [["station_id", 47], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.0ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 62], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.009663' AND '2025-08-19 19:58:16.009692') AND "ping_results"."success" = ?[0m  [["station_id", 62], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.4ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 51], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.018235' AND '2025-08-19 19:58:16.018252') AND "ping_results"."success" = ?[0m  [["station_id", 51], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 4], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.024464' AND '2025-08-19 19:58:16.024495') AND "ping_results"."success" = ?[0m  [["station_id", 4], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.9ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 50], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.032840' AND '2025-08-19 19:58:16.032856') AND "ping_results"."success" = ?[0m  [["station_id", 50], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.1ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 53], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.040030' AND '2025-08-19 19:58:16.040046') AND "ping_results"."success" = ?[0m  [["station_id", 53], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.6ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 52], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.046178' AND '2025-08-19 19:58:16.046211') AND "ping_results"."success" = ?[0m  [["station_id", 52], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.6ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 21], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.053026' AND '2025-08-19 19:58:16.053061') AND "ping_results"."success" = ?[0m  [["station_id", 21], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.4ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 22], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.060207' AND '2025-08-19 19:58:16.060240') AND "ping_results"."success" = ?[0m  [["station_id", 22], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 23], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.066950' AND '2025-08-19 19:58:16.066965') AND "ping_results"."success" = ?[0m  [["station_id", 23], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 24], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.073764' AND '2025-08-19 19:58:16.073777') AND "ping_results"."success" = ?[0m  [["station_id", 24], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.3ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 25], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.081325' AND '2025-08-19 19:58:16.081342') AND "ping_results"."success" = ?[0m  [["station_id", 25], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 28], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.088706' AND '2025-08-19 19:58:16.088721') AND "ping_results"."success" = ?[0m  [["station_id", 28], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 26], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.094614' AND '2025-08-19 19:58:16.094639') AND "ping_results"."success" = ?[0m  [["station_id", 26], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.1ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 27], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.100284' AND '2025-08-19 19:58:16.100303') AND "ping_results"."success" = ?[0m  [["station_id", 27], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.8ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.1ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 3], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.106546' AND '2025-08-19 19:58:16.106574') AND "ping_results"."success" = ?[0m  [["station_id", 3], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.7ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 72], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 72], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 72], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.115052' AND '2025-08-19 19:58:16.115091') AND "ping_results"."success" = ?[0m  [["station_id", 72], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.4ms | Allocations: 1283)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 2], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.123825' AND '2025-08-19 19:58:16.123848') AND "ping_results"."success" = ?[0m  [["station_id", 2], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.7ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 55], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.131767' AND '2025-08-19 19:58:16.131782') AND "ping_results"."success" = ?[0m  [["station_id", 55], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.3ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 54], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.138548' AND '2025-08-19 19:58:16.138565') AND "ping_results"."success" = ?[0m  [["station_id", 54], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.1ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.3ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 57], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.144759' AND '2025-08-19 19:58:16.144800') AND "ping_results"."success" = ?[0m  [["station_id", 57], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 56], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.154865' AND '2025-08-19 19:58:16.154900') AND "ping_results"."success" = ?[0m  [["station_id", 56], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.9ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 58], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.165576' AND '2025-08-19 19:58:16.165602') AND "ping_results"."success" = ?[0m  [["station_id", 58], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 9.9ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 60], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.174874' AND '2025-08-19 19:58:16.174908') AND "ping_results"."success" = ?[0m  [["station_id", 60], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 8.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.2ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 61], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.183613' AND '2025-08-19 19:58:16.183633') AND "ping_results"."success" = ?[0m  [["station_id", 61], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.9ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 5], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.211189' AND '2025-08-19 19:58:16.211242') AND "ping_results"."success" = ?[0m  [["station_id", 5], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 27.0ms | Allocations: 1278)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.5ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 29], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.219125' AND '2025-08-19 19:58:16.219141') AND "ping_results"."success" = ?[0m  [["station_id", 29], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.1ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 59], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.225700' AND '2025-08-19 19:58:16.225716') AND "ping_results"."success" = ?[0m  [["station_id", 59], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.9ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 63], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.233345' AND '2025-08-19 19:58:16.233375') AND "ping_results"."success" = ?[0m  [["station_id", 63], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.9ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 64], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.240647' AND '2025-08-19 19:58:16.240665') AND "ping_results"."success" = ?[0m  [["station_id", 64], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.2ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 65], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.247694' AND '2025-08-19 19:58:16.247712') AND "ping_results"."success" = ?[0m  [["station_id", 65], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 66], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.255307' AND '2025-08-19 19:58:16.255340') AND "ping_results"."success" = ?[0m  [["station_id", 66], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 7.4ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.1ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 67], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.261111' AND '2025-08-19 19:58:16.261129') AND "ping_results"."success" = ?[0m  [["station_id", 67], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 4.3ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 68], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.267036' AND '2025-08-19 19:58:16.267068') AND "ping_results"."success" = ?[0m  [["station_id", 68], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.6ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.1ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.6ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 69], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.274425' AND '2025-08-19 19:58:16.274441') AND "ping_results"."success" = ?[0m  [["station_id", 69], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.6ms | Allocations: 1277)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.1ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 70], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.280406' AND '2025-08-19 19:58:16.280443') AND "ping_results"."success" = ?[0m  [["station_id", 70], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 5.6ms | Allocations: 1030)
+  [1m[36mPingResult Load (0.0ms)[0m  [1m[34mSELECT "ping_results".* FROM "ping_results" WHERE "ping_results"."station_id" = ? ORDER BY "ping_results"."id" DESC LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  [1m[36mPingResult Pluck (0.4ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  [1m[36mCACHE PingResult Pluck (0.0ms)[0m  [1m[34mSELECT MAX(COALESCE(timestamp, created_at)) FROM "ping_results" WHERE "ping_results"."station_id" = ? LIMIT ?[0m  [["station_id", 71], ["LIMIT", 1]]
+  [1m[36mPingResult Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ping_results" WHERE "ping_results"."station_id" = ? AND (COALESCE(timestamp, created_at) BETWEEN '2025-08-19 13:58:16.287514' AND '2025-08-19 19:58:16.287530') AND "ping_results"."success" = ?[0m  [["station_id", 71], ["success", 0]]
+  Rendered stations/_station.html.erb (Duration: 6.5ms | Allocations: 1280)
+  Rendered stations/_list.html.erb (Duration: 692.2ms | Allocations: 113039)
+  Rendered stations/index.html.erb within layouts/application (Duration: 711.8ms | Allocations: 115491)
+  Rendered shared/_theme_toggle.html.erb (Duration: 0.8ms | Allocations: 144)
+  Rendered layouts/_sidebar.html.erb (Duration: 5.6ms | Allocations: 704)
+  Rendered layout layouts/application.html.erb (Duration: 783.5ms | Allocations: 122794)
+Completed 200 OK in 4410ms (Views: 741.6ms | ActiveRecord: 69.5ms | Allocations: 1128350)
+
+
+Started GET "/assets/tailwindcss/preflight" for 127.0.0.1 at 2025-08-20 05:58:16 +1000
+Started GET "/stations/6/edit" for 127.0.0.1 at 2025-08-20 05:58:20 +1000
+Processing by StationsController#edit as HTML
+  Parameters: {"id" => "6"}
+  [1m[36mStation Load (0.2ms)[0m  [1m[34mSELECT "stations".* FROM "stations" WHERE "stations"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stations/edit.html.erb within layouts/application
+  Rendered stations/_form.html.erb (Duration: 7.9ms | Allocations: 1120)
+  Rendered stations/edit.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1327)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 1403)
+Completed 500 Internal Server Error in 924ms (ActiveRecord: 0.2ms | Allocations: 2141)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'form' for an instance of #<Class:0x000001fdb3e20510>):
+     7: 
+     8:   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+     9:     <div>
+    10:       <%= form.label :filestore_path, "Source folder (local or UNC)", class: "block text-sm font-medium text-gray-700" %>
+    11:       <%= form.text_field :filestore_path, class: "mt-1 w-full rounded-md border-gray-300 shadow-sm" %>
+    12:       <p class="mt-1 text-xs text-gray-500">e.g. <code>C:\data\logger\STN001</code> or <code>\\server\share\logger\STN001</code></p>
+    13:     </div>
+  
+app/views/stations/_form.html.erb:10:in '_app_views_stations__form_html_erb__550783582_10032'
+app/views/stations/edit.html.erb:6:in '_app_views_stations_edit_html_erb___841189561_10024'

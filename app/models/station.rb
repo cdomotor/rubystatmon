@@ -2,6 +2,7 @@
 # Path: /app/models/station.rb
 class Station < ApplicationRecord
   scope :active, -> { where(active: true) }
+
   # Persist configured_parameters as JSON; accepts Hash/Array/String
   serialize :configured_parameters, coder: JSON
 
@@ -21,6 +22,16 @@ class Station < ApplicationRecord
   # Accept forgiving input before validations/saves
   before_validation :normalize_tags_if_present!
   before_validation :normalize_configured_parameters!
+
+  # Treat text column as JSON (Hash) in Ruby-land
+  attribute :ingest_parameters, :json, default: {}
+
+  # QoL: ensure a Hash and normalized string keys for Python compatibility
+  after_initialize { self.ingest_parameters ||= {} }
+  before_save      :normalize_ingest_parameters!
+
+  # Validate basic shape (keys are strings; values are { "trend_days" => Integer|nil })
+  validate :ingest_parameters_shape
 
   # --- Small helpers used by filters/UI ---
 
@@ -133,6 +144,35 @@ class Station < ApplicationRecord
     end
   end
 
+  # ---------- Ingest parameters helpers (Step 4: safe update patterns) ----------
+
+  # Upsert a single parameter: sets/overwrites {"trend_days" => <int|nil>}
+  def upsert_ingest_param!(name, trend_days)
+    h = (ingest_parameters || {}).dup
+    h[name.to_s] = { "trend_days" => coerce_trend_days(trend_days) }
+    self.ingest_parameters = h
+    save!
+  end
+
+  # Remove a parameter key
+  def remove_ingest_param!(name)
+    h = (ingest_parameters || {}).dup
+    h.delete(name.to_s)
+    self.ingest_parameters = h
+    save!
+  end
+
+  # Merge many at once: { "Battery" => {trend_days: 7}, ... }
+  def merge_ingest_parameters!(hash_like)
+    normalized = {}
+    (hash_like || {}).each do |k, v|
+      td = (v || {})["trend_days"] || (v || {})[:trend_days]
+      normalized[k.to_s] = { "trend_days" => coerce_trend_days(td) }
+    end
+    self.ingest_parameters = (ingest_parameters || {}).merge(normalized)
+    save!
+  end
+
   private
 
   # Unified time-window scope that binds through `where(...)` correctly.
@@ -198,5 +238,29 @@ class Station < ApplicationRecord
     else
       cfg.select { |_k, v| v.is_a?(Array) && v.size == 2 && v.all? { |x| x.is_a?(Numeric) } }
     end
+  end
+
+  # Ingest JSON normalization & validation
+
+  def normalize_ingest_parameters!
+    h = (ingest_parameters || {})
+    # normalize keys to strings; coerce trend_days
+    h = h.each_with_object({}) do |(k, v), acc|
+      td = (v || {})["trend_days"] || (v || {})[:trend_days]
+      acc[k.to_s] = { "trend_days" => coerce_trend_days(td) }
+    end
+    self.ingest_parameters = h
+  end
+
+  def ingest_parameters_shape
+    h = ingest_parameters
+    return if h.is_a?(Hash) && h.all? { |k, v| k.is_a?(String) && v.is_a?(Hash) && (v.key?("trend_days") || v.key?(:trend_days)) }
+    errors.add(:ingest_parameters, "must be a mapping of name => { trend_days: Integer|nil }")
+  end
+
+  def coerce_trend_days(v)
+    return nil if v.nil? || v == ""
+    i = Integer(v) rescue nil
+    i && i > 0 ? i : 1
   end
 end

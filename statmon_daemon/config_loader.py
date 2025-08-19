@@ -286,10 +286,33 @@ def load_config(config_path: Optional[str] = None) -> Dict[str, Any]:
 
 # --------------------------- Filestore ingest tasks ------------------------- #
 
+# File: statmon_daemon/config_loader.py
+# Path: /statmon_daemon/config_loader.py
 def load_filestore_tasks() -> Dict[str, Any]:
+    """
+    Build ingest tasks from the stations table. Tolerant of schema differences:
+    - If no usable "path" column exists, return no tasks (no crash).
+    - Accept multiple possible path column names to future-proof.
+    """
     tasks: List[Dict[str, Any]] = []
+
     with session_scope() as sess:
         if not _table_exists(sess, "stations"):
+            return {"tasks": tasks}
+
+        # Find a usable path column (first one that exists wins)
+        path_candidates = [
+            "filestore_path",      # preferred
+            "file_store_path",
+            "data_path",
+            "data_dir",
+            "logger_data_path",
+            "ingest_path",
+        ]
+        path_col = next((c for c in path_candidates if _has_column(sess, "stations", c)), None)
+
+        if not path_col:
+            # No path column in schema yet; nothing to ingest (avoid crash)
             return {"tasks": tasks}
 
         filters: List[str] = []
@@ -299,31 +322,39 @@ def load_filestore_tasks() -> Dict[str, Any]:
             filters.append("ingest_enabled = 1")
         where = f"WHERE {' AND '.join(filters)}" if filters else ""
 
-        sel_name = "name" if _has_column(sess, "stations", "name") else "NULL as name"
+        sel_name   = "name" if _has_column(sess, "stations", "name") else "NULL as name"
         sel_params = "ingest_parameters" if _has_column(sess, "stations", "ingest_parameters") else "NULL as ingest_parameters"
 
         rows = _exec_fetchall(
             sess,
-            f"SELECT id, {sel_name}, filestore_path, {sel_params} FROM stations {where};"
+            f"""SELECT id,
+                       {sel_name},
+                       {path_col} AS source_path,
+                       {sel_params}
+                FROM stations
+                {where};"""
         )
 
         for r in rows:
-            path = r.get("filestore_path")
+            path = r.get("source_path")
             if not path:
                 continue
-            params = {}
+
+            params: Dict[str, Any] = {}
             raw = r.get("ingest_parameters")
             if raw:
                 try:
                     params = json.loads(raw) if isinstance(raw, str) else dict(raw)
                 except Exception:
                     params = {}
+
             tasks.append({
-                "station_id": r.get("id"),
+                "station_id":  r.get("id"),
                 "station_name": r.get("name") or f"Station {r.get('id')}",
                 "source_path": path,
-                "parameters": params or {},
+                "parameters":  params or {},
             })
+
     return {"tasks": tasks}
 
 # ----------------------------- Logger poll tasks ---------------------------- #
