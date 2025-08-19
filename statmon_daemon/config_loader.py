@@ -1,33 +1,30 @@
 # File: statmon_daemon/config_loader.py
-# Full path: /statmon_daemon/config_loader.py
+# Path: /statmon_daemon/config_loader.py
 """
-Loads runtime configuration for the StatMon daemon.
+Resilient config loader for StatMon daemon.
 
-What this module does (resiliently):
-- Pulls stations (id, name, ip_address) from the DB for pinging.
-- Optionally reads ping settings from a key/value config table (if present).
-- Builds filestore ingest tasks from station fields.
-- Builds direct-logger poll tasks from station fields.
-- Falls back to safe defaults if tables/columns are missing.
+- Accepts optional path to a TOML config (daemon.toml).
+- If provided and present, reads:
+    [database]
+    path = "db/development.sqlite3"
 
-DB backends:
-- Defaults to SQLite using the Rails DB at 'db/development.sqlite3'.
-- You may override with env STATMON_DB.
-- If you later provide .models.get_session (SQLAlchemy), this file will
-  use it automatically; otherwise it opens a sqlite3 connection directly.
+    [ping]
+    count = 1
+    interval = 0.8
+    timeout = 2.0
+    privileged = false
 
-Assumed schema (tolerant: columns checked before use):
-- Table: stations
-  Required: id (int), ip_address (text)
-  Optional: name (text), enabled (bool/int), ping_enabled (bool/int),
-            filestore_path (text), ingest_enabled (bool/int),
-            ingest_parameters (json/text),
-            poll_enabled (bool/int), poll_variables (json/text)
+    [intervals]
+    pinger = 5
+    filestore_ingest = 15
+    logger_poll = 10
+    alerts = 5
 
-- Key/Value config table (optional):
-  First existing of: configs, config, settings, app_configs
-  Columns: key (text), value (text)
-  Keys honored: PING_COUNT, PING_INTERVAL_SEC, PING_TIMEOUT_SEC, PING_PRIVILEGED
+- Merges DB-derived ping settings with file ping (file wins).
+- Exposes: load_config(config_path=None) -> dict with keys:
+    - stations: [{id, name, ip_address}, ...]
+    - ping: {count, interval, timeout, privileged}
+    - intervals: {pinger, filestore_ingest, logger_poll, alerts}
 """
 
 from __future__ import annotations
@@ -37,24 +34,42 @@ import os
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Sequence
 
-# Optional: if you have a models.get_session, we try to use it
+# Optional TOML (py311+ has tomllib)
+try:
+    import tomllib as _toml
+except Exception:
+    try:
+        import tomli as _toml  # type: ignore
+    except Exception:
+        _toml = None  # TOML parsing disabled if neither available
+
+# If you later provide .models.get_session (SQLAlchemy), we’ll use it.
 try:
     from .models import get_session as _maybe_get_session  # type: ignore
 except Exception:
-    _maybe_get_session = None  # graceful fallback to sqlite3
+    _maybe_get_session = None
 
-DEFAULT_DB_PATH = os.getenv("STATMON_DB", "db/development.sqlite3")
+# -------------------------- Defaults & Overrides ---------------------------- #
+
+_DEFAULT_DB_PATH = os.getenv("STATMON_DB", "db/development.sqlite3")
+_DB_OVERRIDE: Optional[str] = None  # set by load_config() if file specifies one
 
 DEFAULT_PING: Dict[str, Any] = {
     "count": 1,
-    "interval": 0.8,      # seconds between echo requests
-    "timeout": 2.0,       # per-host timeout
-    "privileged": False,  # run unprivileged by default
+    "interval": 0.8,
+    "timeout": 2.0,
+    "privileged": False,
+}
+DEFAULT_INTERVALS: Dict[str, int] = {
+    "pinger": 5,
+    "filestore_ingest": 15,
+    "logger_poll": 10,
+    "alerts": 5,
 }
 
-# ---------------------------- low-level helpers ----------------------------- #
+# ---------------------------- Low-level helpers ----------------------------- #
 
 def _open_sqlite(db_path: str) -> sqlite3.Connection:
     Path(db_path).parent.mkdir(parents=True, exist_ok=True)
@@ -63,68 +78,53 @@ def _open_sqlite(db_path: str) -> sqlite3.Connection:
     return conn
 
 def _open_session() -> Any:
-    """Prefer .models.get_session if available; else open sqlite3 connection."""
+    """
+    Prefer .models.get_session if present; else open sqlite3 using the override
+    from load_config() or the default Rails DB path.
+    """
     if _maybe_get_session is not None:
         try:
             return _maybe_get_session({})
         except TypeError:
-            # get_session() without args
             return _maybe_get_session()  # type: ignore[misc]
-    return _open_sqlite(DEFAULT_DB_PATH)
+    db_path = _DB_OVERRIDE or _DEFAULT_DB_PATH
+    return _open_sqlite(db_path)
 
 @contextmanager
 def session_scope():
-    """
-    Provide a transactional scope.
-    Works for sqlite3.Connection or SQLAlchemy Session (if get_session returns one).
-    """
     sess = _open_session()
     try:
         yield sess
-        # Best-effort commit
         try:
             sess.commit()
         except Exception:
             pass
     except Exception:
-        # Best-effort rollback
         try:
             sess.rollback()
         except Exception:
             pass
         raise
     finally:
-        # Best-effort close
         try:
             sess.close()
         except Exception:
-            try:
-                # SQLAlchemy: session.bind.dispose() is overkill; this is fine
-                sess.connection().close()  # type: ignore[attr-defined]
-            except Exception:
-                pass
+            pass
 
 def _is_sqlite(sess: Any) -> bool:
     return isinstance(sess, sqlite3.Connection)
 
-def _exec_fetchall(sess: Any, sql: str, params: Iterable[Any] | Dict[str, Any] = ()) -> List[Dict[str, Any]]:
-    """
-    Execute a SELECT and return list of dict rows.
-    Supports sqlite3.Connection and SQLAlchemy Session (without importing SA types).
-    """
+def _exec_fetchall(sess: Any, sql: str, params: Sequence[Any] | Dict[str, Any] = ()) -> List[Dict[str, Any]]:
     if _is_sqlite(sess):
         cur = sess.execute(sql, params if not isinstance(params, dict) else tuple(params.values()))
         cols = [d[0] for d in cur.description]
         return [dict(zip(cols, row)) for row in cur.fetchall()]
-
-    # SQLAlchemy Session-like
+    # SQLAlchemy path (avoid hard dep)
     try:
         from sqlalchemy import text  # type: ignore
         res = sess.execute(text(sql), params if isinstance(params, dict) else tuple(params))  # type: ignore[arg-type]
-        # SQLAlchemy 2.0 returns Row objects with ._mapping
         return [dict(r._mapping) for r in res]
     except Exception:
-        # Last resort: try very simple path
         try:
             res = sess.execute(sql)  # type: ignore
             return [dict(r) for r in res]
@@ -133,9 +133,7 @@ def _exec_fetchall(sess: Any, sql: str, params: Iterable[Any] | Dict[str, Any] =
 
 def _table_exists(sess: Any, table: str) -> bool:
     if _is_sqlite(sess):
-        row = _exec_fetchall(sess, "SELECT name FROM sqlite_master WHERE type='table' AND name=?;", (table,))
-        return bool(row)
-    # SQLAlchemy-ish: try a trivial select
+        return bool(_exec_fetchall(sess, "SELECT name FROM sqlite_master WHERE type='table' AND name=?;", (table,)))
     try:
         _exec_fetchall(sess, f"SELECT * FROM {table} LIMIT 0;")
         return True
@@ -152,19 +150,18 @@ def _has_column(sess: Any, table: str, column: str) -> bool:
             return column in _columns_sqlite(sess, table)
         except Exception:
             return False
-    # SQLAlchemy-ish: try selecting that column
     try:
         _exec_fetchall(sess, f"SELECT {column} FROM {table} LIMIT 0;")
         return True
     except Exception:
         return False
 
-# ----------------------------- ping settings -------------------------------- #
+# ----------------------------- Ping settings -------------------------------- #
 
 def _load_ping_settings(sess: Any) -> Dict[str, Any]:
     """
-    Load ping settings from the first existing config table among:
-    configs, config, settings, app_configs. Falls back to DEFAULT_PING.
+    Load ping settings from the first existing config table among
+    ('configs','config','settings','app_configs'). Falls back to DEFAULT_PING.
     """
     cfg = dict(DEFAULT_PING)
     for table in ("configs", "config", "settings", "app_configs"):
@@ -178,7 +175,6 @@ def _load_ping_settings(sess: Any) -> Dict[str, Any]:
             continue
 
         kv = {str(r.get("key")): str(r.get("value")) for r in rows if r.get("key") is not None}
-        # Parse with fallbacks
         try:
             if "PING_COUNT" in kv:
                 cfg["count"] = int(kv["PING_COUNT"])
@@ -189,18 +185,17 @@ def _load_ping_settings(sess: Any) -> Dict[str, Any]:
             if "PING_PRIVILEGED" in kv:
                 cfg["privileged"] = kv["PING_PRIVILEGED"].strip().lower() in {"1", "true", "yes"}
         except Exception:
-            # Ignore bad values; keep defaults where parsing fails
             pass
-        break  # use first found table
+        break
     return cfg
 
-# ----------------------------- stations list -------------------------------- #
+# ----------------------------- Stations list -------------------------------- #
 
 def _load_stations_for_ping(sess: Any) -> List[Dict[str, Any]]:
     """
     Returns a list of stations to ping:
       [{ "id": int, "name": str, "ip_address": str }, ...]
-    Filters: enabled == true, and ping_enabled == true if those columns exist.
+    Filters: enabled == 1 and ping_enabled == 1 when columns exist.
     """
     if not _table_exists(sess, "stations"):
         return []
@@ -210,67 +205,89 @@ def _load_stations_for_ping(sess: Any) -> List[Dict[str, Any]]:
         filters.append("enabled = 1")
     if _has_column(sess, "stations", "ping_enabled"):
         filters.append("ping_enabled = 1")
-
     where = f"WHERE {' AND '.join(filters)}" if filters else ""
-    # Prefer name if present, else fallback to generated name
-    select_name = "name" if _has_column(sess, "stations", "name") else "NULL as name"
 
-    rows = _exec_fetchall(
-        sess,
-        f"SELECT id, {select_name}, ip_address FROM stations {where};"
-    )
+    sel_name = "name" if _has_column(sess, "stations", "name") else "NULL as name"
+    rows = _exec_fetchall(sess, f"SELECT id, {sel_name}, ip_address FROM stations {where};")
 
     out: List[Dict[str, Any]] = []
     for r in rows:
         ip = r.get("ip_address")
         if not ip:
             continue
-        name = r.get("name") or f"Station {r.get('id')}"
-        out.append({"id": r.get("id"), "name": name, "ip_address": ip})
+        out.append({"id": r.get("id"), "name": r.get("name") or f"Station {r.get('id')}", "ip_address": ip})
     return out
 
-# ------------------------------- public API --------------------------------- #
+# ------------------------------ Public API ---------------------------------- #
 
-def load_config() -> Dict[str, Any]:
+def load_config(config_path: Optional[str] = None) -> Dict[str, Any]:
     """
+    Load config from (optional) TOML file and the DB.
+
+    Args:
+        config_path: path to daemon.toml (optional)
+
     Returns:
         {
-          "stations": [ {id, name, ip_address}, ... ],
-          "ping": { count, interval, timeout, privileged }
+          "stations":  [ {id, name, ip_address}, ... ],
+          "ping":      { count, interval, timeout, privileged },
+          "intervals": { pinger, filestore_ingest, logger_poll, alerts }
         }
     """
-    with session_scope() as sess:
-        return {
-            "stations": _load_stations_for_ping(sess),
-            "ping": _load_ping_settings(sess),
-        }
+    # 1) Read file (optional)
+    file_ping: Dict[str, Any] = {}
+    file_intervals: Dict[str, Any] = {}
+    global _DB_OVERRIDE
 
-# --------------------------- filestore ingest tasks ------------------------- #
+    if config_path:
+        try:
+            p = Path(config_path)
+            if p.exists() and _toml is not None:
+                with p.open("rb") as f:
+                    t = _toml.load(f)  # dict
+                # optional DB override
+                db_path = (t.get("database") or {}).get("path")
+                if isinstance(db_path, str) and db_path.strip():
+                    _DB_OVERRIDE = db_path.strip()
+                # optional ping + intervals
+                if isinstance(t.get("ping"), dict):
+                    file_ping = dict(t["ping"])
+                if isinstance(t.get("intervals"), dict):
+                    file_intervals = dict(t["intervals"])
+        except Exception:
+            # Do not fail if file is malformed; we’ll continue with defaults/DB
+            pass
+
+    # 2) Read DB-backed pieces
+    with session_scope() as sess:
+        stations = _load_stations_for_ping(sess)
+        db_ping  = _load_ping_settings(sess)
+
+    # 3) Merge ping (file wins over DB; DB wins over defaults already applied)
+    ping_cfg = dict(db_ping)
+    for k, v in (file_ping or {}).items():
+        if k in DEFAULT_PING:
+            ping_cfg[k] = v
+
+    # 4) Intervals (file or defaults)
+    intervals_cfg = dict(DEFAULT_INTERVALS)
+    for k, v in (file_intervals or {}).items():
+        if k in intervals_cfg:
+            try:
+                intervals_cfg[k] = int(v)
+            except Exception:
+                pass
+
+    return {
+        "stations": stations,
+        "ping": ping_cfg,
+        "intervals": intervals_cfg,
+    }
+
+# --------------------------- Filestore ingest tasks ------------------------- #
 
 def load_filestore_tasks() -> Dict[str, Any]:
-    """
-    Returns:
-      {
-        "tasks": [
-          {
-            "station_id": int,
-            "station_name": str,
-            "source_path": str,
-            "parameters": { "<param>": {"trend_days": int}, ... }
-          },
-          ...
-        ]
-      }
-
-    Tolerant schema (all optional except id and source_path):
-      - stations.filestore_path (string)
-      - stations.ingest_enabled (bool/int) and/or stations.enabled (bool/int)
-      - stations.name (string)
-      - stations.ingest_parameters (json/text) e.g.:
-          {"flow_rate":{"trend_days":3},"turbidity":{"trend_days":7}}
-    """
     tasks: List[Dict[str, Any]] = []
-
     with session_scope() as sess:
         if not _table_exists(sess, "stations"):
             return {"tasks": tasks}
@@ -280,67 +297,39 @@ def load_filestore_tasks() -> Dict[str, Any]:
             filters.append("enabled = 1")
         if _has_column(sess, "stations", "ingest_enabled"):
             filters.append("ingest_enabled = 1")
-
         where = f"WHERE {' AND '.join(filters)}" if filters else ""
-        select_name = "name" if _has_column(sess, "stations", "name") else "NULL as name"
-        select_params = "ingest_parameters" if _has_column(sess, "stations", "ingest_parameters") else "NULL as ingest_parameters"
+
+        sel_name = "name" if _has_column(sess, "stations", "name") else "NULL as name"
+        sel_params = "ingest_parameters" if _has_column(sess, "stations", "ingest_parameters") else "NULL as ingest_parameters"
 
         rows = _exec_fetchall(
             sess,
-            f"""SELECT id,
-                       {select_name},
-                       filestore_path,
-                       {select_params}
-                FROM stations
-                {where};"""
+            f"SELECT id, {sel_name}, filestore_path, {sel_params} FROM stations {where};"
         )
 
         for r in rows:
             path = r.get("filestore_path")
             if not path:
                 continue
-
-            params: Dict[str, Any] = {}
+            params = {}
             raw = r.get("ingest_parameters")
             if raw:
                 try:
-                    params = json.loads(raw) if isinstance(raw, str) else dict(raw)  # tolerate JSON/text
+                    params = json.loads(raw) if isinstance(raw, str) else dict(raw)
                 except Exception:
                     params = {}
-
             tasks.append({
                 "station_id": r.get("id"),
                 "station_name": r.get("name") or f"Station {r.get('id')}",
                 "source_path": path,
                 "parameters": params or {},
             })
-
     return {"tasks": tasks}
 
-# ----------------------------- logger poll tasks ---------------------------- #
+# ----------------------------- Logger poll tasks ---------------------------- #
 
 def load_logger_poll_tasks() -> Dict[str, Any]:
-    """
-    Returns:
-      {
-        "tasks": [
-          {
-            "station_id": int,
-            "station_name": str,
-            "ip_address": str,
-            "variables": [str, ...]
-          },
-          ...
-        ]
-      }
-
-    Tolerant schema:
-      - stations.poll_enabled (bool/int) and/or stations.enabled (bool/int)
-      - stations.poll_variables (json/text) e.g.: ["Battery","SignalStrength"]
-      - stations.name (string)
-    """
     tasks: List[Dict[str, Any]] = []
-
     with session_scope() as sess:
         if not _table_exists(sess, "stations"):
             return {"tasks": tasks}
@@ -350,26 +339,20 @@ def load_logger_poll_tasks() -> Dict[str, Any]:
             filters.append("enabled = 1")
         if _has_column(sess, "stations", "poll_enabled"):
             filters.append("poll_enabled = 1")
-
         where = f"WHERE {' AND '.join(filters)}" if filters else ""
-        select_name = "name" if _has_column(sess, "stations", "name") else "NULL as name"
-        select_vars = "poll_variables" if _has_column(sess, "stations", "poll_variables") else "NULL as poll_variables"
+
+        sel_name = "name" if _has_column(sess, "stations", "name") else "NULL as name"
+        sel_vars = "poll_variables" if _has_column(sess, "stations", "poll_variables") else "NULL as poll_variables"
 
         rows = _exec_fetchall(
             sess,
-            f"""SELECT id,
-                       {select_name},
-                       ip_address,
-                       {select_vars}
-                FROM stations
-                {where};"""
+            f"SELECT id, {sel_name}, ip_address, {sel_vars} FROM stations {where};"
         )
 
         for r in rows:
             ip = r.get("ip_address")
             if not ip:
                 continue
-
             variables: List[str] = []
             raw = r.get("poll_variables")
             if raw:
@@ -377,12 +360,10 @@ def load_logger_poll_tasks() -> Dict[str, Any]:
                     variables = json.loads(raw) if isinstance(raw, str) else list(raw)
                 except Exception:
                     variables = []
-
             tasks.append({
                 "station_id": r.get("id"),
                 "station_name": r.get("name") or f"Station {r.get('id')}",
                 "ip_address": ip,
                 "variables": variables or [],
             })
-
     return {"tasks": tasks}

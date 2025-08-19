@@ -1,0 +1,155 @@
+2025-08-19 13:56:28,743 [INFO] Starting StatMon Daemon… (config=.\daemon.toml, log=.\logs\statmon_daemon.log, debug=True)
+2025-08-19 13:56:28,743 [ERROR] Failed to load configuration: load_config() takes 0 positional arguments but 1 was given
+Traceback (most recent call last):
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\__main__.py", line 97, in main
+    config = load_config(args.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: load_config() takes 0 positional arguments but 1 was given
+2025-08-19 14:00:09,690 [INFO] Starting StatMon Daemon… (config=.\daemon.toml, log=.\logs\statmon_daemon.log, debug=True)
+2025-08-19 14:00:09,690 [INFO] Task intervals (min): {'pinger': 5, 'filestore_ingest': 15, 'logger_poll': 10, 'alerts': 5}
+2025-08-19 14:00:09,690 [INFO] Scheduled job: _wrapped every 300 seconds
+2025-08-19 14:00:09,690 [INFO] Scheduled job: _wrapped every 900 seconds
+2025-08-19 14:00:09,690 [INFO] Scheduled job: _wrapped every 600 seconds
+2025-08-19 14:00:09,690 [INFO] Scheduled job: _wrapped every 300 seconds
+2025-08-19 14:00:09,690 [DEBUG] Job pinger@startup: start
+2025-08-19 14:02:09,432 [DEBUG] Job pinger@startup: done in 119.74s
+2025-08-19 14:02:09,434 [DEBUG] Job alerts@startup: start
+2025-08-19 14:02:09,442 [WARNING] ALERT (HIGH): [StatMon] Ping failure: KolarCk_PHPHHILL :: KolarCk_PHPHHILL has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:02:09,442 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: KolarCk_PHPHHILL :: KolarCk_PHPHHILL has a data gap > 6h (no data found).
+2025-08-19 14:02:09,444 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GalahCk_PHPHHILL :: GalahCk_PHPHHILL has a data gap > 6h (no data found).
+2025-08-19 14:02:09,444 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: DeadHsCk_PHPHHILL :: DeadHsCk_PHPHHILL has a data gap > 6h (no data found).
+2025-08-19 14:02:09,446 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: TBRG_PHPHHILL :: TBRG_PHPHHILL has a data gap > 6h (no data found).
+2025-08-19 14:02:09,446 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AECLST1 (decomissioned) :: AECLST1 (decomissioned) has a data gap > 6h (no data found).
+2025-08-19 14:02:09,448 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AECLST2 (decomissioned) :: AECLST2 (decomissioned) has a data gap > 6h (no data found).
+2025-08-19 14:02:09,449 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AECLST3_Loc7 :: AECLST3_Loc7 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,449 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AECLST4_Loc2 :: AECLST4_Loc2 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,449 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRAVV3 (decomissioned) :: AIRAVV3 (decomissioned) has a data gap > 6h (no data found).
+2025-08-19 14:02:09,449 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE1 :: AIRBNE1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,449 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE2 :: AIRBNE2 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,449 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE3 :: AIRBNE3 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,455 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE4 :: AIRBNE4 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,458 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE5 :: AIRBNE5 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,460 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE6 :: AIRBNE6 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,464 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE7 :: AIRBNE7 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,471 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE8 :: AIRBNE8 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,481 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE9 :: AIRBNE9 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,483 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRBNE10 :: AIRBNE10 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,485 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GC-AS01 :: GC-AS01 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,485 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GC-AS02 :: GC-AS02 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,485 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GC-AS03 :: GC-AS03 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,493 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GC-AS04 :: GC-AS04 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,493 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GC-AS05 :: GC-AS05 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,497 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GC-Tank123 :: GC-Tank123 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,500 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GC-Tank4 :: GC-Tank4 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,502 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: GC-FTG_Cam1 :: GC-FTG_Cam1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,502 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: TMT AIRCAMERA1 :: TMT AIRCAMERA1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,504 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRCBR1 :: AIRCBR1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,505 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRCBR2 :: AIRCBR2 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,507 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRCBR3 :: AIRCBR3 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,509 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRCBR4 :: AIRCBR4 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,512 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRCBR5 :: AIRCBR5 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,513 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRCBR6 :: AIRCBR6 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,514 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRCBR7 :: AIRCBR7 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,516 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRCBR8 :: AIRCBR8 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,516 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRPER1 :: AIRPER1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,516 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRPER2 :: AIRPER2 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,516 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRPER3 :: AIRPER3 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,516 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRPER4 :: AIRPER4 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,520 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRPER5 :: AIRPER5 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,522 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRMEL3 :: AIRMEL3 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,522 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRSYD1 :: AIRSYD1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,525 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRSYD2 :: AIRSYD2 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,527 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRSYD3 :: AIRSYD3 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,527 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRSYD4 :: AIRSYD4 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,527 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRMKY2b  :: AIRMKY2b  has a data gap > 6h (no data found).
+2025-08-19 14:02:09,527 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: AIRMKY4b :: AIRMKY4b has a data gap > 6h (no data found).
+2025-08-19 14:02:09,527 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: Doptest (BNE) :: Doptest (BNE) has a data gap > 6h (no data found).
+2025-08-19 14:02:09,533 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: BrisEagleTest :: BrisEagleTest has a data gap > 6h (no data found).
+2025-08-19 14:02:09,535 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: Emu Swamp US :: Emu Swamp US has a data gap > 6h (no data found).
+2025-08-19 14:02:09,535 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: Emu Swamp DS :: Emu Swamp DS has a data gap > 6h (no data found).
+2025-08-19 14:02:09,538 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: MP1_WQ  :: MP1_WQ  has a data gap > 6h (no data found).
+2025-08-19 14:02:09,540 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: MP1_Q  :: MP1_Q  has a data gap > 6h (no data found).
+2025-08-19 14:02:09,540 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: MP2_WQ  :: MP2_WQ  has a data gap > 6h (no data found).
+2025-08-19 14:02:09,546 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: MP2_Q  :: MP2_Q  has a data gap > 6h (no data found).
+2025-08-19 14:02:09,548 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: MP3_WQ  :: MP3_WQ  has a data gap > 6h (no data found).
+2025-08-19 14:02:09,548 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: TTBLLD1 :: TTBLLD1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,550 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: POBANEMOM1 :: POBANEMOM1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,553 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM2 :: POBANEMOM2 has 8 consecutive failed pings (threshold 3).
+2025-08-19 14:02:09,555 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: POBANEMOM2 :: POBANEMOM2 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,559 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: ALSEBTRADEWASTE1 :: ALSEBTRADEWASTE1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,560 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: WSPBARROW1 :: WSPBARROW1 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,562 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: WSPBARROW2 :: WSPBARROW2 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,564 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: WSPBARROW3 :: WSPBARROW3 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,565 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: WSPBARROW4 :: WSPBARROW4 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,565 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: WSPBARROW5 :: WSPBARROW5 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,565 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: WSPBARROW6 :: WSPBARROW6 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,565 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: WSPBARROW7 :: WSPBARROW7 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,565 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: WSPBARROW8 :: WSPBARROW8 has a data gap > 6h (no data found).
+2025-08-19 14:02:09,569 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: loopback :: loopback has a data gap > 6h (no data found).
+2025-08-19 14:02:09,569 [WARNING] ALERT (MEDIUM): [StatMon] Data gap: Google (test) :: Google (test) has a data gap > 6h (no data found).
+2025-08-19 14:02:09,576 [INFO] Alert evaluation complete.
+2025-08-19 14:02:09,576 [DEBUG] Job alerts@startup: done in 0.14s
+2025-08-19 14:02:09,578 [INFO] Daemon is now running.
+2025-08-19 14:02:09,578 [DEBUG] Running job: _wrapped
+2025-08-19 14:02:09,578 [DEBUG] Job pinger: start
+2025-08-19 14:04:09,115 [DEBUG] Job pinger: done in 119.54s
+2025-08-19 14:04:09,115 [DEBUG] Running job: _wrapped
+2025-08-19 14:04:09,115 [DEBUG] Job filestore_ingest: start
+2025-08-19 14:04:09,135 [ERROR] Job filestore_ingest: unhandled exception
+Traceback (most recent call last):
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\__main__.py", line 130, in _wrapped
+    func()
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\filestore_ingest.py", line 39, in run
+    plan = load_filestore_tasks()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\config_loader.py", line 305, in load_filestore_tasks
+    rows = _exec_fetchall(
+           ^^^^^^^^^^^^^^^
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\config_loader.py", line 119, in _exec_fetchall
+    cur = sess.execute(sql, params if not isinstance(params, dict) else tuple(params.values()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: filestore_path
+2025-08-19 14:04:09,147 [DEBUG] Job filestore_ingest: done in 0.03s
+2025-08-19 14:04:09,149 [DEBUG] Running job: _wrapped
+2025-08-19 14:04:09,151 [DEBUG] Job logger_poll: start
+2025-08-19 14:04:09,159 [INFO] Logger poll starting (70 task(s)).
+2025-08-19 14:04:09,159 [ERROR] Logger poll failed; rolled back DB transaction.
+Traceback (most recent call last):
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\logger_poll.py", line 47, in run
+    session = get_session()
+              ^^^^^^^^^^^^^
+TypeError: get_session() missing 1 required positional argument: 'config'
+2025-08-19 14:04:09,166 [DEBUG] Job logger_poll: done in 0.01s
+2025-08-19 14:04:09,166 [DEBUG] Running job: _wrapped
+2025-08-19 14:04:09,170 [DEBUG] Job alerts: start
+2025-08-19 14:04:09,175 [WARNING] ALERT (HIGH): [StatMon] Ping failure: KolarCk_PHPHHILL :: KolarCk_PHPHHILL has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:04:09,182 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank123 :: GC-Tank123 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:04:09,200 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM2 :: POBANEMOM2 has 9 consecutive failed pings (threshold 3).
+2025-08-19 14:04:09,205 [INFO] Alert evaluation complete.
+2025-08-19 14:04:09,205 [DEBUG] Job alerts: done in 0.04s
+2025-08-19 14:04:09,207 [DEBUG] Heartbeat
+2025-08-19 14:04:14,210 [DEBUG] Heartbeat
+2025-08-19 14:04:19,215 [DEBUG] Heartbeat
+2025-08-19 14:04:24,219 [DEBUG] Heartbeat
+2025-08-19 14:04:29,222 [DEBUG] Heartbeat
+2025-08-19 14:04:34,226 [DEBUG] Heartbeat
+2025-08-19 14:04:39,231 [DEBUG] Heartbeat
+2025-08-19 14:04:44,235 [DEBUG] Heartbeat
+2025-08-19 14:04:49,239 [DEBUG] Heartbeat
+2025-08-19 14:04:54,242 [DEBUG] Heartbeat
+2025-08-19 14:04:59,247 [DEBUG] Heartbeat
+2025-08-19 14:05:04,255 [DEBUG] Heartbeat
+2025-08-19 14:05:09,258 [DEBUG] Heartbeat
+2025-08-19 14:05:14,262 [DEBUG] Heartbeat
+2025-08-19 14:05:19,266 [DEBUG] Heartbeat
+2025-08-19 14:05:24,269 [DEBUG] Heartbeat
+2025-08-19 14:05:29,273 [DEBUG] Heartbeat
+2025-08-19 14:05:34,277 [DEBUG] Heartbeat
+2025-08-19 14:05:39,280 [DEBUG] Heartbeat
+2025-08-19 14:05:44,284 [DEBUG] Heartbeat
+2025-08-19 14:05:49,286 [DEBUG] Heartbeat
+2025-08-19 14:05:54,290 [DEBUG] Heartbeat
+2025-08-19 14:05:59,293 [DEBUG] Heartbeat
+2025-08-19 14:06:04,298 [DEBUG] Heartbeat
+2025-08-19 14:06:09,301 [DEBUG] Heartbeat
+2025-08-19 14:06:14,307 [DEBUG] Heartbeat

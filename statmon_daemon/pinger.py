@@ -1,126 +1,232 @@
 # File: statmon_daemon/pinger.py
-# Full path: statmon_daemon/pinger.py
+# Path: /statmon_daemon/pinger.py
 """
-Pings stations using icmplib and persists results to the shared DB.
-Stations and ping settings are loaded dynamically from config_loader
-each run so UI changes take effect without restarting the daemon.
+StatMon Daemon - Pinger
+
+Pings configured stations and writes results into the Rails DB table
+`ping_results` with columns commonly used by the Rails app:
+
+  ping_results(
+      id INTEGER PRIMARY KEY,
+      station_id INTEGER NOT NULL,
+      success BOOLEAN NOT NULL,
+      latency_ms REAL,               -- nullable when failed
+      created_at TEXT NOT NULL,      -- ISO8601
+      updated_at TEXT NOT NULL       -- ISO8601
+  )
+
+Notes:
+- Uses icmplib when available; falls back to system 'ping' on Windows.
+- Works without admin privileges by preferring unprivileged ping modes.
+- Does not depend on Ruby models. Writes rows with raw SQL using sqlite3.
 """
 
-import logging
-from datetime import datetime
-from typing import Tuple, Optional
+from __future__ import annotations
 
-from icmplib import ping as icmp_ping, ICMPLibError
+import datetime as _dt
+import os
+import re
+import subprocess
+import sys
+import time
+from typing import Any, Dict, Iterable, Optional, Tuple
 
-from .models import get_session
-from models.ping import PingResult
-from statmon_daemon.config_loader import load_config  # <-- wired here
-
-logger = logging.getLogger("statmon_daemon")
+from .models import get_session  # our sqlite connection helper
 
 
 class Pinger:
-    def __init__(self, _config_ignored: dict = None):
-        """
-        _config_ignored is kept for API compatibility with previous code,
-        but we always reload from config_loader on each run().
-        """
-        pass
+    def __init__(self, config: Dict[str, Any]) -> None:
+        self.config = config or {}
+        self.ping_cfg: Dict[str, Any] = (self.config.get("ping") or {})
+        # defaults (can be overridden by config_loader)
+        self.count: int = int(self.ping_cfg.get("count", 1))
+        self.interval: float = float(self.ping_cfg.get("interval", 0.8))
+        self.timeout: float = float(self.ping_cfg.get("timeout", 2.0))
+        self.privileged: bool = bool(self.ping_cfg.get("privileged", False))
 
-    def run(self):
-        """Execute one auto‑ping cycle with the latest config."""
-        config = load_config()
-        stations = config.get("stations", [])
-        ping_cfg = config.get("ping", {}) or {}
+        self._stations = list(self.config.get("stations") or [])
 
-        count = int(ping_cfg.get("count", 1))
-        interval = float(ping_cfg.get("interval", 0.8))
-        timeout = float(ping_cfg.get("timeout", 2.0))
-        privileged = bool(ping_cfg.get("privileged", False))
-
-        if not stations:
-            logger.warning("No stations configured for auto-ping.")
+    # --------------------------------------------------------------------- #
+    # Public API
+    # --------------------------------------------------------------------- #
+    def run(self) -> None:
+        """Ping all configured stations once."""
+        if not self._stations:
+            print("[pinger] no stations configured")
             return
 
-        logger.info(f"Auto-ping cycle started for {len(stations)} station(s).")
-
-        session = None
+        # open one DB connection for the whole run
+        conn = get_session({})
         try:
-            session = get_session()
-
-            for st in stations:
-                station_id = st.get("id")
-                name = st.get("name", f"Station {station_id or ''}".strip())
-                ip = st.get("ip_address")
-
-                if not station_id or not ip:
-                    logger.warning(f"[{name}] Skipping: missing id or ip_address.")
+            self._ensure_ping_table(conn)
+            for s in self._stations:
+                sid = s.get("id")
+                name = s.get("name") or f"Station {sid}"
+                host = s.get("ip_address")
+                if not host:
                     continue
 
-                latency_ms, success = self.ping_station(
-                    ip=ip,
-                    count=count,
-                    interval=interval,
-                    timeout=timeout,
-                    privileged=privileged,
-                )
-
-                if success:
-                    logger.info(f"[{name}] {ip} - Ping OK ({latency_ms:.1f} ms)")
-                else:
-                    logger.warning(f"[{name}] {ip} - Ping FAILED")
-
-                self._save_ping_result(session, station_id, success, latency_ms)
-
-            session.commit()
-            logger.info("Auto-ping cycle complete.")
-
-        except Exception:
-            if session:
-                session.rollback()
-            logger.exception("Auto-ping cycle failed; rolled back DB transaction.")
+                success, latency_ms = self._ping_host(host)
+                self._save_ping_result(conn, sid, success, latency_ms)
+                print(f"[pinger] {name} ({host}) -> {'OK' if success else 'FAIL'}"
+                      + (f" {latency_ms:.1f} ms" if success and latency_ms is not None else ""))
         finally:
-            if session:
-                session.close()
+            try:
+                conn.close()
+            except Exception:
+                pass
 
-    def ping_station(
-        self,
-        ip: str,
-        count: int = 1,
-        interval: float = 0.8,
-        timeout: float = 2.0,
-        privileged: bool = False,
-    ) -> Tuple[Optional[float], bool]:
-        """
-        Ping a single host using icmplib.
+    # --------------------------------------------------------------------- #
+    # DB helpers
+    # --------------------------------------------------------------------- #
+    def _ensure_ping_table(self, conn) -> None:
+        """Create a very tolerant ping_results table if it doesn't exist.
 
-        Returns:
-            (latency_ms, success)
+        NOTE: Rails migrations normally create this. This is just a guard so
+        the daemon doesn't crash if you run it first.
         """
         try:
-            host = icmp_ping(
-                address=ip,
-                count=count,
-                interval=interval,
-                timeout=timeout,
-                privileged=privileged,
+            cur = conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name='ping_results';"
             )
-            success = host.is_alive
-            latency = float(host.avg_rtt) if success else None
-            return latency, success
+            if cur.fetchone():
+                return
+        except Exception:
+            # if PRAGMA fails or similar, best effort create anyway
+            pass
 
-        except ICMPLibError as e:
-            logger.debug(f"icmplib error for {ip}: {e}")
-            return None, False
+        try:
+            conn.execute(
+                """
+                CREATE TABLE IF NOT EXISTS ping_results (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    station_id INTEGER NOT NULL,
+                    success INTEGER NOT NULL,
+                    latency_ms REAL,
+                    created_at TEXT NOT NULL,
+                    updated_at TEXT NOT NULL
+                );
+                """
+            )
+            conn.commit()
+        except Exception:
+            # If we fail to create, we still proceed; inserts may fail and will surface.
+            pass
+
+    def _save_ping_result(self, conn, station_id: int, success: bool, latency_ms: Optional[float]) -> None:
+        now = _dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+        try:
+            conn.execute(
+                "INSERT INTO ping_results (station_id, success, latency_ms, created_at, updated_at) "
+                "VALUES (?, ?, ?, ?, ?);",
+                (station_id, 1 if success else 0, latency_ms, now, now),
+            )
+            conn.commit()
         except Exception as e:
-            logger.exception(f"Unexpected ping error for {ip}: {e}")
-            return None, False
+            # Don't kill the daemon over a single insert.
+            print(f"[pinger] DB insert failed for station_id={station_id}: {e}", file=sys.stderr)
 
-    def _save_ping_result(self, session, station_id: int, success: bool, latency_ms: Optional[float]):
-        """Persist a ping result row in UTC."""
-        session.add(PingResult(
-            station_id=station_id,
-            success=bool(success),
-            latency_ms=float(latency_ms) if latency_ms is not None else None,
-            timestamp=datetime.utcnow(),
-        ))
+    # --------------------------------------------------------------------- #
+    # Ping implementations
+    # --------------------------------------------------------------------- #
+    def _ping_host(self, host: str) -> Tuple[bool, Optional[float]]:
+        """
+        Returns (success, latency_ms). If success is False, latency_ms is None.
+        Tries icmplib; on failure or ImportError, falls back to system 'ping'.
+        """
+        # 1) try icmplib for accurate timing (works cross-platform, unprivileged mode when possible)
+        try:
+            from icmplib import ping as _icmp_ping  # type: ignore
+
+            r = _icmp_ping(
+                host,
+                count=max(1, self.count),
+                interval=max(0.2, self.interval),
+                timeout=max(0.5, self.timeout),
+                privileged=bool(self.privileged),
+            )
+            if r.is_alive:
+                # icmplib gives avg_rtt in ms already
+                return True, float(r.avg_rtt)
+            return False, None
+        except Exception:
+            # Fall back to system ping
+            pass
+
+        # 2) Windows/Linux/OSX fallback using system ping
+        return self._ping_via_system(host)
+
+    def _ping_via_system(self, host: str) -> Tuple[bool, Optional[float]]:
+        """
+        Cross-platform system 'ping' wrapper. Returns (success, latency_ms).
+        - Windows: ping -n COUNT -w TIMEOUT_MS HOST
+        - POSIX  : ping -c COUNT -W TIMEOUT_S HOST
+        Parses time=XXms or averages when present.
+        """
+        is_windows = os.name == "nt"
+        count = str(max(1, self.count))
+
+        if is_windows:
+            timeout_ms = str(int(max(1.0, self.timeout) * 1000))
+            cmd = ["ping", "-n", count, "-w", timeout_ms, host]
+        else:
+            timeout_s = str(int(max(1.0, self.timeout)))
+            # -i needs sudo on many systems; we skip it and just rely on defaults
+            cmd = ["ping", "-c", count, "-W", timeout_s, host]
+
+        try:
+            start = time.time()
+            out = subprocess.run(
+                cmd,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                encoding="utf-8",
+                errors="ignore",
+                timeout=max(2.0, self.timeout * (self.count + 1)),
+            )
+            duration_ms = (time.time() - start) * 1000.0
+            stdout = out.stdout or ""
+
+            # Detect failure by exit code or well-known phrases
+            if out.returncode != 0 and "TTL=" not in stdout.upper() and "time=" not in stdout:
+                return False, None
+
+            # Try to parse 'time=XXms' occurrences and take the min or avg
+            times = _extract_times_ms(stdout)
+            if times:
+                return True, sum(times) / len(times)
+
+            # As a last resort, if ping succeeded but we couldn't parse time,
+            # provide coarse duration per count.
+            return True, duration_ms / max(1, self.count)
+
+        except subprocess.TimeoutExpired:
+            return False, None
+        except Exception:
+            return False, None
+
+
+# --------------------------- parsing helpers -------------------------------- #
+
+_TIME_RE = re.compile(r"time[=<]\s*(\d+(?:\.\d+)?)\s*ms", re.IGNORECASE)
+_AVG_RES = [
+    # Windows summary: "Minimum = 1ms, Maximum = 1ms, Average = 1ms"
+    re.compile(r"Average\s*=\s*(\d+(?:\.\d+)?)\s*ms", re.IGNORECASE),
+    # Linux/macOS summary: "rtt min/avg/max/mdev = 1.234/2.345/..."
+    re.compile(r"=\s*\d+(?:\.\d+)?/(\d+(?:\.\d+)?)/", re.IGNORECASE),
+]
+
+def _extract_times_ms(text: str) -> Optional[Iterable[float]]:
+    """Return a list of RTTs in milliseconds found in ping output, if any."""
+    hits = [float(m.group(1)) for m in _TIME_RE.finditer(text)]
+    if hits:
+        return hits
+    for rx in _AVG_RES:
+        m = rx.search(text)
+        if m:
+            try:
+                return [float(m.group(1))]
+            except Exception:
+                pass
+    return None
