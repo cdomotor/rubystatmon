@@ -1,144 +1,27 @@
 <%# File: app/views/stations/_form.html.erb %>
 <%# Path: /app/views/stations/_form.html.erb %>
 
-<!-- Filestore ingest section -->
-<div class="mt-6 rounded-lg border border-gray-200 bg-white p-4">
-  <h2 class="text-lg font-semibold mb-4">Filestore Ingest</h2>
+<%= form_with model: @station, local: true do |form| %>
+  <%# --- your existing fields go here --- %>
 
+  <%# Example: name/ip fields, etc. %>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div>
-      <%= form.label :filestore_path, "Source folder (local or UNC)", class: "block text-sm font-medium text-gray-700" %>
-      <%= form.text_field :filestore_path, class: "mt-1 w-full rounded-md border-gray-300 shadow-sm" %>
-      <p class="mt-1 text-xs text-gray-500">e.g. <code>C:\data\logger\STN001</code> or <code>\\server\share\logger\STN001</code></p>
+      <%= form.label :name, class: "block text-sm font-medium text-gray-700" %>
+      <%= form.text_field :name, class: "mt-1 w-full rounded-md border-gray-300 shadow-sm" %>
     </div>
-
-    <div class="flex items-end">
-      <label class="inline-flex items-center gap-2">
-        <%= form.check_box :ingest_enabled, class: "rounded border-gray-300" %>
-        <span class="text-sm">Enable ingest</span>
-      </label>
+    <div>
+      <%= form.label :ip_address, class: "block text-sm font-medium text-gray-700" %>
+      <%= form.text_field :ip_address, class: "mt-1 w-full rounded-md border-gray-300 shadow-sm" %>
     </div>
   </div>
 
-  <hr class="my-4 border-gray-200"/>
+  <%# --- Filestore ingest section (the block we just built earlier) --- %>
+  <%# paste your entire Filestore Ingest section here unchanged %>
 
-  <h3 class="text-sm font-medium text-gray-700 mb-2">Parameters to track</h3>
-  <p class="text-xs text-gray-500 mb-3">
-    Add one row per parameter (e.g. <code>Battery</code>, <code>Flow</code>), with a trend window in days.
-  </p>
-
-  <!-- Hidden field Rails binds; our JS updates it with JSON -->
-  <%= form.hidden_field :ingest_parameters, id: "ingest_parameters_json" %>
-
-  <div class="overflow-hidden rounded-lg border border-gray-200">
-    <table class="min-w-full text-sm">
-      <thead class="bg-gray-50 text-gray-600">
-        <tr>
-          <th class="px-3 py-2 text-left font-medium">Parameter name</th>
-          <th class="px-3 py-2 text-left font-medium">Trend (days)</th>
-          <th class="px-3 py-2"></th>
-        </tr>
-      </thead>
-      <tbody id="param_rows" class="divide-y divide-gray-100 bg-white"></tbody>
-    </table>
+  <%# --- Submit --- %>
+  <div class="mt-6">
+    <%= form.submit (@station.persisted? ? "Save" : "Create"),
+          class: "rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700" %>
   </div>
-
-  <div class="mt-3">
-    <button type="button" id="add_param_btn"
-      class="rounded-md bg-gray-100 px-3 py-2 text-sm font-medium hover:bg-gray-200">
-      + Add parameter
-    </button>
-  </div>
-</div>
-
-<script>
-  (function() {
-    // Elements
-    const rowsEl = document.getElementById('param_rows');
-    const hidden = document.getElementById('ingest_parameters_json');
-    const addBtn = document.getElementById('add_param_btn');
-
-    // Parse initial JSON (from server) if present
-    let state = {};
-    try {
-      state = hidden.value ? JSON.parse(hidden.value) : (<%= (form.object.ingest_parameters || {}).to_json.html_safe %>);
-    } catch (_) {
-      state = {};
-    }
-
-    // Render helpers
-    function render() {
-      rowsEl.innerHTML = '';
-      const entries = Object.entries(state);
-      if (entries.length === 0) {
-        rowsEl.innerHTML = '<tr><td colspan="3" class="px-3 py-3 text-center text-xs text-gray-500">No parameters yet</td></tr>';
-      } else {
-        for (const [name, cfg] of entries) {
-          addRow(name, (cfg && typeof cfg === 'object') ? (cfg.trend_days ?? '') : '');
-        }
-      }
-      syncHidden();
-    }
-
-    function addRow(name = '', trend = '') {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td class="px-3 py-2">
-          <input type="text" class="w-full rounded-md border border-gray-300 px-2 py-1"
-                 placeholder="Battery" value="${escapeHtml(name)}">
-        </td>
-        <td class="px-3 py-2">
-          <input type="number" min="1" step="1"
-                 class="w-28 rounded-md border border-gray-300 px-2 py-1"
-                 placeholder="7" value="${escapeHtml(String(trend))}">
-        </td>
-        <td class="px-3 py-2 text-right">
-          <button type="button" class="rounded-md px-2 py-1 text-red-600 hover:bg-red-50">Remove</button>
-        </td>
-      `;
-      // Wire events
-      const [nameEl, trendEl, removeBtn] = [
-        tr.children[0].querySelector('input'),
-        tr.children[1].querySelector('input'),
-        tr.children[2].querySelector('button'),
-      ];
-      nameEl.addEventListener('input', syncFromDOM);
-      trendEl.addEventListener('input', syncFromDOM);
-      removeBtn.addEventListener('click', () => { tr.remove(); syncFromDOM(); });
-      rowsEl.appendChild(tr);
-    }
-
-    function syncFromDOM() {
-      const rows = rowsEl.querySelectorAll('tr');
-      const next = {};
-      for (const tr of rows) {
-        const inputs = tr.querySelectorAll('input');
-        if (inputs.length < 2) continue;
-        const name = inputs[0].value.trim();
-        const trendStr = inputs[1].value.trim();
-        if (!name) continue;
-        const days = trendStr === '' ? null : Math.max(1, parseInt(trendStr, 10) || 1);
-        next[name] = { trend_days: days };
-      }
-      state = next;
-      syncHidden();
-    }
-
-    function syncHidden() {
-      hidden.value = JSON.stringify(state);
-    }
-
-    function escapeHtml(s) {
-      return (s || '').replace(/[&<>"']/g, m => ({
-        '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
-      }[m]));
-    }
-
-    // Init
-    addBtn.addEventListener('click', () => addRow());
-    render();
-
-    // If you want: immediately add first row when empty
-    if (Object.keys(state).length === 0) addRow();
-  })();
-</script>
+<% end %>

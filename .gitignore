@@ -39,3 +39,4 @@
 !/app/assets/builds/.keep
 
 /config/master.key
+logs/statmon_daemon.log
