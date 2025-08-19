@@ -17,7 +17,7 @@ from datetime import datetime
 from typing import Dict, Any, List
 
 from statmon_daemon.config_loader import load_logger_poll_tasks
-from models import get_session
+from .models import get_session
 
 # Optional; adapt to your schema
 try:

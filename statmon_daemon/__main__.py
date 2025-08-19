@@ -20,8 +20,6 @@ import sys
 import time
 from pathlib import Path
 
-# File: statmon_daemon/__main__.py
-# Path: /statmon_daemon/__main__.py
 from .scheduler import Scheduler
 from .config_loader import load_config
 from .pinger import Pinger

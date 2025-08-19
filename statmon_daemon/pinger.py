@@ -12,7 +12,7 @@ from typing import Tuple, Optional
 
 from icmplib import ping as icmp_ping, ICMPLibError
 
-from models import get_session
+from .models import get_session
 from models.ping import PingResult
 from statmon_daemon.config_loader import load_config  # <-- wired here
 

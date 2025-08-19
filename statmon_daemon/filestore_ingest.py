@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Dict, Any, List, Iterable
 
 from statmon_daemon.config_loader import load_filestore_tasks
-from models import get_session
+from .models import get_session
 
 # Optional; adapt to your schema
 try:
