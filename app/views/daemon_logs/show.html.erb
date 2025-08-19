@@ -1,0 +1,64 @@
+<!-- File: app/views/daemon_logs/show.html.erb -->
+<!-- Path: /app/views/daemon_logs/show.html.erb -->
+<% content_for :title, "Daemon Logs" %>
+
+<div class="max-w-5xl mx-auto py-6">
+  <div class="flex items-center justify-between mb-4">
+    <h1 class="text-2xl font-semibold">StatMon Daemon Logs</h1>
+    <div class="flex gap-2">
+      <%= link_to "Download", daemon_logs_download_path, class: "rounded-md px-3 py-2 bg-gray-100 hover:bg-gray-200 text-sm font-medium" %>
+      <button id="pauseBtn" class="rounded-md px-3 py-2 bg-gray-100 hover:bg-gray-200 text-sm font-medium">Pause</button>
+      <button id="clearBtn" class="rounded-md px-3 py-2 bg-gray-100 hover:bg-gray-200 text-sm font-medium">Clear</button>
+    </div>
+  </div>
+
+  <div class="text-xs text-gray-500 mb-2">Reading: <code><%= @log_path %></code></div>
+
+  <div class="bg-black text-green-300 rounded-lg p-3 shadow-inner border border-gray-700">
+    <pre id="log" class="whitespace-pre-wrap leading-snug max-h-[70vh] overflow-auto text-xs"><%=
+      @initial_lines.join
+    %></pre>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const logEl = document.getElementById('log');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const clearBtn = document.getElementById('clearBtn');
+
+    let paused = false;
+    let autoscroll = true;
+
+    function append(text) {
+      if (paused) return;
+      const atBottom = (logEl.scrollTop + logEl.clientHeight) >= (logEl.scrollHeight - 5);
+      logEl.textContent += text;
+      if (autoscroll && atBottom) {
+        logEl.scrollTop = logEl.scrollHeight;
+      }
+    }
+
+    pauseBtn.addEventListener('click', () => {
+      paused = !paused;
+      pauseBtn.textContent = paused ? 'Resume' : 'Pause';
+    });
+
+    clearBtn.addEventListener('click', () => {
+      logEl.textContent = '';
+    });
+
+    logEl.addEventListener('scroll', () => {
+      const atBottom = (logEl.scrollTop + logEl.clientHeight) >= (logEl.scrollHeight - 5);
+      autoscroll = atBottom;
+    });
+
+    const es = new EventSource('<%= daemon_logs_stream_path %>');
+    es.onmessage = (e) => append(e.data + "\n");
+    es.onerror = () => {
+      append("\n[log] stream error or closed; retrying in 3s...\n");
+      es.close();
+      setTimeout(() => location.reload(), 3000);
+    };
+  })();
+</script>

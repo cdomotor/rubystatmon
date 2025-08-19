@@ -27,4 +27,12 @@ Rails.application.routes.draw do
 
   # Features (static-style)
   get "features", to: "features#index", as: :features
+
+
+  # Daemon log viewer
+  get  "daemon_logs",         to: "daemon_logs#show",   as: :daemon_logs
+  get  "daemon_logs/stream",  to: "daemon_logs#stream", as: :daemon_logs_stream
+  get  "daemon_logs/download",to: "daemon_logs#download", as: :daemon_logs_download
+
+
 end

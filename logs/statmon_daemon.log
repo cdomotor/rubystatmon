@@ -153,3 +153,582 @@ TypeError: get_session() missing 1 required positional argument: 'config'
 2025-08-19 14:06:04,298 [DEBUG] Heartbeat
 2025-08-19 14:06:09,301 [DEBUG] Heartbeat
 2025-08-19 14:06:14,307 [DEBUG] Heartbeat
+2025-08-19 14:06:19,310 [DEBUG] Heartbeat
+2025-08-19 14:06:24,313 [DEBUG] Heartbeat
+2025-08-19 14:06:29,317 [DEBUG] Heartbeat
+2025-08-19 14:06:34,320 [DEBUG] Heartbeat
+2025-08-19 14:06:39,323 [DEBUG] Heartbeat
+2025-08-19 14:06:44,327 [DEBUG] Heartbeat
+2025-08-19 14:06:49,331 [DEBUG] Heartbeat
+2025-08-19 14:06:54,334 [DEBUG] Heartbeat
+2025-08-19 14:06:59,337 [DEBUG] Heartbeat
+2025-08-19 14:07:04,341 [DEBUG] Heartbeat
+2025-08-19 14:07:09,344 [DEBUG] Heartbeat
+2025-08-19 14:07:10,346 [DEBUG] Running job: _wrapped
+2025-08-19 14:07:10,346 [DEBUG] Job pinger: start
+2025-08-19 14:09:10,059 [DEBUG] Job pinger: done in 119.71s
+2025-08-19 14:09:10,059 [DEBUG] Running job: _wrapped
+2025-08-19 14:09:10,062 [DEBUG] Job alerts: start
+2025-08-19 14:09:10,064 [WARNING] ALERT (HIGH): [StatMon] Ping failure: KolarCk_PHPHHILL :: KolarCk_PHPHHILL has 8 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,071 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GalahCk_PHPHHILL :: GalahCk_PHPHHILL has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,073 [WARNING] ALERT (HIGH): [StatMon] Ping failure: DeadHsCk_PHPHHILL :: DeadHsCk_PHPHHILL has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,073 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TBRG_PHPHHILL :: TBRG_PHPHHILL has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,073 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST1 (decomissioned) :: AECLST1 (decomissioned) has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST2 (decomissioned) :: AECLST2 (decomissioned) has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST3_Loc7 :: AECLST3_Loc7 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST4_Loc2 :: AECLST4_Loc2 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRAVV3 (decomissioned) :: AIRAVV3 (decomissioned) has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE1 :: AIRBNE1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,086 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE2 :: AIRBNE2 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,086 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE3 :: AIRBNE3 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,090 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE4 :: AIRBNE4 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,090 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE5 :: AIRBNE5 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,090 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE6 :: AIRBNE6 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,094 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE7 :: AIRBNE7 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,094 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE8 :: AIRBNE8 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,094 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE9 :: AIRBNE9 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,094 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE10 :: AIRBNE10 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,094 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS01 :: GC-AS01 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,102 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS02 :: GC-AS02 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,104 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS03 :: GC-AS03 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,108 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS04 :: GC-AS04 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,108 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS05 :: GC-AS05 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,111 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank123 :: GC-Tank123 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,113 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank4 :: GC-Tank4 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,115 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-FTG_Cam1 :: GC-FTG_Cam1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,115 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TMT AIRCAMERA1 :: TMT AIRCAMERA1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,117 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR1 :: AIRCBR1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,119 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR2 :: AIRCBR2 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,123 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR3 :: AIRCBR3 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,124 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR4 :: AIRCBR4 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,126 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR5 :: AIRCBR5 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,126 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR6 :: AIRCBR6 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,126 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR7 :: AIRCBR7 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,131 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR8 :: AIRCBR8 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,131 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER1 :: AIRPER1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,131 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER2 :: AIRPER2 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,135 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER3 :: AIRPER3 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,140 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER4 :: AIRPER4 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,140 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER5 :: AIRPER5 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,142 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMEL3 :: AIRMEL3 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,142 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD1 :: AIRSYD1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,142 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD2 :: AIRSYD2 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,148 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD3 :: AIRSYD3 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,148 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD4 :: AIRSYD4 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,151 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY2b  :: AIRMKY2b  has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,151 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY4b :: AIRMKY4b has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,151 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Doptest (BNE) :: Doptest (BNE) has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,156 [WARNING] ALERT (HIGH): [StatMon] Ping failure: BrisEagleTest :: BrisEagleTest has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,159 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp US :: Emu Swamp US has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,159 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp DS :: Emu Swamp DS has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,159 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_WQ  :: MP1_WQ  has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,159 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_Q  :: MP1_Q  has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,159 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_WQ  :: MP2_WQ  has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,159 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_Q  :: MP2_Q  has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,167 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP3_WQ  :: MP3_WQ  has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,167 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TTBLLD1 :: TTBLLD1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,167 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM1 :: POBANEMOM1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,171 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM2 :: POBANEMOM2 has 10 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,175 [WARNING] ALERT (HIGH): [StatMon] Ping failure: ALSEBTRADEWASTE1 :: ALSEBTRADEWASTE1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,175 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW1 :: WSPBARROW1 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,175 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW2 :: WSPBARROW2 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,175 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW3 :: WSPBARROW3 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,175 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW4 :: WSPBARROW4 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,183 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW5 :: WSPBARROW5 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,183 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW6 :: WSPBARROW6 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,183 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW7 :: WSPBARROW7 has 3 consecutive failed pings (threshold 3).
+2025-08-19 14:09:10,189 [INFO] Alert evaluation complete.
+2025-08-19 14:09:10,190 [DEBUG] Job alerts: done in 0.13s
+2025-08-19 14:09:10,192 [DEBUG] Heartbeat
+2025-08-19 14:09:15,197 [DEBUG] Heartbeat
+2025-08-19 14:09:20,201 [DEBUG] Heartbeat
+2025-08-19 14:09:25,204 [DEBUG] Heartbeat
+2025-08-19 14:09:30,208 [DEBUG] Heartbeat
+2025-08-19 14:09:35,212 [DEBUG] Heartbeat
+2025-08-19 14:09:40,217 [DEBUG] Heartbeat
+2025-08-19 14:09:45,221 [DEBUG] Heartbeat
+2025-08-19 14:09:50,225 [DEBUG] Heartbeat
+2025-08-19 14:09:55,229 [DEBUG] Heartbeat
+2025-08-19 14:10:00,237 [DEBUG] Heartbeat
+2025-08-19 14:10:05,241 [DEBUG] Heartbeat
+2025-08-19 14:10:10,245 [DEBUG] Heartbeat
+2025-08-19 14:10:15,249 [DEBUG] Heartbeat
+2025-08-19 14:10:20,252 [DEBUG] Heartbeat
+2025-08-19 14:10:25,255 [DEBUG] Heartbeat
+2025-08-19 14:10:30,259 [DEBUG] Heartbeat
+2025-08-19 14:10:35,263 [DEBUG] Heartbeat
+2025-08-19 14:10:40,266 [DEBUG] Heartbeat
+2025-08-19 14:10:45,270 [DEBUG] Heartbeat
+2025-08-19 14:10:50,275 [DEBUG] Heartbeat
+2025-08-19 14:10:55,278 [DEBUG] Heartbeat
+2025-08-19 14:11:00,282 [DEBUG] Heartbeat
+2025-08-19 14:11:05,285 [DEBUG] Heartbeat
+2025-08-19 14:11:10,289 [DEBUG] Heartbeat
+2025-08-19 14:11:15,296 [DEBUG] Heartbeat
+2025-08-19 14:11:20,300 [DEBUG] Heartbeat
+2025-08-19 14:11:25,303 [DEBUG] Heartbeat
+2025-08-19 14:11:30,308 [DEBUG] Heartbeat
+2025-08-19 14:11:35,317 [DEBUG] Heartbeat
+2025-08-19 14:11:40,320 [DEBUG] Heartbeat
+2025-08-19 14:11:45,324 [DEBUG] Heartbeat
+2025-08-19 14:11:50,328 [DEBUG] Heartbeat
+2025-08-19 14:11:55,331 [DEBUG] Heartbeat
+2025-08-19 14:12:00,335 [DEBUG] Heartbeat
+2025-08-19 14:12:05,339 [DEBUG] Heartbeat
+2025-08-19 14:12:10,343 [DEBUG] Running job: _wrapped
+2025-08-19 14:12:10,343 [DEBUG] Job logger_poll: start
+2025-08-19 14:12:10,353 [INFO] Logger poll starting (70 task(s)).
+2025-08-19 14:12:10,353 [ERROR] Logger poll failed; rolled back DB transaction.
+Traceback (most recent call last):
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\logger_poll.py", line 47, in run
+    session = get_session()
+              ^^^^^^^^^^^^^
+TypeError: get_session() missing 1 required positional argument: 'config'
+2025-08-19 14:12:10,353 [DEBUG] Job logger_poll: done in 0.01s
+2025-08-19 14:12:10,353 [DEBUG] Heartbeat
+2025-08-19 14:12:11,360 [DEBUG] Running job: _wrapped
+2025-08-19 14:12:11,361 [DEBUG] Job pinger: start
+2025-08-19 14:14:10,971 [DEBUG] Job pinger: done in 119.61s
+2025-08-19 14:14:10,971 [DEBUG] Running job: _wrapped
+2025-08-19 14:14:10,971 [DEBUG] Job alerts: start
+2025-08-19 14:14:10,992 [WARNING] ALERT (HIGH): [StatMon] Ping failure: KolarCk_PHPHHILL :: KolarCk_PHPHHILL has 9 consecutive failed pings (threshold 3).
+2025-08-19 14:14:10,994 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GalahCk_PHPHHILL :: GalahCk_PHPHHILL has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:10,998 [WARNING] ALERT (HIGH): [StatMon] Ping failure: DeadHsCk_PHPHHILL :: DeadHsCk_PHPHHILL has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,000 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TBRG_PHPHHILL :: TBRG_PHPHHILL has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,002 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST1 (decomissioned) :: AECLST1 (decomissioned) has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,005 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST2 (decomissioned) :: AECLST2 (decomissioned) has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,009 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST3_Loc7 :: AECLST3_Loc7 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,009 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST4_Loc2 :: AECLST4_Loc2 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,009 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRAVV3 (decomissioned) :: AIRAVV3 (decomissioned) has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,009 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE1 :: AIRBNE1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,009 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE2 :: AIRBNE2 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,016 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE3 :: AIRBNE3 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,017 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE4 :: AIRBNE4 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,019 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE5 :: AIRBNE5 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,019 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE6 :: AIRBNE6 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,019 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE7 :: AIRBNE7 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,024 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE8 :: AIRBNE8 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,024 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE9 :: AIRBNE9 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,026 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE10 :: AIRBNE10 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,029 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS01 :: GC-AS01 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,029 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS02 :: GC-AS02 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,034 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS03 :: GC-AS03 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,034 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS04 :: GC-AS04 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,034 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS05 :: GC-AS05 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,034 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank123 :: GC-Tank123 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,034 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank4 :: GC-Tank4 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,040 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-FTG_Cam1 :: GC-FTG_Cam1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,040 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TMT AIRCAMERA1 :: TMT AIRCAMERA1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,042 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR1 :: AIRCBR1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,045 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR2 :: AIRCBR2 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,048 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR3 :: AIRCBR3 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,050 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR4 :: AIRCBR4 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,050 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR5 :: AIRCBR5 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,050 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR6 :: AIRCBR6 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,050 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR7 :: AIRCBR7 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,050 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR8 :: AIRCBR8 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,050 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER1 :: AIRPER1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,058 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER2 :: AIRPER2 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,060 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER3 :: AIRPER3 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,062 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER4 :: AIRPER4 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,062 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER5 :: AIRPER5 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,069 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMEL3 :: AIRMEL3 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,071 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD1 :: AIRSYD1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,073 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD2 :: AIRSYD2 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,075 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD3 :: AIRSYD3 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD4 :: AIRSYD4 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY2b  :: AIRMKY2b  has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY4b :: AIRMKY4b has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Doptest (BNE) :: Doptest (BNE) has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,077 [WARNING] ALERT (HIGH): [StatMon] Ping failure: BrisEagleTest :: BrisEagleTest has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,083 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp US :: Emu Swamp US has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,083 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp DS :: Emu Swamp DS has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,083 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_WQ  :: MP1_WQ  has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,087 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_Q  :: MP1_Q  has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,089 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_WQ  :: MP2_WQ  has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,091 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_Q  :: MP2_Q  has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,091 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP3_WQ  :: MP3_WQ  has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,096 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TTBLLD1 :: TTBLLD1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,096 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM1 :: POBANEMOM1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,096 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM2 :: POBANEMOM2 has 11 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,100 [WARNING] ALERT (HIGH): [StatMon] Ping failure: ALSEBTRADEWASTE1 :: ALSEBTRADEWASTE1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,101 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW1 :: WSPBARROW1 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,104 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW2 :: WSPBARROW2 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,104 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW3 :: WSPBARROW3 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,104 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW4 :: WSPBARROW4 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,104 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW5 :: WSPBARROW5 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,104 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW6 :: WSPBARROW6 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,104 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW7 :: WSPBARROW7 has 4 consecutive failed pings (threshold 3).
+2025-08-19 14:14:11,119 [INFO] Alert evaluation complete.
+2025-08-19 14:14:11,119 [DEBUG] Job alerts: done in 0.15s
+2025-08-19 14:14:11,119 [DEBUG] Heartbeat
+2025-08-19 14:14:16,126 [DEBUG] Heartbeat
+2025-08-19 14:14:21,130 [DEBUG] Heartbeat
+2025-08-19 14:14:26,133 [DEBUG] Heartbeat
+2025-08-19 14:14:31,137 [DEBUG] Heartbeat
+2025-08-19 14:14:36,141 [DEBUG] Heartbeat
+2025-08-19 14:14:41,145 [DEBUG] Heartbeat
+2025-08-19 14:14:46,187 [DEBUG] Heartbeat
+2025-08-19 14:14:51,191 [DEBUG] Heartbeat
+2025-08-19 14:14:56,195 [DEBUG] Heartbeat
+2025-08-19 14:15:01,199 [DEBUG] Heartbeat
+2025-08-19 14:15:06,202 [DEBUG] Heartbeat
+2025-08-19 14:15:11,206 [DEBUG] Heartbeat
+2025-08-19 14:15:16,210 [DEBUG] Heartbeat
+2025-08-19 14:15:21,215 [DEBUG] Heartbeat
+2025-08-19 14:15:26,219 [DEBUG] Heartbeat
+2025-08-19 14:15:31,225 [DEBUG] Heartbeat
+2025-08-19 14:15:36,228 [DEBUG] Heartbeat
+2025-08-19 14:15:41,231 [DEBUG] Heartbeat
+2025-08-19 14:15:46,235 [DEBUG] Heartbeat
+2025-08-19 14:15:51,239 [DEBUG] Heartbeat
+2025-08-19 14:15:56,242 [DEBUG] Heartbeat
+2025-08-19 14:16:01,246 [DEBUG] Heartbeat
+2025-08-19 14:16:06,249 [DEBUG] Heartbeat
+2025-08-19 14:16:11,253 [DEBUG] Heartbeat
+2025-08-19 14:16:16,256 [DEBUG] Heartbeat
+2025-08-19 14:16:21,260 [DEBUG] Heartbeat
+2025-08-19 14:16:26,264 [DEBUG] Heartbeat
+2025-08-19 14:16:31,268 [DEBUG] Heartbeat
+2025-08-19 14:16:36,272 [DEBUG] Heartbeat
+2025-08-19 14:16:41,278 [DEBUG] Heartbeat
+2025-08-19 14:16:46,281 [DEBUG] Heartbeat
+2025-08-19 14:16:51,284 [DEBUG] Heartbeat
+2025-08-19 14:16:56,287 [DEBUG] Heartbeat
+2025-08-19 14:17:01,290 [DEBUG] Heartbeat
+2025-08-19 14:17:06,294 [DEBUG] Heartbeat
+2025-08-19 14:17:10,298 [DEBUG] Running job: _wrapped
+2025-08-19 14:17:10,298 [DEBUG] Job filestore_ingest: start
+2025-08-19 14:17:10,329 [ERROR] Job filestore_ingest: unhandled exception
+Traceback (most recent call last):
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\__main__.py", line 130, in _wrapped
+    func()
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\filestore_ingest.py", line 39, in run
+    plan = load_filestore_tasks()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\config_loader.py", line 305, in load_filestore_tasks
+    rows = _exec_fetchall(
+           ^^^^^^^^^^^^^^^
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\config_loader.py", line 119, in _exec_fetchall
+    cur = sess.execute(sql, params if not isinstance(params, dict) else tuple(params.values()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: filestore_path
+2025-08-19 14:17:10,332 [DEBUG] Job filestore_ingest: done in 0.03s
+2025-08-19 14:17:11,334 [DEBUG] Heartbeat
+2025-08-19 14:17:12,335 [DEBUG] Running job: _wrapped
+2025-08-19 14:17:12,336 [DEBUG] Job pinger: start
+2025-08-19 14:19:11,881 [DEBUG] Job pinger: done in 119.55s
+2025-08-19 14:19:11,881 [DEBUG] Running job: _wrapped
+2025-08-19 14:19:11,881 [DEBUG] Job alerts: start
+2025-08-19 14:19:11,897 [WARNING] ALERT (HIGH): [StatMon] Ping failure: KolarCk_PHPHHILL :: KolarCk_PHPHHILL has 10 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,900 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GalahCk_PHPHHILL :: GalahCk_PHPHHILL has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,900 [WARNING] ALERT (HIGH): [StatMon] Ping failure: DeadHsCk_PHPHHILL :: DeadHsCk_PHPHHILL has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,900 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TBRG_PHPHHILL :: TBRG_PHPHHILL has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,900 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST1 (decomissioned) :: AECLST1 (decomissioned) has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,900 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST2 (decomissioned) :: AECLST2 (decomissioned) has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,906 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST3_Loc7 :: AECLST3_Loc7 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,906 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST4_Loc2 :: AECLST4_Loc2 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,906 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRAVV3 (decomissioned) :: AIRAVV3 (decomissioned) has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,913 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE1 :: AIRBNE1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,913 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE2 :: AIRBNE2 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,913 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE3 :: AIRBNE3 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,913 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE4 :: AIRBNE4 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,913 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE5 :: AIRBNE5 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,913 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE6 :: AIRBNE6 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,922 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE7 :: AIRBNE7 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,922 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE8 :: AIRBNE8 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,922 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE9 :: AIRBNE9 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,922 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE10 :: AIRBNE10 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,928 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS01 :: GC-AS01 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,932 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS02 :: GC-AS02 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,932 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS03 :: GC-AS03 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,932 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS04 :: GC-AS04 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,932 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS05 :: GC-AS05 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,932 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank123 :: GC-Tank123 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,939 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank4 :: GC-Tank4 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,939 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-FTG_Cam1 :: GC-FTG_Cam1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,939 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TMT AIRCAMERA1 :: TMT AIRCAMERA1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,939 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR1 :: AIRCBR1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,946 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR2 :: AIRCBR2 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,946 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR3 :: AIRCBR3 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,949 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR4 :: AIRCBR4 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,949 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR5 :: AIRCBR5 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,949 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR6 :: AIRCBR6 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,954 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR7 :: AIRCBR7 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,954 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR8 :: AIRCBR8 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,954 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER1 :: AIRPER1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,958 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER2 :: AIRPER2 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,962 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER3 :: AIRPER3 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,964 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER4 :: AIRPER4 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,964 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER5 :: AIRPER5 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,964 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMEL3 :: AIRMEL3 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,964 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD1 :: AIRSYD1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,970 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD2 :: AIRSYD2 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,970 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD3 :: AIRSYD3 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,970 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD4 :: AIRSYD4 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,970 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY2b  :: AIRMKY2b  has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,970 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY4b :: AIRMKY4b has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,978 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Doptest (BNE) :: Doptest (BNE) has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,981 [WARNING] ALERT (HIGH): [StatMon] Ping failure: BrisEagleTest :: BrisEagleTest has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,981 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp US :: Emu Swamp US has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,981 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp DS :: Emu Swamp DS has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,981 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_WQ  :: MP1_WQ  has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,986 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_Q  :: MP1_Q  has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,986 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_WQ  :: MP2_WQ  has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,986 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_Q  :: MP2_Q  has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,986 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP3_WQ  :: MP3_WQ  has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,991 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TTBLLD1 :: TTBLLD1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,991 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM1 :: POBANEMOM1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,991 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM2 :: POBANEMOM2 has 12 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,991 [WARNING] ALERT (HIGH): [StatMon] Ping failure: ALSEBTRADEWASTE1 :: ALSEBTRADEWASTE1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,997 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW1 :: WSPBARROW1 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:11,997 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW2 :: WSPBARROW2 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:12,001 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW3 :: WSPBARROW3 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:12,001 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW4 :: WSPBARROW4 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:12,001 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW5 :: WSPBARROW5 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:12,001 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW6 :: WSPBARROW6 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:12,001 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW7 :: WSPBARROW7 has 5 consecutive failed pings (threshold 3).
+2025-08-19 14:19:12,001 [INFO] Alert evaluation complete.
+2025-08-19 14:19:12,001 [DEBUG] Job alerts: done in 0.12s
+2025-08-19 14:19:12,001 [DEBUG] Heartbeat
+2025-08-19 14:19:17,014 [DEBUG] Heartbeat
+2025-08-19 14:19:22,017 [DEBUG] Heartbeat
+2025-08-19 14:19:27,021 [DEBUG] Heartbeat
+2025-08-19 14:19:32,024 [DEBUG] Heartbeat
+2025-08-19 14:19:37,028 [DEBUG] Heartbeat
+2025-08-19 14:19:42,033 [DEBUG] Heartbeat
+2025-08-19 14:19:47,037 [DEBUG] Heartbeat
+2025-08-19 14:19:52,041 [DEBUG] Heartbeat
+2025-08-19 14:19:57,045 [DEBUG] Heartbeat
+2025-08-19 14:20:02,048 [DEBUG] Heartbeat
+2025-08-19 14:20:07,053 [DEBUG] Heartbeat
+2025-08-19 14:20:12,057 [DEBUG] Heartbeat
+2025-08-19 14:20:17,062 [DEBUG] Heartbeat
+2025-08-19 14:20:22,066 [DEBUG] Heartbeat
+2025-08-19 14:20:27,070 [DEBUG] Heartbeat
+2025-08-19 14:20:32,074 [DEBUG] Heartbeat
+2025-08-19 14:20:37,078 [DEBUG] Heartbeat
+2025-08-19 14:20:42,083 [DEBUG] Heartbeat
+2025-08-19 14:20:47,088 [DEBUG] Heartbeat
+2025-08-19 14:20:52,092 [DEBUG] Heartbeat
+2025-08-19 14:20:57,096 [DEBUG] Heartbeat
+2025-08-19 14:21:02,099 [DEBUG] Heartbeat
+2025-08-19 14:21:07,103 [DEBUG] Heartbeat
+2025-08-19 14:21:12,106 [DEBUG] Heartbeat
+2025-08-19 14:21:17,109 [DEBUG] Heartbeat
+2025-08-19 14:21:22,113 [DEBUG] Heartbeat
+2025-08-19 14:21:27,117 [DEBUG] Heartbeat
+2025-08-19 14:21:32,121 [DEBUG] Heartbeat
+2025-08-19 14:21:37,125 [DEBUG] Heartbeat
+2025-08-19 14:21:42,128 [DEBUG] Heartbeat
+2025-08-19 14:21:47,132 [DEBUG] Heartbeat
+2025-08-19 14:21:52,136 [DEBUG] Heartbeat
+2025-08-19 14:21:57,139 [DEBUG] Heartbeat
+2025-08-19 14:22:02,143 [DEBUG] Heartbeat
+2025-08-19 14:22:07,146 [DEBUG] Heartbeat
+2025-08-19 14:22:11,150 [DEBUG] Running job: _wrapped
+2025-08-19 14:22:11,150 [DEBUG] Job logger_poll: start
+2025-08-19 14:22:11,158 [INFO] Logger poll starting (70 task(s)).
+2025-08-19 14:22:11,160 [ERROR] Logger poll failed; rolled back DB transaction.
+Traceback (most recent call last):
+  File "C:\rubystatmon-fetched\rubystatmon\statmon_daemon\logger_poll.py", line 47, in run
+    session = get_session()
+              ^^^^^^^^^^^^^
+TypeError: get_session() missing 1 required positional argument: 'config'
+2025-08-19 14:22:11,162 [DEBUG] Job logger_poll: done in 0.01s
+2025-08-19 14:22:12,164 [DEBUG] Heartbeat
+2025-08-19 14:22:13,165 [DEBUG] Running job: _wrapped
+2025-08-19 14:22:13,165 [DEBUG] Job pinger: start
+2025-08-19 14:24:12,801 [DEBUG] Job pinger: done in 119.64s
+2025-08-19 14:24:12,801 [DEBUG] Running job: _wrapped
+2025-08-19 14:24:12,804 [DEBUG] Job alerts: start
+2025-08-19 14:24:12,817 [WARNING] ALERT (HIGH): [StatMon] Ping failure: KolarCk_PHPHHILL :: KolarCk_PHPHHILL has 11 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,818 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GalahCk_PHPHHILL :: GalahCk_PHPHHILL has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,818 [WARNING] ALERT (HIGH): [StatMon] Ping failure: DeadHsCk_PHPHHILL :: DeadHsCk_PHPHHILL has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,822 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TBRG_PHPHHILL :: TBRG_PHPHHILL has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,825 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST1 (decomissioned) :: AECLST1 (decomissioned) has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,825 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST2 (decomissioned) :: AECLST2 (decomissioned) has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,825 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST3_Loc7 :: AECLST3_Loc7 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,825 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST4_Loc2 :: AECLST4_Loc2 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,831 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRAVV3 (decomissioned) :: AIRAVV3 (decomissioned) has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,831 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE1 :: AIRBNE1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,831 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE2 :: AIRBNE2 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,831 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE3 :: AIRBNE3 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,831 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE4 :: AIRBNE4 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,831 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE5 :: AIRBNE5 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,838 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE6 :: AIRBNE6 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,841 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE7 :: AIRBNE7 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,841 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE8 :: AIRBNE8 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,841 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE9 :: AIRBNE9 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,841 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE10 :: AIRBNE10 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,841 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS01 :: GC-AS01 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,841 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS02 :: GC-AS02 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,849 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS03 :: GC-AS03 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,853 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS04 :: GC-AS04 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,853 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS05 :: GC-AS05 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,858 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank123 :: GC-Tank123 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,860 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank4 :: GC-Tank4 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,861 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-FTG_Cam1 :: GC-FTG_Cam1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,863 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TMT AIRCAMERA1 :: TMT AIRCAMERA1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,865 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR1 :: AIRCBR1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,865 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR2 :: AIRCBR2 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,867 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR3 :: AIRCBR3 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,871 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR4 :: AIRCBR4 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,876 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR5 :: AIRCBR5 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,879 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR6 :: AIRCBR6 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,879 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR7 :: AIRCBR7 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,879 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR8 :: AIRCBR8 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,879 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER1 :: AIRPER1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,879 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER2 :: AIRPER2 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,879 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER3 :: AIRPER3 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,890 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER4 :: AIRPER4 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,892 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER5 :: AIRPER5 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,894 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMEL3 :: AIRMEL3 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,896 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD1 :: AIRSYD1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,896 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD2 :: AIRSYD2 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,898 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD3 :: AIRSYD3 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,900 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD4 :: AIRSYD4 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,902 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY2b  :: AIRMKY2b  has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,902 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY4b :: AIRMKY4b has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,905 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Doptest (BNE) :: Doptest (BNE) has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,908 [WARNING] ALERT (HIGH): [StatMon] Ping failure: BrisEagleTest :: BrisEagleTest has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,910 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp US :: Emu Swamp US has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,910 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp DS :: Emu Swamp DS has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,910 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_WQ  :: MP1_WQ  has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,910 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_Q  :: MP1_Q  has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,910 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_WQ  :: MP2_WQ  has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,910 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_Q  :: MP2_Q  has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,910 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP3_WQ  :: MP3_WQ  has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,921 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TTBLLD1 :: TTBLLD1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,924 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM1 :: POBANEMOM1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,924 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM2 :: POBANEMOM2 has 13 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,924 [WARNING] ALERT (HIGH): [StatMon] Ping failure: ALSEBTRADEWASTE1 :: ALSEBTRADEWASTE1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,928 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW1 :: WSPBARROW1 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,928 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW2 :: WSPBARROW2 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,928 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW3 :: WSPBARROW3 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,928 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW4 :: WSPBARROW4 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,928 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW5 :: WSPBARROW5 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,938 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW6 :: WSPBARROW6 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,942 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW7 :: WSPBARROW7 has 6 consecutive failed pings (threshold 3).
+2025-08-19 14:24:12,942 [INFO] Alert evaluation complete.
+2025-08-19 14:24:12,942 [DEBUG] Job alerts: done in 0.14s
+2025-08-19 14:24:12,942 [DEBUG] Heartbeat
+2025-08-19 14:24:17,951 [DEBUG] Heartbeat
+2025-08-19 14:24:22,954 [DEBUG] Heartbeat
+2025-08-19 14:24:27,973 [DEBUG] Heartbeat
+2025-08-19 14:24:32,980 [DEBUG] Heartbeat
+2025-08-19 14:24:37,983 [DEBUG] Heartbeat
+2025-08-19 14:24:42,986 [DEBUG] Heartbeat
+2025-08-19 14:24:47,989 [DEBUG] Heartbeat
+2025-08-19 14:24:52,993 [DEBUG] Heartbeat
+2025-08-19 14:24:57,996 [DEBUG] Heartbeat
+2025-08-19 14:25:03,050 [DEBUG] Heartbeat
+2025-08-19 14:25:08,053 [DEBUG] Heartbeat
+2025-08-19 14:25:13,057 [DEBUG] Heartbeat
+2025-08-19 14:25:18,061 [DEBUG] Heartbeat
+2025-08-19 14:25:23,065 [DEBUG] Heartbeat
+2025-08-19 14:25:28,070 [DEBUG] Heartbeat
+2025-08-19 14:25:33,073 [DEBUG] Heartbeat
+2025-08-19 14:25:38,076 [DEBUG] Heartbeat
+2025-08-19 14:25:43,080 [DEBUG] Heartbeat
+2025-08-19 14:25:48,084 [DEBUG] Heartbeat
+2025-08-19 14:25:53,089 [DEBUG] Heartbeat
+2025-08-19 14:25:58,091 [DEBUG] Heartbeat
+2025-08-19 14:26:03,100 [DEBUG] Heartbeat
+2025-08-19 14:26:08,103 [DEBUG] Heartbeat
+2025-08-19 14:26:13,107 [DEBUG] Heartbeat
+2025-08-19 14:26:18,111 [DEBUG] Heartbeat
+2025-08-19 14:26:23,129 [DEBUG] Heartbeat
+2025-08-19 14:26:28,134 [DEBUG] Heartbeat
+2025-08-19 14:26:33,138 [DEBUG] Heartbeat
+2025-08-19 14:26:38,141 [DEBUG] Heartbeat
+2025-08-19 14:26:43,144 [DEBUG] Heartbeat
+2025-08-19 14:26:48,151 [DEBUG] Heartbeat
+2025-08-19 14:26:53,155 [DEBUG] Heartbeat
+2025-08-19 14:26:58,157 [DEBUG] Heartbeat
+2025-08-19 14:27:03,163 [DEBUG] Heartbeat
+2025-08-19 14:27:08,166 [DEBUG] Heartbeat
+2025-08-19 14:27:13,169 [DEBUG] Running job: _wrapped
+2025-08-19 14:27:13,170 [DEBUG] Job pinger: start
+2025-08-19 14:29:12,697 [DEBUG] Job pinger: done in 119.53s
+2025-08-19 14:29:12,698 [DEBUG] Running job: _wrapped
+2025-08-19 14:29:12,698 [DEBUG] Job alerts: start
+2025-08-19 14:29:12,710 [WARNING] ALERT (HIGH): [StatMon] Ping failure: KolarCk_PHPHHILL :: KolarCk_PHPHHILL has 12 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,712 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GalahCk_PHPHHILL :: GalahCk_PHPHHILL has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,712 [WARNING] ALERT (HIGH): [StatMon] Ping failure: DeadHsCk_PHPHHILL :: DeadHsCk_PHPHHILL has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,712 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TBRG_PHPHHILL :: TBRG_PHPHHILL has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,716 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST1 (decomissioned) :: AECLST1 (decomissioned) has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,718 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST2 (decomissioned) :: AECLST2 (decomissioned) has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,718 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST3_Loc7 :: AECLST3_Loc7 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,720 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AECLST4_Loc2 :: AECLST4_Loc2 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,720 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRAVV3 (decomissioned) :: AIRAVV3 (decomissioned) has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,722 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE1 :: AIRBNE1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,722 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE2 :: AIRBNE2 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,722 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE3 :: AIRBNE3 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,722 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE4 :: AIRBNE4 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,722 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE5 :: AIRBNE5 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,728 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE6 :: AIRBNE6 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,728 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE7 :: AIRBNE7 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,728 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE8 :: AIRBNE8 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,728 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE9 :: AIRBNE9 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,728 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRBNE10 :: AIRBNE10 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,735 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS01 :: GC-AS01 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS02 :: GC-AS02 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS03 :: GC-AS03 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS04 :: GC-AS04 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-AS05 :: GC-AS05 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank123 :: GC-Tank123 has 8 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-Tank4 :: GC-Tank4 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: GC-FTG_Cam1 :: GC-FTG_Cam1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TMT AIRCAMERA1 :: TMT AIRCAMERA1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR1 :: AIRCBR1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,736 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR2 :: AIRCBR2 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,745 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR3 :: AIRCBR3 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,745 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR4 :: AIRCBR4 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,745 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR5 :: AIRCBR5 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,745 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR6 :: AIRCBR6 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,745 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR7 :: AIRCBR7 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,745 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRCBR8 :: AIRCBR8 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,753 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER1 :: AIRPER1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,754 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER2 :: AIRPER2 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,754 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER3 :: AIRPER3 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,755 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER4 :: AIRPER4 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,755 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRPER5 :: AIRPER5 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,755 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMEL3 :: AIRMEL3 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,755 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD1 :: AIRSYD1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,755 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD2 :: AIRSYD2 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,759 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD3 :: AIRSYD3 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,759 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRSYD4 :: AIRSYD4 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,760 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY2b  :: AIRMKY2b  has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,760 [WARNING] ALERT (HIGH): [StatMon] Ping failure: AIRMKY4b :: AIRMKY4b has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,760 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Doptest (BNE) :: Doptest (BNE) has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,760 [WARNING] ALERT (HIGH): [StatMon] Ping failure: BrisEagleTest :: BrisEagleTest has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,760 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp US :: Emu Swamp US has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,760 [WARNING] ALERT (HIGH): [StatMon] Ping failure: Emu Swamp DS :: Emu Swamp DS has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,765 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_WQ  :: MP1_WQ  has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,767 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP1_Q  :: MP1_Q  has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,769 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_WQ  :: MP2_WQ  has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,771 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP2_Q  :: MP2_Q  has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,771 [WARNING] ALERT (HIGH): [StatMon] Ping failure: MP3_WQ  :: MP3_WQ  has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,771 [WARNING] ALERT (HIGH): [StatMon] Ping failure: TTBLLD1 :: TTBLLD1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,771 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM1 :: POBANEMOM1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,771 [WARNING] ALERT (HIGH): [StatMon] Ping failure: POBANEMOM2 :: POBANEMOM2 has 14 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,771 [WARNING] ALERT (HIGH): [StatMon] Ping failure: ALSEBTRADEWASTE1 :: ALSEBTRADEWASTE1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,771 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW1 :: WSPBARROW1 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,777 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW2 :: WSPBARROW2 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,777 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW3 :: WSPBARROW3 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,777 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW4 :: WSPBARROW4 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,777 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW5 :: WSPBARROW5 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,777 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW6 :: WSPBARROW6 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,780 [WARNING] ALERT (HIGH): [StatMon] Ping failure: WSPBARROW7 :: WSPBARROW7 has 7 consecutive failed pings (threshold 3).
+2025-08-19 14:29:12,785 [INFO] Alert evaluation complete.
+2025-08-19 14:29:12,785 [DEBUG] Job alerts: done in 0.09s
+2025-08-19 14:29:12,785 [DEBUG] Heartbeat
+2025-08-19 14:29:17,791 [DEBUG] Heartbeat
+2025-08-19 14:29:22,795 [DEBUG] Heartbeat
+2025-08-19 14:29:27,798 [DEBUG] Heartbeat
+2025-08-19 14:29:32,802 [DEBUG] Heartbeat
+2025-08-19 14:29:37,806 [DEBUG] Heartbeat
+2025-08-19 14:29:42,809 [DEBUG] Heartbeat
+2025-08-19 14:29:47,812 [DEBUG] Heartbeat
+2025-08-19 14:29:52,816 [DEBUG] Heartbeat
