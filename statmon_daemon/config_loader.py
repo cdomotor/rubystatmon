@@ -9,7 +9,7 @@ Loads runtime configuration for the StatMon daemon.
 
 Assumptions:
 - models.get_session() returns a SQLAlchemy session.
-- models.station.Station has: id, name, ip_address, enabled (bool), ping_enabled (bool, optional).
+- .models.station.Station has: id, name, ip_address, enabled (bool), ping_enabled (bool, optional).
 - models.config.Config (optional) has key/value (strings). Keys used here:
     PING_COUNT, PING_INTERVAL_SEC, PING_TIMEOUT_SEC, PING_PRIVILEGED
 """
@@ -17,12 +17,12 @@ Assumptions:
 from typing import Dict, Any, List
 from contextlib import contextmanager
 
-from models import get_session
-from models.station import Station
+from .models import get_session
+from .models.station import Station
 
 # Optional: if you have a Config model; otherwise the try/except path will handle it.
 try:
-    from models.config import Config  # key (str), value (str)
+    from .models.config import Config  # key (str), value (str)
 except Exception:
     Config = None  # gracefully handle absence
 
@@ -156,7 +156,7 @@ def load_filestore_tasks() -> Dict[str, Any]:
     - Station has: ingest_parameters (JSON/text) where we expect:
         { "flow_rate": {"trend_days": 3}, "turbidity": {"trend_days": 7} }
     """
-    from models.station import Station
+    from .models.station import Station
 
     tasks: List[Dict[str, Any]] = []
     with session_scope() as session:
@@ -209,7 +209,7 @@ def load_logger_poll_tasks() -> Dict[str, Any]:
     - Station has: poll_enabled (bool) OR enabled (bool)
     - Station has: poll_variables (JSON/text) like ["Battery", "SignalStrength"]
     """
-    from models.station import Station
+    from .models.station import Station
 
     tasks: List[Dict[str, Any]] = []
     with session_scope() as session:
