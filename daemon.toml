@@ -1,0 +1,35 @@
+# File: daemon.toml
+# Path: ./daemon.toml
+# StatMon Daemon configuration
+
+# --- Ping task settings (read by statmon_daemon.pinger.Pinger) -------------
+[ping]
+# Packets per host (integer)
+count = 3
+
+# Seconds between packets within a single ping call (float seconds)
+interval = 1.0
+
+# Per-packet timeout (float seconds)
+timeout = 2.5
+
+# Use privileged raw sockets if available (usually requires admin/root).
+# False uses unprivileged methods where possible.
+privileged = false
+
+# Only ping stations marked active in DB (active=1). Set true to ping all.
+include_inactive = false
+
+# Run continuously in this process. If your scheduler already runs pinger
+# on an interval, leave this false to avoid duplicate work.
+run_continuous = true
+
+# Sleep between *cycles* (pinging all selected stations once). Float seconds.
+cycle_sleep = 300.0
+
+# Optional pause between stations inside a cycle (to spread load). Float seconds.
+per_station_sleep = 0.2
+
+# Optional random +/- jitter added to per_station_sleep (seconds).
+# Example: per_station_sleep=0.2, jitter=0.1 -> actual pause in [0.1, 0.3]s
+jitter = 0.1

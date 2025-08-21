@@ -9,8 +9,10 @@ current:
   - Station editing (name, URL, tags, monitoring options)
 
 planned:
+  - invert the daemon logs
   - add nested grouping of stations on station list page (e.g. by active (monitoring), client, project, etc.)
   - Test/debug Background daemon server data ingest
+  - build out the station details page (with ping history, graphs, etc.)
   - Historical data modal (zoom/pan + export) (untested)
   - Direct logger status table ingest
   - fix the "collage" of colours in the station cards

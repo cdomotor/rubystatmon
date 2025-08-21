@@ -20,6 +20,7 @@ Assumed schema (tolerant; columns checked before use):
     id INTEGER PRIMARY KEY
     name TEXT
     enabled INTEGER (0/1)
+    active INTEGER  (0/1)               # also supported
     alert_ping_failures INTEGER          # default 3 (consecutive fails)
     alert_gap_hours INTEGER              # default 6 hours
     alert_thresholds TEXT/JSON           # {"Battery":[11.5,14.5], "SignalStrength":[-120,-50]}
@@ -104,6 +105,15 @@ def _parse_iso(ts: Optional[str]) -> Optional[datetime]:
         return datetime.fromisoformat(ts)
     except Exception:
         return None
+
+def _truthy(v: Any) -> bool:
+    if isinstance(v, bool):
+        return v
+    if isinstance(v, (int, float)):
+        return v != 0
+    if isinstance(v, str):
+        return v.strip().lower() in {"1", "true", "t", "yes", "y", "on"}
+    return False
 
 
 # --------------------------------------------------------------------------- #
@@ -197,12 +207,16 @@ class AlertManager:
 
         select: List[str] = ["id"]
         select += ["name"] if "name" in cols else ["NULL as name"]
-        for c in ("alert_ping_failures", "alert_gap_hours", "alert_thresholds", "enabled"):
-            select.append(c) if c in cols else None
+        for c in ("alert_ping_failures", "alert_gap_hours", "alert_thresholds", "enabled", "active"):
+            if c in cols:
+                select.append(c)
 
         rows = _exec_fetchall(conn, f"SELECT {', '.join(select)} FROM stations")
         out: List[Dict[str, Any]] = []
         for r in rows:
+            # Require BOTH (if present): active==truthy and enabled!=0
+            if "active" in r and not _truthy(r["active"]):
+                continue
             if "enabled" in r and r["enabled"] in (0, "0", False):
                 continue
             out.append({
