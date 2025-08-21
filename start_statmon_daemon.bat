@@ -2,22 +2,14 @@
 REM ============================================================================
 REM File: start_statmon_daemon.bat
 REM Full path: C:\rubystatmon-fetched\rubystatmon\start_statmon_daemon.bat
-REM ----------------------------------------------------------------------------
-REM Starts the StatMon Python daemon.
-REM - Place this file in your repo root: C:\rubystatmon-fetched\rubystatmon
-REM - Double-click to run (foreground), or run with "bg" to spawn a new window.
-REM - Any extra args after the mode are passed through to the daemon.
-REM     e.g. start_statmon_daemon.bat bg --debug
-REM Environment you can set (optional):
-REM   STATMON_DB         : Path to SQLite DB (overrides daemon.toml)
-REM   STATMON_CFG        : Path to daemon.toml (overrides default)
-REM   STATMON_LOG        : Path to log file (overrides default)
-REM   PYTHON_EXE         : Path to specific python.exe to use
+REM Starts the StatMon Python daemon. Use "bg" as first arg to open a new window.
+REM Extra args after the mode are passed to the daemon (e.g., --debug).
+REM Env (optional): STATMON_DB, STATMON_CFG, STATMON_LOG, PYTHON_EXE
 REM ============================================================================
 
 setlocal ENABLEDELAYEDEXPANSION
 
-REM --- Locate repo root and move there ---
+REM --- Repo root ---
 set "SCRIPT_DIR=%~dp0"
 cd /d "%SCRIPT_DIR%"
 
@@ -29,28 +21,26 @@ if "%CFG_PATH%"=="" set "CFG_PATH=%APP_DIR%\daemon.toml"
 set "LOG_PATH=%STATMON_LOG%"
 if "%LOG_PATH%"=="" set "LOG_PATH=%APP_DIR%\logs\statmon_daemon.log"
 
-REM If STATMON_DB not set, leave it empty; Python will use daemon.toml or default.
-
-REM --- Choose Python interpreter (venv > explicit > PATH) ---
+REM --- Python selection (venv > explicit > PATH) ---
 set "PY_EXE=%PYTHON_EXE%"
 if exist "%APP_DIR%\venv\Scripts\python.exe" set "PY_EXE=%APP_DIR%\venv\Scripts\python.exe"
 if "%PY_EXE%"=="" if exist "C:\Program Files\Python312\python.exe" set "PY_EXE=C:\Program Files\Python312\python.exe"
 if "%PY_EXE%"=="" set "PY_EXE=python"
 
-REM --- Ensure logs directory exists ---
+REM --- Ensure logs dir ---
 if not exist "%APP_DIR%\logs" mkdir "%APP_DIR%\logs" >nul 2>&1
 
-REM --- Parse mode (fg/bg). First arg "bg" = new console window ---
+REM --- Mode parsing (fg/bg) ---
 set "MODE=fg"
 if /I "%~1"=="bg" (
   set "MODE=bg"
   shift
 )
 
-REM --- Forward the rest of the args to the daemon (e.g., --debug) ---
+REM --- Extra args passthrough ---
 set "EXTRA_ARGS=%*"
 
-REM --- Print summary ---
+REM --- Summary ---
 echo.
 echo [StatMon] Starting daemon
 echo   App Dir   : %APP_DIR%
@@ -61,27 +51,35 @@ if not "%STATMON_DB%"=="" echo   STATMON_DB : %STATMON_DB%
 if not "%EXTRA_ARGS%"=="" echo   Extra args : %EXTRA_ARGS%
 echo.
 
-REM --- Make Python flush immediately to console/logs ---
+REM --- Unbuffered output ---
 set "PYTHONUNBUFFERED=1"
 
-REM --- Build command line ---
-set "DAEMON_CMD="%PY_EXE%" -m statmon_daemon --log "%LOG_PATH%" --config "%CFG_PATH%" %EXTRA_ARGS%"
-
-REM --- Launch ---
+REM --- BG launch: new console that stays open (/k) ---
 if /I "%MODE%"=="bg" (
-  REM New console window (does not block this one)
-  start "StatMon Daemon" cmd /c %DAEMON_CMD%
+  REM Use ComSpec to avoid quoting pitfalls. Keep window open after the program ends.
+  start "StatMon Daemon" "%ComSpec%" /k ^
+  ""%PY_EXE%" -u -m statmon_daemon --log "%LOG_PATH%" --config "%CFG_PATH%" %EXTRA_ARGS% & ^
+   echo(& echo [StatMon] Daemon exited with code %%ERRORLEVEL%%. & ^
+   echo Press any key to close this window... & pause>nul"
   if errorlevel 1 (
     echo [StatMon] Failed to start daemon (background). Errorlevel %errorlevel%.
     exit /b %errorlevel%
   )
   echo [StatMon] Daemon started in background. Check "%LOG_PATH%".
   exit /b 0
-) else (
-  REM Foreground (blocks current window; Ctrl+C to stop)
-  %DAEMON_CMD%
-  set "EXITCODE=%ERRORLEVEL%"
-  echo.
-  echo [StatMon] Daemon exited with code %EXITCODE%.
-  exit /b %EXITCODE%
 )
+
+REM --- FG launch: run in current console ---
+"%PY_EXE%" -u -m statmon_daemon --log "%LOG_PATH%" --config "%CFG_PATH%" %EXTRA_ARGS%
+set "EXITCODE=%ERRORLEVEL%"
+echo.
+echo [StatMon] Daemon exited with code %EXITCODE%.
+
+REM Heuristic: pause if likely double-click (no Windows Terminal / ConEmu session)
+if not defined WT_SESSION if not defined ConEmuPID (
+  echo.
+  echo Press any key to close this window...
+  pause >nul
+)
+
+exit /b %EXITCODE%
