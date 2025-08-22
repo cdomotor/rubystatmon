@@ -12,12 +12,41 @@
   </div>
 
   <!-- Quick Pills -->
-  <div class="flex items-center gap-2">
-    <% current_q = params[:q].to_s %>
-    <%= link_to "All",       stations_path(q: current_q, status: ""),          class: pill_classes(params[:status].blank?) %>
-    <%= link_to "Reachable", stations_path(q: current_q, status: "reachable"), class: pill_classes(params[:status] == "reachable") %>
-    <%= link_to "Unreachable", stations_path(q: current_q, status: "unreachable"), class: pill_classes(params[:status] == "unreachable") %>
-  </div>
+<%# File: app/views/stations/index.html.erb %>
+<%# Full path: /app/views/stations/index.html.erb %>
+
+<div class="flex flex-wrap gap-2">
+  <%= link_to "All",
+              stations_path(request.query_parameters.merge(status: nil)),
+              class: ["inline-flex items-center rounded-full px-3 py-1 text-sm border",
+                      @status.blank? ? "bg-blue-600 text-white border-blue-600"
+                                     : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"].join(" ") %>
+
+  <%= link_to "Reachable",
+              stations_path(request.query_parameters.merge(status: "reachable")),
+              class: ["inline-flex items-center rounded-full px-3 py-1 text-sm border",
+                      @status == "reachable" ? "bg-blue-600 text-white border-blue-600"
+                                              : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"].join(" ") %>
+
+  <%= link_to "Unreachable",
+              stations_path(request.query_parameters.merge(status: "unreachable")),
+              class: ["inline-flex items-center rounded-full px-3 py-1 text-sm border",
+                      @status == "unreachable" ? "bg-blue-600 text-white border-blue-600"
+                                               : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"].join(" ") %>
+
+  <%= link_to "Active",
+              stations_path(request.query_parameters.merge(status: "active")),
+              class: ["inline-flex items-center rounded-full px-3 py-1 text-sm border",
+                      @status == "active" ? "bg-blue-600 text-white border-blue-600"
+                                          : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"].join(" ") %>
+
+  <%= link_to "Inactive",
+              stations_path(request.query_parameters.merge(status: "inactive")),
+              class: ["inline-flex items-center rounded-full px-3 py-1 text-sm border",
+                      @status == "inactive" ? "bg-blue-600 text-white border-blue-600"
+                                             : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"].join(" ") %>
+</div>
+
 
   <!-- Filter Bar -->
   <div class="bg-white border border-gray-200 rounded-lg p-4">

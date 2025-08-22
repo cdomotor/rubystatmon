@@ -1892,3 +1892,2018 @@ TypeError: get_session() missing 1 required positional argument: 'config'
 2025-08-22 06:10:47,935 [INFO] Logger poll complete.
 2025-08-22 06:10:47,948 [INFO] AlertManager: no stations to evaluate.
 2025-08-22 06:15:48,112 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 06:20:48,319 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 06:20:48,319 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,319 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 06:20:48,335 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 06:20:48,350 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 06:20:48,350 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 06:20:48,350 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 06:20:48,350 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 06:20:48,350 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 06:20:48,350 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 06:20:48,350 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 06:20:48,350 [INFO] Logger poll complete.
+2025-08-22 06:20:48,350 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 06:25:48,539 [INFO] No filestore ingest tasks configured.
+2025-08-22 06:25:48,546 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 06:30:48,708 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 06:30:48,709 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:30:48,710 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:30:48,710 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:30:48,710 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:30:48,711 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:30:48,711 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:30:48,711 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 06:30:48,712 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 06:30:48,712 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:30:48,712 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,712 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 06:30:48,713 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 06:30:48,713 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 06:30:48,713 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 06:30:48,714 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 06:30:48,714 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 06:30:48,714 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 06:30:48,715 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 06:30:48,715 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 06:30:48,715 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 06:30:48,715 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 06:30:48,715 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 06:30:48,715 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 06:30:48,715 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 06:30:48,715 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 06:30:48,717 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 06:30:48,717 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,717 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,718 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,718 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 06:30:48,718 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 06:30:48,719 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 06:30:48,719 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 06:30:48,719 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 06:30:48,719 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 06:30:48,720 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 06:30:48,720 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,720 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 06:30:48,721 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:30:48,722 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 06:30:48,723 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:30:48,723 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,723 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,723 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 06:30:48,723 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,723 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 06:30:48,724 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 06:30:48,724 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 06:30:48,724 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 06:30:48,724 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 06:30:48,724 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 06:30:48,724 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 06:30:48,725 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 06:30:48,725 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 06:30:48,725 [INFO] Logger poll complete.
+2025-08-22 06:30:48,727 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 06:35:48,894 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 06:40:49,074 [INFO] No filestore ingest tasks configured.
+2025-08-22 06:40:49,088 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 06:40:49,088 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,088 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 06:40:49,104 [INFO] Logger poll complete.
+2025-08-22 06:40:49,122 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 06:45:49,313 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 06:50:49,502 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 06:50:49,505 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,505 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 06:50:49,513 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 06:50:49,523 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 06:50:49,527 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:50:49,527 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 06:50:49,527 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:50:49,527 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 06:50:49,527 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 06:50:49,527 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,527 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,527 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 06:50:49,528 [INFO] Logger poll complete.
+2025-08-22 06:50:49,528 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 06:55:49,726 [INFO] No filestore ingest tasks configured.
+2025-08-22 06:55:49,733 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:00:49,924 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 07:00:49,931 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 07:00:49,931 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 07:00:49,940 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 07:00:49,950 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 07:00:49,950 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,950 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 07:00:49,950 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 07:00:49,950 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 07:00:49,950 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 07:00:49,950 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 07:00:49,952 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 07:00:49,956 [INFO] Logger poll complete.
+2025-08-22 07:00:49,956 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:05:50,139 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:10:50,332 [INFO] No filestore ingest tasks configured.
+2025-08-22 07:10:50,332 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 07:10:50,332 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 07:10:50,332 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 07:10:50,348 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 07:10:50,364 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 07:10:50,364 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 07:10:50,364 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 07:10:50,366 [INFO] Logger poll complete.
+2025-08-22 07:10:50,377 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:15:50,561 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:20:50,757 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 07:20:50,760 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 07:20:50,760 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 07:20:50,773 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 07:20:50,789 [INFO] Logger poll complete.
+2025-08-22 07:20:50,789 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:25:50,988 [INFO] No filestore ingest tasks configured.
+2025-08-22 07:25:51,002 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:30:51,207 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 07:30:51,207 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:30:51,207 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:30:51,207 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:30:51,207 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 07:30:51,211 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 07:30:51,227 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 07:30:51,227 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 07:30:51,229 [INFO] Logger poll complete.
+2025-08-22 07:30:51,236 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:35:51,429 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:40:51,623 [INFO] No filestore ingest tasks configured.
+2025-08-22 07:40:51,630 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 07:40:51,639 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 07:40:51,639 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 07:40:51,645 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 07:40:51,655 [INFO] Logger poll complete.
+2025-08-22 07:40:51,655 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:45:51,831 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:50:52,017 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 07:50:52,019 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 07:50:52,019 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 07:50:52,025 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 07:50:52,041 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 07:50:52,045 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 07:50:52,045 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 07:50:52,045 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 07:50:52,045 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 07:50:52,045 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 07:50:52,045 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 07:50:52,045 [INFO] Logger poll complete.
+2025-08-22 07:50:52,048 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 07:55:52,240 [INFO] No filestore ingest tasks configured.
+2025-08-22 07:55:52,240 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:00:52,427 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 08:00:52,431 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 08:00:52,431 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 08:00:52,443 [INFO] Logger poll complete.
+2025-08-22 08:00:52,459 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:05:52,653 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:10:52,838 [INFO] No filestore ingest tasks configured.
+2025-08-22 08:10:52,847 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 08:10:52,849 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 08:10:52,851 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 08:10:52,856 [INFO] Logger poll complete.
+2025-08-22 08:10:52,856 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:15:53,051 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:20:53,235 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 08:20:53,242 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 08:20:53,242 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 08:20:53,251 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 08:20:53,265 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 08:20:53,265 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 08:20:53,265 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 08:20:53,265 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 08:20:53,265 [INFO] Logger poll complete.
+2025-08-22 08:20:53,267 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:25:53,449 [INFO] No filestore ingest tasks configured.
+2025-08-22 08:25:53,462 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:30:53,653 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 08:30:53,653 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:30:53,653 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:30:53,653 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:30:53,653 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:30:53,653 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:30:53,653 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:30:53,653 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 08:30:53,653 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 08:30:53,653 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,659 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 08:30:53,669 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 08:30:53,685 [INFO] Logger poll complete.
+2025-08-22 08:30:53,688 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:35:53,871 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:40:54,056 [INFO] No filestore ingest tasks configured.
+2025-08-22 08:40:54,068 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 08:40:54,068 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 08:40:54,068 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,084 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 08:40:54,100 [INFO] Logger poll complete.
+2025-08-22 08:40:54,100 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:45:54,297 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:50:54,483 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 08:50:54,488 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:50:54,488 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:50:54,488 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:50:54,488 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 08:50:54,488 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:50:54,488 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:50:54,488 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 08:50:54,488 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 08:50:54,493 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,499 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 08:50:54,504 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 08:50:54,510 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 08:50:54,515 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 08:50:54,515 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 08:50:54,515 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 08:50:54,515 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 08:50:54,515 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 08:50:54,515 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 08:50:54,515 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 08:50:54,515 [INFO] Logger poll complete.
+2025-08-22 08:50:54,515 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 08:55:54,702 [INFO] No filestore ingest tasks configured.
+2025-08-22 08:55:54,712 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:00:54,905 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 09:00:54,905 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 09:00:54,905 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 09:00:54,911 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 09:00:54,919 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 09:00:54,927 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 09:00:54,927 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 09:00:54,927 [INFO] Logger poll complete.
+2025-08-22 09:00:54,927 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:05:55,116 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:10:55,312 [INFO] No filestore ingest tasks configured.
+2025-08-22 09:10:55,319 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 09:10:55,319 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 09:10:55,319 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 09:10:55,335 [INFO] Logger poll complete.
+2025-08-22 09:10:55,335 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:15:55,527 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:20:55,717 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 09:20:55,721 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 09:20:55,721 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,731 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 09:20:55,747 [INFO] Logger poll complete.
+2025-08-22 09:20:55,747 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:25:55,951 [INFO] No filestore ingest tasks configured.
+2025-08-22 09:25:55,957 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:30:56,149 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 09:30:56,152 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 09:30:56,152 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 09:30:56,165 [INFO] Logger poll complete.
+2025-08-22 09:30:56,165 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:35:56,360 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:40:56,542 [INFO] No filestore ingest tasks configured.
+2025-08-22 09:40:56,547 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 09:40:56,547 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:40:56,547 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:40:56,547 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:40:56,547 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:40:56,547 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:40:56,547 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:40:56,547 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 09:40:56,547 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 09:40:56,547 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:40:56,553 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,553 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 09:40:56,553 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 09:40:56,553 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 09:40:56,553 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 09:40:56,553 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 09:40:56,553 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 09:40:56,556 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 09:40:56,556 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 09:40:56,556 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 09:40:56,556 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 09:40:56,556 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 09:40:56,556 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 09:40:56,557 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 09:40:56,560 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 09:40:56,562 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 09:40:56,564 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 09:40:56,564 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 09:40:56,564 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 09:40:56,564 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 09:40:56,564 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 09:40:56,564 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 09:40:56,564 [INFO] Logger poll complete.
+2025-08-22 09:40:56,564 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:45:56,736 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:50:56,935 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 09:50:56,935 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 09:50:56,935 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 09:50:56,945 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,961 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 09:50:56,961 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 09:50:56,962 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 09:50:56,962 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 09:50:56,962 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 09:50:56,962 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 09:50:56,962 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 09:50:56,962 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 09:50:56,962 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 09:50:56,962 [INFO] Logger poll complete.
+2025-08-22 09:50:56,969 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 09:55:57,156 [INFO] No filestore ingest tasks configured.
+2025-08-22 09:55:57,161 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:00:57,357 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 10:00:57,357 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,357 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 10:00:57,367 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:00:57,373 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 10:00:57,389 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 10:00:57,394 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 10:00:57,394 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 10:00:57,394 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 10:00:57,394 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 10:00:57,394 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 10:00:57,394 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 10:00:57,394 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 10:00:57,394 [INFO] Logger poll complete.
+2025-08-22 10:00:57,394 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:05:57,594 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:10:57,787 [INFO] No filestore ingest tasks configured.
+2025-08-22 10:10:57,797 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 10:10:57,797 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:10:57,797 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:10:57,797 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:10:57,797 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:10:57,797 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:10:57,797 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:10:57,797 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 10:10:57,797 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 10:10:57,797 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 10:10:57,803 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:10:57,819 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,819 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,819 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 10:10:57,819 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,819 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 10:10:57,821 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 10:10:57,821 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 10:10:57,822 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 10:10:57,822 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 10:10:57,822 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 10:10:57,822 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 10:10:57,822 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 10:10:57,822 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 10:10:57,822 [INFO] Logger poll complete.
+2025-08-22 10:10:57,829 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:15:58,013 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:20:58,201 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 10:20:58,212 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 10:20:58,214 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 10:20:58,230 [INFO] Logger poll complete.
+2025-08-22 10:20:58,230 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:25:58,432 [INFO] No filestore ingest tasks configured.
+2025-08-22 10:25:58,443 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:30:58,633 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 10:30:58,633 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 10:30:58,633 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 10:30:58,649 [INFO] Logger poll complete.
+2025-08-22 10:30:58,649 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:35:58,846 [INFO] AlertManager: no stations to evaluate.
+2025-08-22 10:40:59,013 [INFO] No filestore ingest tasks configured.
+2025-08-22 10:40:59,013 [INFO] Logger poll starting (70 task(s)).
+2025-08-22 10:40:59,013 [WARNING] [KolarCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [GalahCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [DeadHsCk_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [TBRG_PHPHHILL] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AECLST1 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AECLST2 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AECLST3_Loc7] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AECLST4_Loc2] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRAVV3 (decomissioned)] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRBNE1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRBNE2] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRBNE3] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRBNE4] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRBNE5] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRBNE6] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRBNE7] Missing IP or variables; skipping.
+2025-08-22 10:40:59,013 [WARNING] [AIRBNE8] Missing IP or variables; skipping.
+2025-08-22 10:40:59,024 [WARNING] [AIRBNE9] Missing IP or variables; skipping.
+2025-08-22 10:40:59,024 [WARNING] [AIRBNE10] Missing IP or variables; skipping.
+2025-08-22 10:40:59,024 [WARNING] [GC-AS01] Missing IP or variables; skipping.
+2025-08-22 10:40:59,024 [WARNING] [GC-AS02] Missing IP or variables; skipping.
+2025-08-22 10:40:59,024 [WARNING] [GC-AS03] Missing IP or variables; skipping.
+2025-08-22 10:40:59,025 [WARNING] [GC-AS04] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [GC-AS05] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [GC-Tank123] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [GC-Tank4] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [GC-FTG_Cam1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [TMT AIRCAMERA1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRCBR1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRCBR2] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRCBR3] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRCBR4] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRCBR5] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRCBR6] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRCBR7] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRCBR8] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRPER1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRPER2] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRPER3] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRPER4] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRPER5] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRMEL3] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRSYD1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRSYD2] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRSYD3] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRSYD4] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRMKY2b ] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [AIRMKY4b] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [Doptest (BNE)] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [BrisEagleTest] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [Emu Swamp US] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [Emu Swamp DS] Missing IP or variables; skipping.
+2025-08-22 10:40:59,026 [WARNING] [MP1_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:40:59,032 [WARNING] [MP1_Q ] Missing IP or variables; skipping.
+2025-08-22 10:40:59,032 [WARNING] [MP2_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:40:59,032 [WARNING] [MP2_Q ] Missing IP or variables; skipping.
+2025-08-22 10:40:59,032 [WARNING] [MP3_WQ ] Missing IP or variables; skipping.
+2025-08-22 10:40:59,032 [WARNING] [TTBLLD1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [POBANEMOM1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [POBANEMOM2] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [ALSEBTRADEWASTE1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [WSPBARROW1] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [WSPBARROW2] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [WSPBARROW3] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [WSPBARROW4] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [WSPBARROW5] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [WSPBARROW6] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [WSPBARROW7] Missing IP or variables; skipping.
+2025-08-22 10:40:59,033 [WARNING] [loopback] Missing IP or variables; skipping.
+2025-08-22 10:40:59,034 [WARNING] [Google (test)] Missing IP or variables; skipping.
+2025-08-22 10:40:59,034 [INFO] Logger poll complete.
+2025-08-22 10:40:59,035 [INFO] AlertManager: no stations to evaluate.

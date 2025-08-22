@@ -17,6 +17,10 @@ class StationsController < ApplicationController
       @stations = @stations.select(&:last_ping_success?)
     when "unreachable"
       @stations = @stations.reject(&:last_ping_success?)
+    when "active"
+      @stations = @stations.where(active: true)
+    when "inactive"
+      @stations = @stations.where(active: false)
     end
   end
 
