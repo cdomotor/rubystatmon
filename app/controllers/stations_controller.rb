@@ -1,26 +1,50 @@
 # File: app/controllers/stations_controller.rb
 # Path: /app/controllers/stations_controller.rb
 class StationsController < ApplicationController
-  before_action :set_station, only: %i[ show edit update destroy ping ]
+  before_action :set_station, only: %i[ show edit update destroy ping toggle_active ]
 
-  require 'csv'
+  require 'csv' # Ensure CSV is available for import/export
 
   # GET /stations
   def index
     @q      = params[:q].to_s.strip
-    @status = params[:status].to_s.strip # "", "reachable", "unreachable"
+    @status = params[:status].to_s.strip # "", "active", "reachable", "unreachable"
 
-    @stations = Station.search(@q).order(:name)
+    scope = Station.search(@q).order(:name)
 
-    case @status
-    when "reachable"
-      @stations = @stations.select(&:last_ping_success?)
-    when "unreachable"
-      @stations = @stations.reject(&:last_ping_success?)
-    when "active"
-      @stations = @stations.where(active: true)
-    when "inactive"
-      @stations = @stations.where(active: false)
+    @stations =
+      case @status
+      when "active"      then scope.where(active: true)
+      when "reachable"   then scope.select(&:last_ping_success?)
+      when "unreachable" then scope.reject(&:last_ping_success?)
+      else                     scope
+      end
+  end
+
+  # GET /stations/1
+  def show; end
+
+  # GET /stations/new
+  def new
+    @station = Station.new
+  end
+
+  # GET /stations/1/edit
+  def edit; end
+
+  # POST /stations
+  def create
+    @station = Station.new(station_params)
+    if @station.save
+      respond_to do |format|
+        format.turbo_stream
+        format.html { redirect_to stations_path, notice: "Station created." }
+      end
+    else
+      respond_to do |format|
+        format.turbo_stream
+        format.html { render :new, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -37,81 +61,49 @@ class StationsController < ApplicationController
       imported += 1
     end
 
-    redirect_to stations_path, notice: "Imported #{imported} station(s)"
-  rescue ActiveRecord::RecordInvalid => e
-    redirect_to stations_path, alert: "Import error: #{e.record.errors.full_messages.to_sentence}"
+    redirect_to stations_path, notice: "Imported #{imported} station(s)."
   rescue => e
     redirect_to stations_path, alert: "Import failed: #{e.message}"
   end
 
-  # GET /stations/1
-  def show
-    window_start = 7.days.ago
-    @battery_data = @station.series_for('Battery', since: window_start)
-    @selected_params = @station.selected_parameters
-    #@param_data = @selected_params.each_with_object({}) { |p, h| h[p] = @station.series_for(p, since: window_start) }
-    @battery_thresholds = { low: 11.5, high: 14.5 }
-  end
-
-  # GET /stations/new
-  def new
-    @station = Station.new
-  end
-
-  # GET /stations/1/edit
-  def edit; end
-
-  # POST /stations
-  def create
-    @station = Station.new(station_params)
-    if @station.save
-      redirect_to @station, notice: "Station was successfully created."
-    else
-      render :new, status: :unprocessable_entity
+  # POST /stations/:id/ping
+  def ping
+    respond_to do |format|
+      format.turbo_stream { render turbo_stream: turbo_stream.replace(dom_id(@station), partial: "stations/station", locals: { station: @station }) }
+      format.html { redirect_to stations_path, notice: "Ping requested." }
     end
   end
 
-  # PATCH/PUT /stations/1
+  # PATCH/PUT /stations/:id
   def update
     if @station.update(station_params)
-      redirect_to @station, notice: "Station was successfully updated."
-    else
-      render :edit, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /stations/1
-  def destroy
-    @station.destroy!
-    redirect_to stations_path, status: :see_other, notice: "Station was successfully destroyed."
-  end
-
-  # POST /stations/1/ping
-  def ping
-    ip = @station.ip_address
-
-    if Gem.win_platform?
-      output  = `ping -n 1 -w 1000 #{ip}`
-      success = $?.exitstatus == 0
-      latency = output[/Average = (\d+)ms/, 1]&.to_i
-    else
-      output  = `ping -c 1 -W 1 #{ip}`
-      success = $?.exitstatus == 0
-      latency = output[/time=(\d+(?:\.\d+)?) ms/, 1]&.to_f&.round
-    end
-
-    @station.ping_results.create!(timestamp: Time.current, latency_ms: latency, success: success)
-
-    respond_to do |format|
-      format.turbo_stream do
-        render turbo_stream: turbo_stream.replace(
-          "ping_result_#{@station.id}",
-          partial: "stations/ping_result",
-          locals: { station: @station }
-        )
+      respond_to do |format|
+        format.turbo_stream { render turbo_stream: turbo_stream.replace(dom_id(@station), partial: "stations/station", locals: { station: @station }) }
+        format.html { redirect_to stations_path, notice: "Station updated." }
       end
-      format.html { redirect_to @station, notice: success ? "Ping succeeded" : "Ping failed" }
-      format.json { render json: { success: success, latency_ms: latency }, status: :ok }
+    else
+      respond_to do |format|
+        format.turbo_stream { render turbo_stream: turbo_stream.replace(dom_id(@station), partial: "stations/station", locals: { station: @station }) }
+        format.html { render :edit, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH /stations/:id/toggle_active
+  def toggle_active
+    @station.update(active: !@station.active?)
+    respond_to do |format|
+      format.turbo_stream { render turbo_stream: turbo_stream.replace(dom_id(@station), partial: "stations/station", locals: { station: @station }) }
+      format.html { redirect_to stations_path }
+    end
+  end
+
+  # DELETE /stations/:id
+  def destroy
+    @station.destroy
+    respond_to do |format|
+      format.turbo_stream { render turbo_stream: turbo_stream.remove(dom_id(@station)) }
+      format.html { redirect_to stations_path, notice: "Station deleted." }
     end
   end
 
@@ -121,11 +113,11 @@ class StationsController < ApplicationController
     @station = Station.find(params[:id])
   end
 
+  # PERMIT :active so PATCHes aren’t dropped as “Unpermitted parameter: :active”
   def station_params
     params.require(:station).permit(
-      :name, :ip_address, :enabled,
-      :filestore_path, :ingest_enabled,
-      ingest_parameters: {} # allow nested JSON as a Hash
+      :name, :ip_address, :status, :notes, :active,
+      :lat, :lng, :port, :auth_token
     )
   end
 end
