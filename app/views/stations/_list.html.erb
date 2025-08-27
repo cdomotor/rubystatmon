@@ -1,17 +1,7 @@
-<!-- File: app/views/stations/_list.html.erb -->
-<!-- Path: /app/views/stations/_list.html.erb -->
-
-<% if stations.present? %>
-  <!-- Responsive card grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3">
-    <% stations.each do |station| %>
-      <%= render partial: "station", locals: { station: station } %>
-    <% end %>
-  </div>
-
-  <p class="text-sm text-gray-500 mt-2"><%= stations.size %> station(s) shown</p>
-<% else %>
-  <div class="text-center text-gray-500 mt-6">
-    No stations found. <%= link_to "Create one now", new_station_path, class: "text-blue-600 hover:underline" %>.
-  </div>
-<% end %>
+<%# File: app/views/stations/_list.html.erb %>
+<%# Path: /app/views/stations/_list.html.erb %>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+  <% @stations.each do |station| %>
+    <%= render "stations/station", station: station %>
+  <% end %>
+</div>

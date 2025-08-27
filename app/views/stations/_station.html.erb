@@ -1,102 +1,61 @@
 <%# File: app/views/stations/_station.html.erb %>
 <%# Path: /app/views/stations/_station.html.erb %>
-<%# Compact station card with clear hierarchy %>
-
 <% last_ping = station.ping_results.last %>
 
-<div class="bg-gray-100 border rounded-md shadow-xs p-3">
+<div id="<%= dom_id(station) %>" class="bg-gray-100 border rounded-md shadow-xs p-3" data-controller="stopclick">
   <!-- Row 1: Station name + active badge -->
   <div class="flex items-center gap-2">
     <h2 class="text-base font-semibold text-gray-900 truncate">
-      <%= station.name.presence || "Unnamed Station" %>
+      <%= link_to (station.name.presence || "Unnamed Station"),
+                  station_path(station),
+                  class: "hover:underline" %>
       <% if station.respond_to?(:status) && station.status.present? %>
         <span class="ml-1 text-xs text-gray-500">(<%= station.status %>)</span>
       <% end %>
     </h2>
 
-    <%# Read-only active badge %>
     <% if station.active? %>
       <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-green-100 text-green-700">Active</span>
     <% else %>
-      <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-gray-200 text-gray-600">Inactive</span>
+      <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-gray-200 text-gray-700">Inactive</span>
     <% end %>
   </div>
 
-  <!-- Row 2+: Actions + Meta grid -->
-  <div class="mt-2 grid grid-cols-2 gap-x-3 gap-y-2 text-xs leading-5 text-gray-700">
-    <!-- Actions (full width) -->
-    <div class="col-span-2 flex flex-wrap gap-1">
-      <!-- Ping -->
-      <%= button_to "Ping",
-          ping_station_path(station),
-          method: :post,
-          data: { turbo: true },
-          class: "px-2 py-1 text-xs font-medium rounded bg-blue-600 text-white hover:bg-blue-500" %>
+<div class="mt-2 text-xs text-gray-600">
+  <span class="mr-3">IP: <%= station.ip_address.presence || "—" %></span>
+  <% if last_ping %>
+    <span class="mr-3">Last ping: <%= l(last_ping.created_at, format: :short) %></span>
+    <% if last_ping.success %>
+      <span class="mr-3 text-green-600">✅ ok</span>
+    <% else %>
+      <span class="mr-3 text-red-600">❌ fail</span>
+    <% end %>
+  <% end %>
+</div>
 
-      <!-- Show -->
-      <%= link_to "Show", station,
-          class: "px-2 py-1 text-xs font-medium rounded bg-gray-100 text-gray-800 hover:bg-gray-200" %>
+  <div class="mt-3 flex items-center gap-2">
+    <!-- Toggle Active (Turbo PATCH) -->
+    <%= button_to (station.active? ? "Deactivate" : "Activate"),
+                  toggle_active_station_path(station),
+                  method: :patch,
+                  form: { data: { turbo: true } },
+                  data: { action: "click->stopclick#stop" },
+                  class: "px-3 py-1 rounded bg-blue-600 text-white hover:bg-blue-700" %>
 
-      <!-- Edit -->
-      <%= link_to "Edit", edit_station_path(station),
-          class: "px-2 py-1 text-xs font-medium rounded bg-gray-100 text-gray-800 hover:bg-gray-200" %>
+    <!-- Delete (Turbo DELETE) -->
+    <%= button_to "Delete",
+                  station_path(station),
+                  method: :delete,
+                  form: { data: { turbo_confirm: "Delete this station?" } },
+                  data: { action: "click->stopclick#stop" },
+                  class: "px-3 py-1 rounded bg-red-600 text-white hover:bg-red-700" %>
 
-      <!-- Delete -->
-      <%= link_to "Del", station,
-          method: :delete,
-          data: { confirm: "Delete this station?" },
-          class: "px-2 py-1 text-xs font-medium rounded bg-red-100 text-red-700 hover:bg-red-200" %>
-
-      <!-- Activate/Deactivate -->
-      <%= button_to (station.active? ? "Deactivate" : "Activate"),
-          station_path(station, station: { active: !station.active? }),
-          method: :patch,
-          class: "px-2 py-1 text-xs font-medium rounded #{station.active? ? 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200' : 'bg-green-600 text-white hover:bg-green-500'}" %>
-    </div>
-
-    <!-- IP -->
-    <div class="col-span-1 flex">
-      <span class="font-semibold mr-1">IP:</span>
-      <span class="truncate"><%= station.ip_address.presence || "—" %></span>
-    </div>
-
-    <!-- Ping -->
-    <div class="col-span-1 flex items-center">
-      <span class="font-semibold mr-1">Ping:</span>
-      <% if last_ping.present? %>
-        <% if last_ping.success %>
-          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-green-100 text-green-700">
-            <%= "#{last_ping.latency_ms.to_i} ms" %>
-          </span>
-        <% else %>
-          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-red-600 text-white animate-pulse">
-            Failed
-          </span>
-        <% end %>
-      <% else %>
-        <span class="text-gray-400">none</span>
-      <% end %>
-    </div>
-
-    <!-- Seen (uses coalesced timestamp via model helper) -->
-    <div class="col-span-1 flex">
-      <span class="font-semibold mr-1">Seen:</span>
-      <% if station.last_ping_at.present? %>
-        <span class="text-gray-600"><%= time_ago_in_words(station.last_ping_at) %> ago</span>
-      <% else %>
-        <span class="text-gray-400">—</span>
-      <% end %>
-    </div>
-
-    <!-- Fails (safe fallback if helper not present) -->
-    <div class="col-span-1 flex">
-      <span class="font-semibold mr-1">Fails:</span>
-      <% if station.respond_to?(:recent_failures_count) %>
-        <span><%= station.recent_failures_count %></span>
-      <% else %>
-        <%# Fallback: count failed pings in the last 6h without calling a missing method %>
-        <span><%= station.ping_results.where(success: false).where('created_at >= ?', 6.hours.ago).count %></span>
-      <% end %>
-    </div>
+    <!-- Optional: Ping (Turbo POST) -->
+    <%= button_to "Ping",
+                  ping_station_path(station),
+                  method: :post,
+                  form: { data: { turbo: true } },
+                  data: { action: "click->stopclick#stop" },
+                  class: "px-3 py-1 rounded bg-gray-800 text-white hover:bg-black" %>
   </div>
 </div>
