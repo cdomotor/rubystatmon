@@ -26,9 +26,9 @@
   <% if last_ping %>
     <span class="mr-3">Last ping: <%= l(last_ping.created_at, format: :short) %></span>
     <% if last_ping.success %>
-      <span class="mr-3 text-green-600">✅ ok</span>
+      <span class="mr-3 text-green-600">ok ✅/span>
     <% else %>
-      <span class="mr-3 text-red-600">❌ fail</span>
+      <span class="mr-3 text-red-600">fail ❌</span>
     <% end %>
   <% end %>
 </div>

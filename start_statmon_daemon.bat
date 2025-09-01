@@ -18,7 +18,7 @@ set "CFG_PATH=%STATMON_CFG%"
 if "%CFG_PATH%"=="" set "CFG_PATH=%APP_DIR%\daemon.toml"
 
 set "LOG_PATH=%STATMON_LOG%"
-if "%LOG_PATH%"=="" set "LOG_PATH=%APP_DIR%\logs\statmon_daemon.log"
+if "%LOG_PATH%"=="" set "LOG_PATH=%APP_DIR%\log\statmon_daemon.log"
 
 REM --- Python selection (venv > explicit > PATH) ---
 set "PY_EXE=%PYTHON_EXE%"
@@ -26,8 +26,8 @@ if exist "%APP_DIR%\venv\Scripts\python.exe" set "PY_EXE=%APP_DIR%\venv\Scripts\
 if "%PY_EXE%"=="" if exist "C:\Program Files\Python312\python.exe" set "PY_EXE=C:\Program Files\Python312\python.exe"
 if "%PY_EXE%"=="" set "PY_EXE=python"
 
-REM --- Ensure logs dir ---
-if not exist "%APP_DIR%\logs" mkdir "%APP_DIR%\logs" >nul 2>&1
+REM --- Ensure log dir ---
+if not exist "%APP_DIR%\log" mkdir "%APP_DIR%\log" >nul 2>&1
 
 REM --- Mode parsing (fg/bg) ---
 set "MODE=fg"
