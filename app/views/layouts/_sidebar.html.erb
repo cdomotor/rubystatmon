@@ -28,12 +28,17 @@
     </li>
 
     <li>
-      <%= link_to features_path,
-                  class: "block py-2 px-3 rounded-md hover:bg-gray-700 #{'bg-gray-900' if current_page?(features_path)}" do %>
-        <span class="inline-flex items-center gap-2">
-          <span>✨</span>
-          <span>Features</span>
-        </span>
+      <% if Rails.application.routes.url_helpers.respond_to?(:features_path) %>
+        <%= link_to features_path,
+                    class: "block py-2 px-3 rounded-md hover:bg-gray-700 #{'bg-gray-900' if current_page?(features_path)}" do %>
+          <span class="inline-flex items-center gap-2">
+            <span>✨</span>
+            <span>Features</span>
+          </span>
+        <% end %>
+      <% else %>
+        <!-- Optional: show a disabled item instead of erroring -->
+        <span class="block py-2 px-3 rounded-md text-gray-500 cursor-not-allowed">Features</span>
       <% end %>
     </li>
 

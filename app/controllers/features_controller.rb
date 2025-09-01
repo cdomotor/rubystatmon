@@ -11,3 +11,4 @@ class FeaturesController < ApplicationController
     @planned_features = features[:planned] || []
   end
 end
+

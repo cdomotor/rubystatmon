@@ -12,31 +12,32 @@
     </div>
   </div>
 
-  <div class="text-xs text-gray-500 mb-2">Reading: <code><%= @log_path %></code></div>
+  <div class="text-xs text-gray-500 mb-2">
+    Reading: <code><%= @log_path %></code>
+    <span class="ml-2">• newest shown first</span>
+  </div>
 
   <div class="bg-black text-green-300 rounded-lg p-3 shadow-inner border border-gray-700">
     <pre id="log" class="whitespace-pre-wrap leading-snug max-h-[70vh] overflow-auto text-xs"><%=
-      @initial_lines.join
+      @initial_lines.reverse.join
     %></pre>
   </div>
 </div>
 
 <script>
-  (function() {
-    const logEl = document.getElementById('log');
+  (function () {
+    const logEl    = document.getElementById('log');
     const pauseBtn = document.getElementById('pauseBtn');
     const clearBtn = document.getElementById('clearBtn');
 
     let paused = false;
-    let autoscroll = true;
+    let autoscroll = true; // for newest-at-top, this means "stick to top"
 
-    function append(text) {
+    function prepend(text) {
       if (paused) return;
-      const atBottom = (logEl.scrollTop + logEl.clientHeight) >= (logEl.scrollHeight - 5);
-      logEl.textContent += text;
-      if (autoscroll && atBottom) {
-        logEl.scrollTop = logEl.scrollHeight;
-      }
+      const atTop = logEl.scrollTop <= 2;
+      logEl.textContent = text + "\n" + logEl.textContent;
+      if (autoscroll && atTop) logEl.scrollTop = 0;
     }
 
     pauseBtn.addEventListener('click', () => {
@@ -44,19 +45,16 @@
       pauseBtn.textContent = paused ? 'Resume' : 'Pause';
     });
 
-    clearBtn.addEventListener('click', () => {
-      logEl.textContent = '';
-    });
+    clearBtn.addEventListener('click', () => { logEl.textContent = ''; });
 
     logEl.addEventListener('scroll', () => {
-      const atBottom = (logEl.scrollTop + logEl.clientHeight) >= (logEl.scrollHeight - 5);
-      autoscroll = atBottom;
+      autoscroll = (logEl.scrollTop <= 2);
     });
 
     const es = new EventSource('<%= daemon_logs_stream_path %>');
-    es.onmessage = (e) => append(e.data + "\n");
+    es.onmessage = (e) => prepend(e.data);
     es.onerror = () => {
-      append("\n[log] stream error or closed; retrying in 3s...\n");
+      prepend("[log] stream error or closed; retrying in 3s…");
       es.close();
       setTimeout(() => location.reload(), 3000);
     };
